@@ -16,10 +16,10 @@ class Jugador(BaseModel):
     id: int
     name: str = Field(..., min_length=2, max_length=70)
     age: int = Field(..., ge=16)
-    nationality: str = Field(..., min_length=2, max_length=25)
+    nationality: str = Field(..., min_length=2, max_length=40)
     height: float = Field(..., gt=0)
-    team: str = Field(..., min_length=2, max_length=25)
-    position: str = Field(..., min_length=2, max_length=25)
+    team: str = Field(..., min_length=2, max_length=40)
+    position: str = Field(..., min_length=2, max_length=40)
     dorsal: int = Field(..., ge=1, le=99)
     goalkeeper: bool
     stats: Estadisticas
