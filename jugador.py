@@ -1,7 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel, Field
 
-# Modelo para estadísticas (opcional si no lo estás usando aún en la base de datos)
+
 class Estadisticas(BaseModel):
     goals: int = Field(..., ge=0)
     assists: int = Field(..., ge=0)
