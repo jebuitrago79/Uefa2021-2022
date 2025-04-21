@@ -13,15 +13,13 @@ class Estadisticas(BaseModel):
 
 # Modelo Jugador con estadísticas
 class Jugador(BaseModel):
-    id: int
-    name: str = Field(..., min_length=2, max_length=70)
+    sofifa_id: int
+    long_name: str = Field(..., min_length=2, max_length=70)
     age: int = Field(..., ge=16)
-    nationality: str = Field(..., min_length=2, max_length=40)
-    height: float = Field(..., gt=0)
-    team: str = Field(..., min_length=2, max_length=40)
-    position: str = Field(..., min_length=2, max_length=40)
-    dorsal: int = Field(..., ge=1, le=99)
-    goalkeeper: bool
+    nationality_name: str = Field(..., min_length=2, max_length=40)
+    height_cm: float = Field(..., gt=0)
+    club_name: str = Field(..., min_length=2, max_length=40)
+    player_positions: str = Field(..., min_length=2, max_length=40)
     club_jersey_number : float = Field(..., gt=0)
     stats: Estadisticas
 
