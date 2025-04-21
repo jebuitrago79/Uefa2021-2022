@@ -2,7 +2,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from database import Jugadores
 from jugador import Jugador
-
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import update, delete
 
 async def get_all_jugadores(db: AsyncSession):
     result = await db.execute(select(Jugadores))
@@ -20,12 +21,23 @@ async def create_jugador(db: AsyncSession, jugador: Jugadores):
     await db.refresh(new)
     return new
 
-async def update_jugador(db: AsyncSession, sofifa_id: int, jugador: Jugador):
-    db_jugador = await get_jugador(db, sofifa_id)
-    if db_jugador is None:
-        return None
-    for key, value in jugador.dict().items():
-        setattr(db_jugador, key, value)
-    await db.commit()
-    await db.refresh(db_jugador)
-    return db_jugador
+async def update_jugador(db_session: AsyncSession, sofifa_id: int, data: dict):
+    data.pop("sofifa_id", None)
+
+    query = (
+        update(Jugadores)
+        .where(Jugadores.sofifa_id == sofifa_id)
+        .values(**data)
+    )
+    result = await db_session.execute(query)
+    await db_session.commit()
+    return result.rowcount > 0
+
+
+
+async def delete_jugador(db_session: AsyncSession, sofifa_id: int):
+    result = await db_session.execute(
+        delete(Jugadores).where(Jugadores.sofifa_id == sofifa_id)
+    )
+    await db_session.commit()
+    return result.rowcount > 0

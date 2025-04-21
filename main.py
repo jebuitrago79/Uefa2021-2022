@@ -35,9 +35,32 @@ async def read_jugador(sofifa_id: int, db: AsyncSession = Depends(get_db)):
 async def create_jugador1(jugador: Jugador, db: AsyncSession = Depends(get_db)):
     return await create_jugador(db,jugador)
 
+
+
 @app.put("/jugadores/{sofifa_id}", response_model=Jugador)
-async def update_jugador1(sofifa_id: int, jugador: Jugador, db: AsyncSession = Depends(get_db)):
-    update = await update_jugador(db, sofifa_id, jugador)
-    if update is None:
+async def update_jugador1(
+    sofifa_id: int,
+    jugador_update: Jugador,
+    db: AsyncSession = Depends(get_db)
+):
+    updated = await update_jugador(
+        db, sofifa_id, jugador_update.dict(exclude_unset=True)
+    )
+
+    if not updated:
+        raise HTTPException(status_code=404, detail="Jugador no modificado")
+
+    jugador_actualizado = await get_jugador(db, sofifa_id)
+    return jugador_actualizado
+
+@app.delete("/jugadores/{sofifa_id}", response_model=Jugador)
+async def delete_jugador1(sofifa_id: int, db: AsyncSession = Depends(get_db)):
+    jugador = await get_jugador(db, sofifa_id)
+    if not jugador:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
-    return update
+
+    eliminado = await delete_jugador(db, sofifa_id)
+    if not eliminado:
+        raise HTTPException(status_code=404, detail="Jugador no eliminado")
+
+    return jugador
