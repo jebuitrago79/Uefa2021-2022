@@ -1,17 +1,16 @@
 from typing import Optional
 from pydantic import BaseModel, Field
 
-# Modelo para las estadísticas del jugador (vida real y para arquero)
+# Modelo para estadísticas (opcional si no lo estás usando aún en la base de datos)
 class Estadisticas(BaseModel):
     goals: int = Field(..., ge=0)
     assists: int = Field(..., ge=0)
     yellow_cards: int = Field(..., ge=0)
     red_cards: int = Field(..., ge=0)
-    # Estadísticas de arquero
     saved: int = Field(..., ge=0)
     conceded: int = Field(..., ge=0)
 
-# Modelo Jugador con estadísticas
+
 class Jugador(BaseModel):
     sofifa_id: int
     long_name: str = Field(..., min_length=2, max_length=70)
@@ -20,8 +19,8 @@ class Jugador(BaseModel):
     height_cm: float = Field(..., gt=0)
     club_name: str = Field(..., min_length=2, max_length=40)
     player_positions: str = Field(..., min_length=2, max_length=40)
-    club_jersey_number : float = Field(..., gt=0)
-    stats: Estadisticas
+    club_jersey_number: float = Field(..., gt=0)
 
-class JugadorwithId(Jugador):
-        pass
+
+class Config:
+    from_attributes = True
