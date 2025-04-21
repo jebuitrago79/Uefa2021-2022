@@ -22,6 +22,7 @@ class Jugador(BaseModel):
     position: str = Field(..., min_length=2, max_length=40)
     dorsal: int = Field(..., ge=1, le=99)
     goalkeeper: bool
+    club_jersey_number : float = Field(..., gt=0)
     stats: Estadisticas
 
 class JugadorwithId(Jugador):

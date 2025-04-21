@@ -5,12 +5,12 @@ from pydantic import BaseModel, Field
 class Metricplayer (BaseModel):
     id: int
     overall : float
+    pase : float
+    shooting: float
+    defending: float
+    physical: float
     power_shot: float
-    speed : float
-    passing : float
-    shooting : float
-    defending : float
-    physical : float
+
 
 #Modelo jugador FIFA
 class PlayerF(BaseModel):
