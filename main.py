@@ -34,3 +34,10 @@ async def read_jugador(sofifa_id: int, db: AsyncSession = Depends(get_db)):
 @app.post("/jugadores", response_model=Jugador)
 async def create_jugador1(jugador: Jugador, db: AsyncSession = Depends(get_db)):
     return await create_jugador(db,jugador)
+
+@app.put("/jugadores/{sofifa_id}", response_model=Jugador)
+async def update_jugador1(sofifa_id: int, jugador: Jugador, db: AsyncSession = Depends(get_db)):
+    update = await update_jugador(db, sofifa_id, jugador)
+    if update is None:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return update

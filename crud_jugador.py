@@ -19,3 +19,13 @@ async def create_jugador(db: AsyncSession, jugador: Jugadores):
     await db.commit()
     await db.refresh(new)
     return new
+
+async def update_jugador(db: AsyncSession, sofifa_id: int, jugador: Jugador):
+    db_jugador = await get_jugador(db, sofifa_id)
+    if db_jugador is None:
+        return None
+    for key, value in jugador.dict().items():
+        setattr(db_jugador, key, value)
+    await db.commit()
+    await db.refresh(db_jugador)
+    return db_jugador
