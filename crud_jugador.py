@@ -64,3 +64,9 @@ async def export_jugadores_to_csv(db: AsyncSession, filepath: str = "jugadores.c
     df = pd.DataFrame(data)
     df.to_csv(filepath, index=False)
     return filepath
+
+async def get_jugadores_by_pais(db: AsyncSession, pais: str):
+    result = await db.execute(
+        select(Jugadores).where(Jugadores.nationality_name.ilike(f"%{pais}%"))
+    )
+    return result.scalars().all()

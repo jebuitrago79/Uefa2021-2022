@@ -117,3 +117,10 @@ async def export_players(db: AsyncSession = Depends(get_db)):
 async def exportar_jugadores(db: AsyncSession = Depends(get_db)):
     filepath = await export_jugadores_to_csv(db)
     return FileResponse(filepath, filename="jugadores.csv", media_type="text/csv")
+
+@app.get("/jugadores/filtrar/pais/{pais}", response_model=list[Jugador])
+async def filtrar_jugadores_por_pais(pais: str, db: AsyncSession = Depends(get_db)):
+    jugadores = await get_jugadores_by_pais(db, pais)
+    if not jugadores:
+        raise HTTPException(status_code=404, detail="No se encontraron jugadores para ese país")
+    return jugadores

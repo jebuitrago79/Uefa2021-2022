@@ -65,3 +65,4 @@ async def export_players_to_csv(db: AsyncSession, filepath: str = "players.csv")
 
     df = pd.DataFrame(data)
     df.to_csv(filepath, index=False)
+
