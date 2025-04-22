@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.responses import FileResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 from crud_jugador import *
 from database import *
@@ -105,3 +106,14 @@ async def delete_player_detailed(sofifa_id: int, db: AsyncSession = Depends(get_
         raise HTTPException(status_code=400, detail="No se pudo eliminar el jugador")
 
     return player
+
+@app.get("/players1/export", response_class=FileResponse)
+async def export_players(db: AsyncSession = Depends(get_db)):
+    filepath = "players.csv"
+    await export_players_to_csv(db, filepath)
+    return FileResponse(path=filepath, filename="players.csv", media_type="text/csv")
+
+@app.get("/jugadores1/export", response_class=FileResponse)
+async def exportar_jugadores(db: AsyncSession = Depends(get_db)):
+    filepath = await export_jugadores_to_csv(db)
+    return FileResponse(filepath, filename="jugadores.csv", media_type="text/csv")

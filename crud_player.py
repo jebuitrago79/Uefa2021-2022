@@ -2,6 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, delete
 from database import Player
 from player import Metricplayer
+import pandas as pd
 
 
 async def get_all_players(db: AsyncSession):
@@ -37,3 +38,30 @@ async def delete_player(db: AsyncSession, sofifa_id: int):
     result = await db.execute(delete(Player).where(Player.sofifa_id == sofifa_id))
     await db.commit()
     return result.rowcount > 0
+
+async def export_players_to_csv(db: AsyncSession, filepath: str = "players.csv"):
+    result = await db.execute(select(Player))
+    players = result.scalars().all()
+
+    data = [
+        {
+            "sofifa_id": p.sofifa_id,
+            "long_name": p.long_name,
+            "age": p.age,
+            "nationality_name": p.nationality_name,
+            "height_cm": p.height_cm,
+            "club_name": p.club_name,
+            "player_positions": p.player_positions,
+            "club_jersey_number": p.club_jersey_number,
+            "overall": p.overall,
+            "pace": p.pace,
+            "shooting": p.shooting,
+            "defending": p.defending,
+            "physical": p.physical,
+            "power_shot": p.power_shot
+        }
+        for p in players
+    ]
+
+    df = pd.DataFrame(data)
+    df.to_csv(filepath, index=False)
