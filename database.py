@@ -1,6 +1,6 @@
 import pandas as pd
 import asyncio
-from sqlalchemy import Column, Float, Integer, String
+from sqlalchemy import Column, Float, Integer, String, Boolean
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
@@ -36,8 +36,9 @@ class Player(Base):
     pace = Column(Float, nullable=True)
     shooting = Column(Float, nullable=True)
     defending = Column(Float, nullable=True)
-    physical = Column(Float, nullable=True)  # ✅ CAMBIO aquí
+    physical = Column(Float, nullable=True)
     power_shot = Column(Float, nullable=True)
+    is_active = Column(Boolean, default=True)
 
 
 DATABASE_URL = "sqlite+aiosqlite:///./uefa.db"
@@ -74,9 +75,10 @@ async def main():
                 pace=row["pace"],
                 shooting=row["shooting"],
                 defending=row["defending"],
-                physical=row["physic"],  # ✅ usamos "physic" del CSV pero mapeamos a "physical"
+                physical=row["physic"],
                 power_shot=row["power_shot_power"],
                 club_jersey_number=row["club_jersey_number"]
+
             ))
         await session.commit()
 

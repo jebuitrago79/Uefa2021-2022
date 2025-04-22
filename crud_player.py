@@ -6,7 +6,9 @@ import pandas as pd
 
 
 async def get_all_players(db: AsyncSession):
-    result = await db.execute(select(Player))
+    result = await db.execute(
+        select(Player).where(Player.is_active == True)
+    )
     return result.scalars().all()
 
 
@@ -35,7 +37,12 @@ async def update_player(db_session: AsyncSession, sofifa_id: int, data: dict):
     return result.rowcount > 0
 
 async def delete_player(db: AsyncSession, sofifa_id: int):
-    result = await db.execute(delete(Player).where(Player.sofifa_id == sofifa_id))
+    query = (
+        update(Player)
+        .where(Player.sofifa_id == sofifa_id)
+        .values(is_active=False)
+    )
+    result = await db.execute(query)
     await db.commit()
     return result.rowcount > 0
 

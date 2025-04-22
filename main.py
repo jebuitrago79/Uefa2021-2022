@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Query
 from fastapi.responses import FileResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 from crud_jugador import *
@@ -131,3 +131,8 @@ async def filtrar_players_por_overall(min_overall: float = Query(..., descriptio
     if not players:
         raise HTTPException(status_code=404, detail="No se encontraron jugadores con ese overall o superior")
     return players
+
+@app.get("/players1/eliminados")
+async def get_deleted_players(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(Player).where(Player.is_active == False))
+    return result.scalars().all()

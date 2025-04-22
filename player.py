@@ -1,5 +1,6 @@
 from typing import Optional
 from pydantic import BaseModel, Field
+from sqlalchemy import Boolean, Column
 
 class Metricplayer(BaseModel):
     sofifa_id: int
@@ -16,6 +17,8 @@ class Metricplayer(BaseModel):
     defending: Optional[float] = None
     physical: Optional[float] = None
     power_shot: Optional[float] = None
+
+    is_active: Optional[bool] = True
 
     class Config:
         from_attributes = True
