@@ -124,3 +124,10 @@ async def filtrar_jugadores_por_pais(pais: str, db: AsyncSession = Depends(get_d
     if not jugadores:
         raise HTTPException(status_code=404, detail="No se encontraron jugadores para ese país")
     return jugadores
+
+@app.get("/players/filter/overall")
+async def filtrar_players_por_overall(min_overall: float = Query(..., description="Valor mínimo de overall"), db: AsyncSession = Depends(get_db)):
+    players = await get_players_by_overall(db, min_overall)
+    if not players:
+        raise HTTPException(status_code=404, detail="No se encontraron jugadores con ese overall o superior")
+    return players

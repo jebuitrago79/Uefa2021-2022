@@ -66,3 +66,9 @@ async def export_players_to_csv(db: AsyncSession, filepath: str = "players.csv")
     df = pd.DataFrame(data)
     df.to_csv(filepath, index=False)
 
+
+async def get_players_by_overall(db: AsyncSession, min_overall: float):
+    result = await db.execute(
+        select(Player).where(Player.overall >= min_overall)
+    )
+    return result.scalars().all()
