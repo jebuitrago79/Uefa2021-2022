@@ -1,57 +1,85 @@
-Mapa de Endpoints – UEFA 2021-22 API
-🌐 General
+# UEFA Players API - Proyecto FastAPI
 
-    GET /
-    Retorna un mensaje de bienvenida: {"message": "Hello World"}
+Este proyecto es una API construida con **FastAPI** que gestiona metricas y compara los jugadores del FIFA 2022 con los jugadores de fútbol de la (temporada UEFA 2021-22). 
 
-    GET /hello/{name}
-    Saludo personalizado con nombre.
+---
 
-⚽ Modelo: Jugador (modelo simplificado)
+## 🚀 Características principales
 
-    GET /jugadores
-    Obtener todos los jugadores.
+- Gestión de **jugadores** y **players** como modelos independientes.
+- CRUD completo para ambos modelos (`GET`, `POST`, `PUT`, `DELETE`).
+- Exportación de datos a archivos `.csv`.
+- Filtros dinámicos:
+  - Filtrar jugadores por país.
+  - Filtrar players por valor de `overall`.
+- Eliminación lógica en el modelo `Player` (trazabilidad con `is_active`).
+- Separación del código por responsabilidades (`crud_*.py`, `main.py`, `player.py`, etc.).
 
-    GET /jugadores/{sofifa_id}
-    Obtener un jugador por su ID.
+---
 
-    POST /jugadores
-    Crear un nuevo jugador.
+## 📂 Estructura del proyecto
 
-    PUT /jugadores/{sofifa_id}
-    Actualizar un jugador existente.
+```
+uefa2021-22/
+├── main.py              # Punto de entrada de la aplicación FastAPI
+├── database.py          # Conexión, modelos y setup de la base de datos
+├── crud_jugador.py      # Funciones CRUD para Jugadores
+├── crud_player.py       # Funciones CRUD para Players
+├── jugador.py           # Pydantic model para Jugador
+├── player.py            # Pydantic model para Player
+├── players.csv          # Archivo de exportación para Players
+├── jugadores.csv        # Archivo de exportación para Jugadores
+└── uefa.db              # Base de datos SQLite asincrónica
+```
 
-    DELETE /jugadores/{sofifa_id}
-    Eliminar un jugador.
+---
 
-    GET /jugadores1/export
-    Exportar todos los jugadores a CSV (jugadores.csv).
+## 🧭 Mapa de Endpoints
 
-    GET /jugadores/filtrar/pais/{pais}
-    Filtrar jugadores por nombre de país.
+### 🔹 Endpoints generales
+- `GET /` → Mensaje de bienvenida
+- `GET /hello/{name}` → Saludo personalizado
 
-🏆 Modelo: Player (modelo extendido con métricas)
+### 🔹 Endpoints Jugadores (`JUGADORES`)
+- `GET /jugadores` → Listar todos los jugadores
+- `GET /jugadores/{sofifa_id}` → Obtener jugador por ID
+- `POST /jugadores` → Crear nuevo jugador
+- `PUT /jugadores/{sofifa_id}` → Actualizar jugador
+- `DELETE /jugadores/{sofifa_id}` → Eliminar jugador
+- `GET /jugadores/filtrar/pais/{pais}` → Filtrar jugadores por país
+- `GET /jugadores1/export` → Exportar jugadores a `jugadores.csv`
 
-    GET /players
-    Obtener todos los jugadores.
+### 🔹 Endpoints Players (`PLAYERS`)
+- `GET /players` → Listar todos los players
+- `GET /players/{sofifa_id}` → Obtener player por ID
+- `POST /players` → Crear nuevo player
+- `PUT /players/{sofifa_id}` → Actualizar player
+- `DELETE /players/{sofifa_id}` → Eliminar player con trazabilidad
+- `GET /players/filter/overall?min_overall=` → Filtrar por `overall`
+- `GET /players1/export` → Exportar players a `players.csv`
+- `GET /players1/eliminados` → Ver players eliminados (`is_active=False`)
 
-    GET /players/{sofifa_id}
-    Obtener un jugador por ID.
+---
 
-    POST /players
-    Crear un nuevo jugador (con métricas y trazabilidad).
+## 🛠️ Requisitos y ejecución
 
-    PUT /players/{sofifa_id}
-    Actualizar datos de un jugador.
+### Requisitos
+- Python 3.11+
+- Dependencias: `fastapi`, `uvicorn`, `sqlalchemy`, `aiosqlite`, `pandas`
 
-    DELETE /players/{sofifa_id}
-    Eliminación lógica de un jugador (campo is_active = False).
+### Instalación y ejecución
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8003
+```
 
-    GET /players1/export
-    Exportar todos los jugadores con métricas a CSV (players.csv).
+### Acceso a la documentación interactiva
+- 📘 [Swagger UI](http://127.0.0.1:8003/docs)
 
-    GET /players/filter/overall?min_overall=80
-    Filtrar jugadores con un valor mínimo de overall.
+---
 
-    GET /players1/eliminados
-    Listar jugadores que han sido eliminados lógicamente (is_active == False).
+## 🧑‍💻 Autor
+**Julian Buitrago Camacho**  
+Proyecto académico FastAPI 2025
+
+
