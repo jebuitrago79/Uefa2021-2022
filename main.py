@@ -1,9 +1,11 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from crud_jugador import *
-from database import AsyncSessionLocal
+from database import *
 from jugador import Jugador
 from typing import List
+from crud_player import *
+from player import Metricplayer
 
 app = FastAPI()
 
@@ -64,3 +66,14 @@ async def delete_jugador1(sofifa_id: int, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Jugador no eliminado")
 
     return jugador
+
+@app.get("/players", response_model=List[Metricplayer])
+async def read_players(db: AsyncSession = Depends(get_db)):
+    return await get_all_players(db)
+
+@app.get("/players/{sofifa_id}", response_model=Metricplayer)
+async def read_player(sofifa_id: int, db: AsyncSession = Depends(get_db)):
+    player = await get_player(db, sofifa_id)
+    if not player:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return player
