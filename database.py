@@ -21,24 +21,24 @@ class Jugadores(Base):
     club_name: Mapped[str] = mapped_column(String(100))
     club_jersey_number: Mapped[float] = mapped_column(Float)
 
-# Modelo Player
 class Player(Base):
     __tablename__ = "PLAYERS"
-    sofifa_id: Mapped[int] = mapped_column(primary_key=True)
-    long_name: Mapped[str] = mapped_column(String(100))
-    player_positions: Mapped[str] = mapped_column(String(50), nullable=True)
-    overall: Mapped[int] = mapped_column(Integer)
-    age: Mapped[int] = mapped_column(Integer)
-    height_cm: Mapped[float] = mapped_column(Float)
-    club_name: Mapped[str] = mapped_column(String(100))
-    nationality_name: Mapped[str] = mapped_column(String(60))
-    pace: Mapped[float] = mapped_column(Float, nullable=True)
-    shooting: Mapped[float] = mapped_column(Float, nullable=True)
-    passing: Mapped[float] = mapped_column(Float, nullable=True)
-    defending: Mapped[float] = mapped_column(Float, nullable=True)
-    physic: Mapped[float] = mapped_column(Float, nullable=True)
-    power_shot_power: Mapped[float] = mapped_column(Float, nullable=True)
-    club_jersey_number: Mapped[float] = mapped_column(Float, nullable=True)
+    sofifa_id = Column(Integer, primary_key=True, index=True)
+    long_name = Column(String(70), nullable=False)
+    age = Column(Integer, nullable=False)
+    nationality_name = Column(String(40), nullable=False)
+    height_cm = Column(Float, nullable=False)
+    club_name = Column(String(40), nullable=False)
+    player_positions = Column(String(40), nullable=False)
+    club_jersey_number = Column(Float, nullable=False)
+    overall = Column(Float, nullable=False)
+
+    pace = Column(Float, nullable=True)
+    shooting = Column(Float, nullable=True)
+    defending = Column(Float, nullable=True)
+    physical = Column(Float, nullable=True)  # ✅ CAMBIO aquí
+    power_shot = Column(Float, nullable=True)
+
 
 DATABASE_URL = "sqlite+aiosqlite:///./uefa.db"
 engine = create_async_engine(DATABASE_URL, echo=False)
@@ -73,10 +73,9 @@ async def main():
                 nationality_name=row["nationality_name"],
                 pace=row["pace"],
                 shooting=row["shooting"],
-                passing=row["passing"],
                 defending=row["defending"],
-                physic=row["physic"],
-                power_shot_power=row["power_shot_power"],
+                physical=row["physic"],  # ✅ usamos "physic" del CSV pero mapeamos a "physical"
+                power_shot=row["power_shot_power"],
                 club_jersey_number=row["club_jersey_number"]
             ))
         await session.commit()

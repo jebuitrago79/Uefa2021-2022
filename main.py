@@ -56,16 +56,17 @@ async def update_jugador1(
     return jugador_actualizado
 
 @app.delete("/jugadores/{sofifa_id}", response_model=Jugador)
-async def delete_jugador1(sofifa_id: int, db: AsyncSession = Depends(get_db)):
+async def delete_jugador_endpoint(sofifa_id: int, db: AsyncSession = Depends(get_db)):
     jugador = await get_jugador(db, sofifa_id)
     if not jugador:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
 
     eliminado = await delete_jugador(db, sofifa_id)
     if not eliminado:
-        raise HTTPException(status_code=404, detail="Jugador no eliminado")
+        raise HTTPException(status_code=400, detail="No se pudo eliminar el jugador")
 
     return jugador
+
 
 @app.get("/players", response_model=List[Metricplayer])
 async def read_players(db: AsyncSession = Depends(get_db)):
@@ -76,4 +77,31 @@ async def read_player(sofifa_id: int, db: AsyncSession = Depends(get_db)):
     player = await get_player(db, sofifa_id)
     if not player:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return player
+
+@app.post("/players", response_model=Metricplayer)
+async def create_new_player(player: Metricplayer, db: AsyncSession = Depends(get_db)):
+    return await create_player(db, player)
+
+@app.put("/players/{sofifa_id}", response_model=Metricplayer)
+async def update_existing_player(
+    sofifa_id: int,
+    player_update: Metricplayer,
+    db: AsyncSession = Depends(get_db)
+):
+    updated = await update_player(db, sofifa_id, player_update.dict(exclude_unset=True))
+    if not updated:
+        raise HTTPException(status_code=404, detail="Jugador no actualiazado")
+    return await get_player(db, sofifa_id)
+
+@app.delete("/players/{sofifa_id}", response_model=Metricplayer)
+async def delete_player_detailed(sofifa_id: int, db: AsyncSession = Depends(get_db)):
+    player = await get_player(db, sofifa_id)
+    if not player:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+
+    success = await delete_player(db, sofifa_id)
+    if not success:
+        raise HTTPException(status_code=400, detail="No se pudo eliminar el jugador")
+
     return player

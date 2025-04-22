@@ -11,7 +11,7 @@ class Metricplayer(BaseModel):
     player_positions: str = Field(..., min_length=2, max_length=40)
     club_jersey_number: float = Field(..., gt=0)
     overall: float
-    pase: Optional[float] = None
+    pace: Optional[float] = None
     shooting: Optional[float] = None
     defending: Optional[float] = None
     physical: Optional[float] = None
@@ -19,4 +19,3 @@ class Metricplayer(BaseModel):
 
     class Config:
         from_attributes = True
-

@@ -3,12 +3,37 @@ from sqlalchemy import select, update, delete
 from database import Player
 from player import Metricplayer
 
-# Obtener todos los jugadores tipo Player
+
 async def get_all_players(db: AsyncSession):
     result = await db.execute(select(Player))
     return result.scalars().all()
 
-# Obtener un jugador tipo Player por ID
+
 async def get_player(db: AsyncSession, sofifa_id: int):
     result = await db.execute(select(Player).where(Player.sofifa_id == sofifa_id))
     return result.scalar_one_or_none()
+
+
+async def create_player(db: AsyncSession, player: Metricplayer):
+    new_player = Player(**player.dict())
+    db.add(new_player)
+    await db.commit()
+    await db.refresh(new_player)
+    return new_player
+
+
+async def update_player(db_session: AsyncSession, sofifa_id: int, data: dict):
+    data.pop("sofifa_id", None)
+    query = (
+        update(Player)
+        .where(Player.sofifa_id == sofifa_id)
+        .values(**data)
+    )
+    result = await db_session.execute(query)
+    await db_session.commit()
+    return result.rowcount > 0
+
+async def delete_player(db: AsyncSession, sofifa_id: int):
+    result = await db.execute(delete(Player).where(Player.sofifa_id == sofifa_id))
+    await db.commit()
+    return result.rowcount > 0
