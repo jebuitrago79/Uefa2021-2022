@@ -1,6 +1,6 @@
 # UEFA Players API - Proyecto FastAPI
 
-Este proyecto es una API construida con **FastAPI** que gestiona metricas y compara los jugadores del FIFA 2022 con los jugadores de fútbol de la (temporada UEFA 2021-22). 
+Este proyecto esta construido con **FastAPI** que gestiona metricas y compara los jugadores del FIFA 2022 con los jugadores de fútbol de la (temporada UEFA 2021-22). 
 
 ---
 
