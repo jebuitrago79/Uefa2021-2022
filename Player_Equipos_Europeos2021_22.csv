@@ -1,0 +1,951 @@
+sofifa_id,long_name,player_positions,overall,age,height_cm,club_name,nationality_name,pace,shooting,passing,defending,physic,power_shot_power,club_jersey_number,posicion_fija,position_category
+158023,Lionel Andrés Messi Cuccittini,"RW, ST, CF",93,34,170,Paris Saint-Germain,Argentina,85.0,92.0,91.0,34.0,65.0,86,30.0,CF,Forward
+188545,Robert Lewandowski,ST,92,32,185,FC Bayern München,Poland,78.0,92.0,79.0,44.0,82.0,90,9.0,ST,Forward
+20801,Cristiano Ronaldo dos Santos Aveiro,"ST, LW",91,36,187,Manchester United,Portugal,87.0,94.0,80.0,34.0,75.0,94,7.0,ST,Forward
+190871,Neymar da Silva Santos Júnior,"LW, CAM",91,29,175,Paris Saint-Germain,Brazil,91.0,83.0,86.0,37.0,63.0,80,10.0,CAM,Midfielder
+192985,Kevin De Bruyne,"CM, CAM",91,30,181,Manchester City,Belgium,76.0,86.0,93.0,64.0,78.0,91,17.0,CM,Midfielder
+200389,Jan Oblak,GK,91,28,188,Atlético de Madrid,Slovenia,,,,,,59,13.0,GK,Goalkeeper
+231747,Kylian Mbappé Lottin,"ST, LW",91,22,182,Paris Saint-Germain,France,97.0,88.0,80.0,36.0,77.0,86,7.0,ST,Forward
+167495,Manuel Peter Neuer,GK,90,35,193,FC Bayern München,Germany,,,,,,68,1.0,GK,Goalkeeper
+192448,Marc-André ter Stegen,GK,90,29,187,FC Barcelona,Germany,,,,,,66,1.0,GK,Goalkeeper
+215914,N'Golo Kanté,"CDM, CM",90,30,168,Chelsea,France,78.0,66.0,75.0,87.0,83.0,71,7.0,CDM,Midfielder
+165153,Karim Benzema,"CF, ST",89,33,185,Real Madrid CF,France,76.0,86.0,81.0,39.0,77.0,85,9.0,CF,Forward
+192119,Thibaut Courtois,GK,89,29,199,Real Madrid CF,Belgium,,,,,,56,1.0,GK,Goalkeeper
+200145,Carlos Henrique Venancio Casimiro,CDM,89,29,185,Real Madrid CF,Brazil,65.0,73.0,76.0,86.0,90.0,88,14.0,CDM,Midfielder
+203376,Virgil van Dijk,CB,89,29,193,Liverpool,Netherlands,78.0,60.0,71.0,91.0,84.0,81,4.0,CB,Defender
+208722,Sadio Mané,LW,89,29,175,Liverpool,Senegal,91.0,83.0,80.0,44.0,77.0,83,10.0,LW,Forward
+209331,Mohamed Salah Ghaly,RW,89,29,175,Liverpool,Egypt,90.0,87.0,81.0,45.0,75.0,82,11.0,RW,Forward
+210257,Ederson Santana de Moraes,GK,89,27,188,Manchester City,Brazil,,,,,,70,31.0,GK,Goalkeeper
+212622,Joshua Walter Kimmich,"CDM, RB",89,26,177,FC Bayern München,Germany,70.0,73.0,86.0,83.0,79.0,78,6.0,RB,Defender
+212831,Alisson Ramsés Becker,GK,89,28,191,Liverpool,Brazil,,,,,,63,1.0,GK,Goalkeeper
+230621,Gianluigi Donnarumma,GK,89,22,196,Paris Saint-Germain,Italy,,,,,,59,50.0,GK,Goalkeeper
+155862,Sergio Ramos García,CB,88,35,184,Paris Saint-Germain,Spain,70.0,70.0,76.0,88.0,84.0,79,4.0,CB,Defender
+176580,Luis Alberto Suárez Díaz,ST,88,34,182,Atlético de Madrid,Uruguay,72.0,90.0,82.0,47.0,83.0,89,9.0,ST,Forward
+182521,Toni Kroos,CM,88,31,183,Real Madrid CF,Germany,53.0,81.0,91.0,71.0,68.0,89,8.0,CM,Midfielder
+192505,Romelu Lukaku Menama,ST,88,28,191,Chelsea,Belgium,84.0,87.0,74.0,39.0,83.0,89,9.0,ST,Forward
+193041,Keylor Navas Gamboa,GK,88,34,185,Paris Saint-Germain,Costa Rica,,,,,,56,1.0,GK,Goalkeeper
+202652,Raheem Sterling,"LW, RW",88,26,170,Manchester City,England,91.0,82.0,79.0,45.0,66.0,78,7.0,LW,Forward
+212198,Bruno Miguel Borges Fernandes,CAM,88,26,179,Manchester United,Portugal,75.0,86.0,89.0,70.0,77.0,89,18.0,CAM,Midfielder
+239085,Erling Braut Haaland,ST,88,20,194,Borussia Dortmund,Norway,89.0,91.0,65.0,45.0,88.0,94,9.0,ST,Forward
+153079,Sergio Leonel Agüero del Castillo,ST,87,33,173,FC Barcelona,Argentina,71.0,89.0,75.0,33.0,69.0,90,19.0,ST,Forward
+177003,Luka Modrić,CM,87,35,172,Real Madrid CF,Croatia,73.0,76.0,89.0,72.0,66.0,79,10.0,CM,Midfielder
+183898,Ángel Fabián Di María Hernández,"RW, LW",87,33,180,Paris Saint-Germain,Argentina,83.0,81.0,86.0,48.0,69.0,83,11.0,LW,Forward
+186153,Wojciech Tomasz Szczęsny,GK,87,31,195,Juventus,Poland,,,,,,55,1.0,GK,Goalkeeper
+189596,Thomas Müller,"CAM, RM, RW",87,31,185,FC Bayern München,Germany,67.0,84.0,83.0,56.0,71.0,78,25.0,CAM,Midfielder
+195864,Paul Pogba,"CM, LM",87,28,191,Manchester United,France,71.0,81.0,86.0,65.0,83.0,90,6.0,CM,Midfielder
+199556,Marco Verratti,"CM, CAM",87,28,165,Paris Saint-Germain,Italy,64.0,61.0,87.0,79.0,67.0,60,6.0,CM,Midfielder
+207865,Marcos Aoás Corrêa,"CB, CDM",87,27,183,Paris Saint-Germain,Brazil,81.0,53.0,75.0,89.0,81.0,65,5.0,CB,Defender
+209658,Leon Christoph Goretzka,"CM, CDM",87,26,189,FC Bayern München,Germany,81.0,82.0,82.0,81.0,86.0,85,8.0,CDM,Midfielder
+211110,Paulo Bruno Exequiel Dybala,"CF, CAM",87,27,177,Juventus,Argentina,84.0,86.0,86.0,40.0,60.0,84,10.0,CAM,Midfielder
+216267,Andrew Robertson,LB,87,27,178,Liverpool,Scotland,84.0,61.0,81.0,82.0,76.0,76,26.0,LB,Defender
+228702,Frenkie de Jong,"CM, CDM, CB",87,24,180,FC Barcelona,Netherlands,81.0,69.0,85.0,77.0,78.0,68,21.0,CB,Defender
+231281,Trent Alexander-Arnold,RB,87,22,180,Liverpool,England,79.0,68.0,88.0,80.0,72.0,82,66.0,RB,Defender
+233049,Jadon Sancho,"RM, CF, LM",87,21,180,Manchester United,England,81.0,76.0,82.0,36.0,65.0,73,25.0,LM,Midfielder
+239818,Rúben dos Santos Gato Alves Dias,CB,87,24,187,Manchester City,Portugal,61.0,38.0,65.0,88.0,88.0,74,3.0,CB,Defender
+138956,Giorgio Chiellini,CB,86,36,187,Juventus,Italy,68.0,46.0,60.0,89.0,85.0,78,3.0,CB,Defender
+162835,Samir Handanovič,GK,86,36,193,Inter,Slovenia,,,,,,49,1.0,GK,Goalkeeper
+178603,Mats Hummels,CB,86,32,191,Borussia Dortmund,Germany,56.0,59.0,77.0,89.0,77.0,71,15.0,CB,Defender
+189332,Jordi Alba Ramos,"LB, LM",86,32,170,FC Barcelona,Spain,86.0,69.0,81.0,77.0,71.0,64,18.0,LB,Defender
+189509,Thiago Alcântara do Nascimento,"CM, CDM",86,30,174,Liverpool,Spain,63.0,72.0,86.0,70.0,66.0,75,6.0,CDM,Midfielder
+189511,Sergio Busquets i Burgos,"CDM, CM",86,32,189,FC Barcelona,Spain,42.0,62.0,79.0,82.0,75.0,61,5.0,CDM,Midfielder
+189513,Daniel Parejo Muñoz,CM,86,32,182,Villarreal CF,Spain,50.0,83.0,90.0,71.0,69.0,81,5.0,CM,Midfielder
+192984,Koen Casteels,GK,86,29,197,VfL Wolfsburg,Belgium,,,,,,60,1.0,GK,Goalkeeper
+201535,Raphaël Varane,CB,86,28,191,Manchester United,France,82.0,49.0,64.0,87.0,82.0,52,19.0,CB,Defender
+204485,Riyad Mahrez,"RW, RM",86,30,179,Manchester City,Algeria,81.0,79.0,81.0,38.0,60.0,79,26.0,RM,Midfielder
+208093,Gerard Moreno Balagueró,"ST, RM, RW",86,29,180,Villarreal CF,Spain,79.0,86.0,77.0,46.0,73.0,83,7.0,RM,Midfielder
+209499,Fábio Henrique Tavares,"CDM, CB",86,27,188,Liverpool,Brazil,67.0,69.0,78.0,85.0,83.0,81,3.0,CB,Defender
+210514,João Pedro Cavaco Cancelo,"RB, LB",86,27,182,Manchester City,Portugal,85.0,71.0,83.0,80.0,72.0,80,27.0,LB,Defender
+212218,Aymeric Laporte,CB,86,27,191,Manchester City,Spain,63.0,50.0,72.0,86.0,80.0,68,14.0,CB,Defender
+213345,Kingsley Junior Coman,"LM, RM, LW",86,25,180,FC Bayern München,France,93.0,76.0,79.0,30.0,60.0,80,11.0,LM,Midfielder
+218667,Bernardo Mota Veiga de Carvalho e Silva,"CAM, CM, RW",86,26,173,Manchester City,Portugal,80.0,76.0,83.0,54.0,67.0,76,20.0,CM,Midfielder
+226161,Marcos Llorente Moreno,"CM, RM, ST",86,26,184,Atlético de Madrid,Spain,88.0,80.0,81.0,78.0,82.0,84,14.0,CM,Midfielder
+231866,Rodrigo Hernández Cascante,CDM,86,25,191,Manchester City,Spain,61.0,70.0,77.0,82.0,82.0,83,16.0,CDM,Midfielder
+232363,Milan Škriniar,CB,86,26,188,Inter,Slovakia,80.0,41.0,53.0,87.0,84.0,50,37.0,CB,Defender
+143076,Alejandro Darío Gómez,"CAM, CF, CM",85,33,167,Sevilla FC,Argentina,87.0,78.0,84.0,39.0,55.0,79,24.0,CM,Midfielder
+164240,Thiago Emiliano da Silva,CB,85,36,183,Chelsea,Brazil,53.0,54.0,72.0,86.0,78.0,71,6.0,CB,Defender
+179813,Edinson Roberto Cavani Gómez,ST,85,34,185,Manchester United,Uruguay,66.0,86.0,70.0,51.0,79.0,87,21.0,ST,Forward
+183277,Eden Hazard,LW,85,30,175,Real Madrid CF,Belgium,84.0,80.0,82.0,35.0,63.0,82,7.0,LW,Forward
+184344,Leonardo Bonucci,CB,85,34,190,Juventus,Italy,64.0,58.0,69.0,86.0,80.0,74,19.0,CB,Defender
+185122,Péter Gulácsi,GK,85,31,191,RB Leipzig,Hungary,,,,,,57,1.0,GK,Goalkeeper
+186942,İlkay Gündoğan,"CM, CDM",85,30,180,Manchester City,Germany,65.0,80.0,85.0,73.0,72.0,79,8.0,CDM,Midfielder
+188350,Marco Reus,"CAM, CF",85,32,180,Borussia Dortmund,Germany,73.0,84.0,84.0,47.0,63.0,86,11.0,CAM,Midfielder
+188377,Kyle Walker,RB,85,31,183,Manchester City,England,92.0,63.0,76.0,80.0,82.0,86,2.0,RB,Defender
+193747,Jorge Resurrección Merodio,"CM, CDM",85,29,176,Atlético de Madrid,Spain,70.0,75.0,85.0,79.0,80.0,83,6.0,CDM,Midfielder
+194765,Antoine Griezmann,"ST, LW, RW",85,30,176,Atlético de Madrid,France,80.0,84.0,84.0,52.0,72.0,82,17.0,ST,Forward
+198176,Stefan de Vrij,CB,85,29,189,Inter,Netherlands,72.0,41.0,64.0,87.0,79.0,65,6.0,CB,Defender
+201942,Roberto Firmino Barbosa de Oliveira,CF,85,29,181,Liverpool,Brazil,77.0,78.0,79.0,59.0,78.0,79,9.0,CF,Forward
+202556,Memphis Depay,"CF, LW, CAM",85,27,176,FC Barcelona,Netherlands,82.0,83.0,82.0,30.0,79.0,87,9.0,CAM,Midfielder
+204963,Daniel Carvajal Ramos,RB,85,29,173,Real Madrid CF,Spain,80.0,54.0,78.0,81.0,80.0,68,2.0,RB,Defender
+205498,Luiz Frello Filho Jorge,"CM, CDM",85,29,180,Chelsea,Italy,55.0,67.0,86.0,73.0,73.0,71,5.0,CDM,Midfielder
+206113,Serge David Gnabry,"RM, LM, RW",85,25,176,FC Bayern München,Germany,83.0,84.0,79.0,43.0,69.0,87,7.0,LM,Midfielder
+231478,Lautaro Javier Martínez,ST,85,23,174,Inter,Argentina,84.0,81.0,72.0,48.0,84.0,80,10.0,ST,Forward
+231677,Marcus Rashford,"LM, ST",85,23,186,Manchester United,England,90.0,84.0,79.0,43.0,77.0,92,10.0,LM,Midfielder
+235212,Achraf Hakimi Mouh,"RB, RWB",85,22,181,Paris Saint-Germain,Morocco,95.0,71.0,78.0,76.0,78.0,77,2.0,RB,Defender
+235243,Matthijs de Ligt,CB,85,21,189,Juventus,Netherlands,73.0,59.0,60.0,84.0,87.0,82,4.0,CB,Defender
+41236,Zlatan Ibrahimović,ST,84,39,195,AC Milan,Sweden,65.0,87.0,78.0,34.0,77.0,88,11.0,ST,Forward
+146536,Jesús Navas González,"RB, RM",84,35,172,Sevilla FC,Spain,87.0,69.0,81.0,79.0,58.0,74,16.0,RB,Defender
+152729,Gerard Piqué Bernabéu,CB,84,34,194,FC Barcelona,Spain,58.0,61.0,71.0,85.0,78.0,62,3.0,CB,Defender
+181291,Georginio Wijnaldum,"CM, CDM",84,30,175,Paris Saint-Germain,Netherlands,77.0,75.0,80.0,79.0,79.0,78,18.0,CDM,Midfielder
+183711,Jordan Henderson,"CDM, CM",84,31,182,Liverpool,England,66.0,74.0,83.0,78.0,81.0,77,14.0,CDM,Midfielder
+184134,Fernando Francisco Reges,"CDM, CM",84,33,183,Sevilla FC,Brazil,66.0,62.0,75.0,83.0,82.0,76,25.0,CDM,Midfielder
+186345,Kieran Trippier,"RB, RWB, RM",84,30,173,Atlético de Madrid,England,73.0,63.0,82.0,80.0,72.0,75,23.0,RB,Defender
+193080,David De Gea Quintana,GK,84,30,192,Manchester United,Spain,,,,,,57,1.0,GK,Goalkeeper
+197445,David Olatukunbo Alaba,"CB, LB",84,29,180,Real Madrid CF,Austria,77.0,70.0,81.0,83.0,76.0,82,4.0,CB,Defender
+199434,Dušan Tadić,"LW, CF, CAM",84,32,181,Ajax,Serbia,69.0,81.0,85.0,43.0,76.0,79,10.0,CAM,Midfielder
+199451,Wissam Ben Yedder,ST,84,30,170,AS Monaco,France,82.0,84.0,77.0,39.0,70.0,84,10.0,ST,Forward
+200647,Josip Iličić,"CF, ST",84,33,190,Atalanta,Slovenia,75.0,86.0,84.0,40.0,67.0,88,72.0,CF,Forward
+203263,Harry Maguire,CB,84,28,194,Manchester United,England,50.0,55.0,69.0,85.0,87.0,75,5.0,CB,Defender
+204639,Stefan Savić,CB,84,30,187,Atlético de Madrid,Montenegro,64.0,35.0,57.0,87.0,76.0,43,15.0,CB,Defender
+204923,Marcel Sabitzer,"CM, CDM, CAM",84,27,178,FC Bayern München,Austria,78.0,84.0,81.0,67.0,78.0,88,18.0,CDM,Midfielder
+205988,Luke Shaw,LB,84,25,181,Manchester United,England,79.0,54.0,79.0,81.0,80.0,70,23.0,LB,Defender
+206517,Jack Grealish,"LW, LM, CAM",84,25,180,Manchester City,England,80.0,76.0,83.0,46.0,64.0,76,10.0,CAM,Midfielder
+207863,Felipe Augusto de Almeida Monteiro,CB,84,32,190,Atlético de Madrid,Brazil,61.0,41.0,58.0,85.0,84.0,46,18.0,CB,Defender
+208418,Yannick Ferreira Carrasco,"LM, ST",84,27,185,Atlético de Madrid,Belgium,88.0,81.0,78.0,45.0,67.0,85,21.0,LM,Midfielder
+208670,Hakim Ziyech,"RW, CAM",84,28,181,Chelsea,Morocco,78.0,76.0,87.0,50.0,65.0,83,22.0,CAM,Midfielder
+209889,Raphaël Adelino José Guerreiro,"LB, LM",84,27,170,Borussia Dortmund,Portugal,75.0,77.0,85.0,76.0,58.0,79,13.0,LB,Defender
+212188,Timo Werner,"ST, LW",84,25,180,Chelsea,Germany,91.0,81.0,70.0,35.0,70.0,85,11.0,ST,Forward
+215698,Mike Maignan,GK,84,25,191,AC Milan,France,,,,,,64,16.0,GK,Goalkeeper
+216352,Marcelo Brozović,"CDM, CM",84,28,181,Inter,Croatia,69.0,74.0,80.0,79.0,78.0,80,77.0,CDM,Midfielder
+216460,José María Giménez de Vargas,CB,84,26,185,Atlético de Madrid,Uruguay,69.0,45.0,57.0,86.0,80.0,72,2.0,CB,Defender
+222492,Leroy Aziz Sané,"RM, LM",84,25,183,FC Bayern München,Germany,90.0,81.0,79.0,38.0,68.0,87,10.0,LM,Midfielder
+224232,Nicolò Barella,CM,84,24,172,Inter,Italy,78.0,71.0,79.0,75.0,78.0,69,23.0,CM,Midfielder
+224334,Marcos Javier Acuña,"LB, LM",84,29,172,Sevilla FC,Argentina,76.0,74.0,82.0,79.0,82.0,82,19.0,LB,Defender
+228941,André Miguel Valente da Silva,ST,84,25,185,RB Leipzig,Portugal,74.0,84.0,69.0,45.0,77.0,83,33.0,ST,Forward
+230938,Franck Yannick Kessié,"CDM, CM",84,24,183,AC Milan,Côte d'Ivoire,78.0,74.0,74.0,82.0,87.0,84,79.0,CDM,Midfielder
+232656,Theo Bernard François Hernández,LB,84,23,184,AC Milan,France,93.0,71.0,76.0,77.0,82.0,80,19.0,LB,Defender
+235790,Kai Lukas Havertz,"CAM, CF, CM",84,22,188,Chelsea,Germany,82.0,78.0,79.0,45.0,66.0,74,29.0,CM,Midfielder
+237692,Philip Foden,"CAM, LW, CM",84,21,171,Manchester City,England,84.0,78.0,80.0,56.0,57.0,82,47.0,CM,Midfielder
+135507,Fernando Luiz Rosa,"CDM, CB",83,36,179,Manchester City,Brazil,59.0,72.0,75.0,84.0,75.0,83,25.0,CB,Defender
+177413,Axel Witsel,"CDM, CM",83,32,186,Borussia Dortmund,Belgium,61.0,72.0,81.0,82.0,79.0,75,28.0,CDM,Midfielder
+178750,Sergio Asenjo Andrés,GK,83,32,189,Villarreal CF,Spain,,,,,,59,1.0,GK,Goalkeeper
+179645,Simon Thorup Kjær,CB,83,32,190,AC Milan,Denmark,67.0,55.0,64.0,85.0,78.0,78,24.0,CB,Defender
+180930,Edin Džeko,ST,83,35,193,Inter,Bosnia and Herzegovina,66.0,83.0,72.0,45.0,76.0,86,9.0,ST,Forward
+184432,César Azpilicueta Tanco,"CB, RWB",83,31,178,Chelsea,Spain,66.0,55.0,76.0,84.0,76.0,68,28.0,CB,Defender
+191043,Alex Sandro Lobo Silva,"LB, LM",83,30,180,Juventus,Brazil,81.0,65.0,77.0,78.0,79.0,78,12.0,LB,Defender
+193082,Juan Guillermo Cuadrado Bello,"RB, RM",83,33,179,Juventus,Colombia,90.0,75.0,77.0,76.0,72.0,84,11.0,RB,Defender
+197061,Joël Andre Job Matip,CB,83,29,194,Liverpool,Cameroon,58.0,46.0,68.0,85.0,78.0,66,32.0,CB,Defender
+197655,Sebastián Coates Nión,CB,83,30,196,Sporting CP,Uruguay,68.0,49.0,55.0,84.0,87.0,50,4.0,CB,Defender
+200610,Kevin Volland,"ST, CF",83,28,179,AS Monaco,Germany,73.0,85.0,79.0,42.0,86.0,87,31.0,CF,Forward
+201153,Álvaro Borja Morata Martín,ST,83,28,190,Juventus,Spain,82.0,80.0,72.0,31.0,77.0,80,9.0,ST,Forward
+201399,Mauro Emanuel Icardi Rivero,ST,83,28,181,Paris Saint-Germain,Argentina,69.0,83.0,65.0,36.0,69.0,85,9.0,ST,Forward
+203574,John Stones,CB,83,27,188,Manchester City,England,70.0,51.0,71.0,84.0,78.0,55,5.0,CB,Defender
+205452,Antonio Rüdiger,CB,83,28,190,Chelsea,Germany,75.0,43.0,68.0,84.0,84.0,72,2.0,CB,Defender
+205632,Lucas Ariel Ocampos,"LW, RW",83,26,188,Sevilla FC,Argentina,81.0,84.0,78.0,63.0,84.0,84,5.0,LW,Forward
+207410,Mateo Kovačić,"CM, CDM",83,27,176,Chelsea,Croatia,70.0,69.0,83.0,69.0,70.0,79,8.0,CDM,Midfielder
+213565,Thomas Lemar,"LM, CM, RM",83,25,171,Atlético de Madrid,France,82.0,76.0,82.0,59.0,63.0,79,11.0,CM,Midfielder
+214997,Ángel Martín Correa,"ST, RM",83,26,171,Atlético de Madrid,Argentina,85.0,83.0,78.0,49.0,74.0,83,10.0,RM,Midfielder
+215333,Duván Esteban Zapata Banguera,ST,83,30,189,Atalanta,Colombia,80.0,81.0,61.0,35.0,84.0,86,91.0,ST,Forward
+220651,José Ángel Esmoris Tasende,"LWB, LM",83,24,175,RB Leipzig,Spain,78.0,71.0,82.0,76.0,70.0,80,3.0,LWB,Defender
+220814,Lucas François Bernard Hernández Pi,"LB, CB",83,25,184,FC Bayern München,France,77.0,54.0,68.0,84.0,79.0,62,21.0,CB,Defender
+220834,Marco Asensio Willemsen,"RW, LW",83,25,182,Real Madrid CF,Spain,82.0,80.0,81.0,43.0,62.0,86,11.0,LW,Forward
+223689,Wout Weghorst,ST,83,28,197,VfL Wolfsburg,Netherlands,63.0,83.0,59.0,52.0,86.0,86,9.0,ST,Forward
+223697,Robin Everardus Gosens,"LWB, LB, LM",83,26,183,Atalanta,Germany,82.0,75.0,74.0,77.0,81.0,76,8.0,LB,Defender
+225850,Presnel Kimpembe,CB,83,25,189,Paris Saint-Germain,France,81.0,42.0,68.0,83.0,86.0,70,3.0,CB,Defender
+228618,Ferland Mendy,LB,83,26,180,Real Madrid CF,France,92.0,64.0,76.0,78.0,84.0,69,23.0,LB,Defender
+229880,Aaron Wan-Bissaka,RB,83,23,183,Manchester United,England,85.0,52.0,69.0,81.0,75.0,70,29.0,RB,Defender
+230658,Arthur Henrique Ramos de Oliveira Melo,CM,83,24,171,Juventus,Brazil,69.0,67.0,83.0,72.0,70.0,76,5.0,CM,Midfielder
+230666,Gabriel Fernando de Jesus,ST,83,24,175,Manchester City,Brazil,84.0,81.0,72.0,39.0,73.0,82,9.0,ST,Forward
+231443,Ousmane Dembélé,RW,83,24,178,FC Barcelona,France,93.0,77.0,77.0,36.0,56.0,83,7.0,RW,Forward
+233064,Mason Mount,"CAM, CM, RW",83,22,178,Chelsea,England,74.0,79.0,84.0,55.0,65.0,81,19.0,CM,Midfielder
+234642,Édouard Mendy,GK,83,29,197,Chelsea,Senegal,,,,,,59,16.0,GK,Goalkeeper
+235805,Federico Chiesa,"RW, LW, RM",83,23,175,Juventus,Italy,91.0,81.0,74.0,48.0,73.0,86,22.0,RM,Midfielder
+239053,Federico Santiago Valverde Dipetta,CM,83,22,182,Real Madrid CF,Uruguay,86.0,74.0,78.0,77.0,80.0,80,15.0,CM,Midfielder
+241486,Jules Koundé,CB,83,22,181,Sevilla FC,France,81.0,45.0,64.0,84.0,78.0,48,23.0,CB,Defender
+242444,João Félix Sequeira,"CF, ST",83,21,181,Atlético de Madrid,Portugal,82.0,79.0,76.0,40.0,68.0,80,7.0,CF,Forward
+120533,Kléper Laveran de Lima Ferreira,CB,82,38,188,FC Porto,Portugal,80.0,51.0,60.0,82.0,87.0,63,3.0,CB,Defender
+157481,Raúl Albiol Tortajada,CB,82,35,190,Villarreal CF,Spain,40.0,41.0,62.0,86.0,73.0,65,3.0,CB,Defender
+168651,Ivan Rakitić,CM,82,33,184,Sevilla FC,Croatia,57.0,79.0,85.0,75.0,69.0,84,10.0,CM,Midfielder
+173731,Gareth Frank Bale,"RM, RW",82,31,185,Real Madrid CF,Wales,82.0,84.0,82.0,55.0,70.0,90,18.0,RM,Midfielder
+189242,Philippe Coutinho Correia,"CAM, LW, CM",82,29,172,FC Barcelona,Brazil,69.0,79.0,80.0,52.0,59.0,82,14.0,CM,Midfielder
+190460,Christian Dannemann Eriksen,"CM, CAM",82,29,181,Inter,Denmark,62.0,78.0,88.0,53.0,52.0,84,24.0,CM,Midfielder
+190815,Daley Blind,"CB, CDM, LB",82,31,180,Ajax,Netherlands,45.0,64.0,82.0,83.0,72.0,74,17.0,CB,Defender
+192318,Mario Götze,"CAM, CM",82,29,177,PSV,Germany,68.0,75.0,83.0,55.0,69.0,75,27.0,CM,Midfielder
+193165,Jesús Manuel Corona Ruíz,"RM, RB, RW",82,28,173,FC Porto,Mexico,83.0,67.0,79.0,74.0,60.0,66,17.0,RB,Defender
+193474,Idrissa Gana Gueye,"CDM, CM",82,31,174,Paris Saint-Germain,Senegal,69.0,62.0,71.0,83.0,77.0,80,27.0,CDM,Midfielder
+194404,Norberto Murara Neto,GK,82,31,190,FC Barcelona,Brazil,,,,,,59,13.0,GK,Goalkeeper
+197781,Francisco Román Alarcón Suárez,"CAM, CM, LW",82,29,176,Real Madrid CF,Spain,66.0,75.0,80.0,59.0,59.0,69,22.0,CM,Midfielder
+199110,Luis Fernando Muriel Fruto,ST,82,30,179,Atalanta,Colombia,89.0,83.0,74.0,27.0,67.0,81,9.0,ST,Forward
+202651,Jesús Joaquín Fernández Sáez de la Torre,RW,82,27,176,Sevilla FC,Spain,76.0,76.0,82.0,32.0,55.0,78,7.0,RW,Forward
+203486,Thorgan Hazard,"LM, CF",82,28,175,Borussia Dortmund,Belgium,80.0,76.0,80.0,52.0,66.0,77,10.0,LM,Midfielder
+205069,Juan Bernat Velasco,LB,82,28,170,Paris Saint-Germain,Spain,82.0,65.0,78.0,76.0,68.0,67,14.0,LB,Defender
+208128,Hakan Çalhanoğlu,"CAM, LM",82,27,178,Inter,Turkey,67.0,78.0,84.0,59.0,57.0,80,20.0,CAM,Midfielder
+208333,Emre Can,"CM, CB, CDM",82,27,186,Borussia Dortmund,Germany,78.0,78.0,78.0,84.0,87.0,85,23.0,CB,Defender
+208421,Saúl Ñíguez Esclápez,"CM, LM",82,26,184,Chelsea,Spain,71.0,78.0,78.0,78.0,79.0,82,17.0,CM,Midfielder
+208461,Marten Elco de Roon,"CDM, CM",82,30,185,Atalanta,Netherlands,66.0,68.0,71.0,82.0,83.0,76,15.0,CDM,Midfielder
+209981,Yassine Bounou,GK,82,30,192,Sevilla FC,Morocco,,,,,,57,13.0,GK,Goalkeeper
+210035,Alejandro Grimaldo García,"LB, LM, LWB",82,25,171,SL Benfica,Spain,87.0,65.0,81.0,74.0,71.0,79,3.0,LB,Defender
+210413,Alessio Romagnoli,CB,82,26,185,AC Milan,Italy,68.0,40.0,56.0,85.0,78.0,64,13.0,CB,Defender
+211256,Nicolás Alejandro Tagliafico,LB,82,28,172,Ajax,Argentina,80.0,55.0,73.0,81.0,81.0,65,31.0,LB,Defender
+212190,Niklas Süle,"CB, RB",82,25,195,FC Bayern München,Germany,65.0,42.0,59.0,83.0,81.0,77,4.0,CB,Defender
+212462,Alex Nicolao Telles,LB,82,28,181,Manchester United,Brazil,83.0,73.0,82.0,77.0,73.0,87,27.0,LB,Defender
+212616,Rodrigo Javier De Paul,"CM, CF",82,27,180,Atlético de Madrid,Argentina,78.0,76.0,80.0,71.0,79.0,80,5.0,CM,Midfielder
+216547,Rafael Alexandre Fernandes Ferreira da Silva,"RM, LM",82,28,170,SL Benfica,Portugal,94.0,73.0,74.0,50.0,52.0,75,27.0,LM,Midfielder
+219693,Diego Carlos Santos Silva,CB,82,28,185,Sevilla FC,Brazil,76.0,47.0,63.0,81.0,83.0,73,20.0,CB,Defender
+220018,Ante Rebić,"LM, ST",82,27,185,AC Milan,Croatia,86.0,83.0,75.0,48.0,80.0,85,12.0,LM,Midfielder
+220440,Clément Nicolas Laurent Lenglet,CB,82,26,186,FC Barcelona,France,72.0,45.0,67.0,83.0,79.0,58,15.0,CB,Defender
+222077,Manuel Locatelli,"CDM, CM",82,23,185,Juventus,Italy,61.0,72.0,79.0,79.0,79.0,77,27.0,CDM,Midfielder
+224458,Diogo José Teixeira da Silva,"LW, ST",82,24,178,Liverpool,Portugal,84.0,81.0,73.0,57.0,77.0,84,20.0,ST,Forward
+225100,Joe Gomez,CB,82,24,188,Liverpool,England,81.0,30.0,66.0,83.0,78.0,41,12.0,CB,Defender
+227796,Christian Mate Pulisic,"LW, RW, LM",82,22,177,Chelsea,United States,89.0,70.0,73.0,37.0,59.0,77,10.0,LM,Midfielder
+229391,João Maria Lobo Alves Palhinha Gonçalves,"CDM, CM",82,25,190,Sporting CP,Portugal,60.0,65.0,70.0,85.0,88.0,76,6.0,CDM,Midfielder
+229558,Dayotchanculle Oswald Upamecano,CB,82,22,186,FC Bayern München,France,81.0,43.0,62.0,81.0,81.0,60,2.0,CB,Defender
+229668,Mario Hermoso Canseco,"CB, LB",82,26,185,Atlético de Madrid,Spain,75.0,49.0,72.0,83.0,80.0,65,22.0,CB,Defender
+229984,Ben Chilwell,"LWB, LB",82,24,178,Chelsea,England,76.0,53.0,77.0,78.0,75.0,72,21.0,LB,Defender
+233096,Denzel Justus Morris Dumfries,RB,82,25,188,Inter,Netherlands,80.0,61.0,66.0,78.0,89.0,66,2.0,RB,Defender
+234396,Alphonso Boyle Davies,"LB, LM",82,20,183,FC Bayern München,Canada,96.0,67.0,71.0,75.0,75.0,71,19.0,LB,Defender
+235410,Youssef En-Nesyri,"ST, LW",82,24,188,Sevilla FC,Morocco,78.0,83.0,58.0,35.0,76.0,83,15.0,ST,Forward
+240130,Éder Gabriel Militão,CB,82,23,186,Real Madrid CF,Brazil,83.0,50.0,69.0,83.0,82.0,62,3.0,CB,Defender
+241461,Ferran Torres García,"RW, ST",82,21,184,Manchester City,Spain,82.0,79.0,78.0,35.0,66.0,79,21.0,ST,Forward
+241464,Pau Francisco Torres,CB,82,24,191,Villarreal CF,Spain,71.0,38.0,67.0,84.0,80.0,58,4.0,CB,Defender
+241671,Dominik Livaković,GK,82,26,187,Dinamo Zagreb,Croatia,,,,,,56,40.0,GK,Goalkeeper
+244260,Daniel Olmo Carvajal,"CAM, CF",82,23,179,RB Leipzig,Spain,67.0,76.0,81.0,50.0,60.0,79,25.0,CAM,Midfielder
+124375,Burak Yılmaz,ST,81,35,188,LOSC Lille,Turkey,79.0,83.0,69.0,34.0,79.0,88,17.0,ST,Forward
+156519,Héctor Miguel Herrera López,CM,81,31,185,Atlético de Madrid,Mexico,70.0,75.0,76.0,78.0,84.0,81,16.0,CM,Midfielder
+171791,José Miguel da Rocha Fonte,CB,81,37,191,LOSC Lille,Portugal,32.0,46.0,62.0,83.0,77.0,60,6.0,CB,Defender
+172871,Jan Vertonghen,CB,81,34,189,SL Benfica,Belgium,76.0,62.0,72.0,83.0,78.0,80,5.0,CB,Defender
+178086,Antonio Adán Garrido,GK,81,34,190,Sporting CP,Spain,,,,,,59,1.0,GK,Goalkeeper
+181458,Ivan Perišić,"LM, LW, LWB",81,32,186,Inter,Croatia,81.0,79.0,76.0,64.0,74.0,84,14.0,LWB,Defender
+181872,Arturo Erasmo Vidal Pardo,CM,81,34,180,Inter,Chile,65.0,79.0,79.0,82.0,82.0,84,22.0,CM,Midfielder
+187754,Marlos Romero Bonfim,"CAM, RM",81,33,174,Shakhtar Donetsk,Ukraine,79.0,76.0,78.0,47.0,68.0,77,11.0,CAM,Midfielder
+190674,Benjamin André,"CDM, CM",81,30,180,LOSC Lille,France,67.0,64.0,74.0,80.0,85.0,69,21.0,CDM,Midfielder
+192366,Nicolás Hernán Gonzalo Otamendi,CB,81,33,183,SL Benfica,Argentina,63.0,57.0,62.0,83.0,81.0,69,30.0,CB,Defender
+193283,Thomas Joseph Delaney,"CDM, CM",81,29,182,Sevilla FC,Denmark,75.0,71.0,74.0,83.0,82.0,78,18.0,CDM,Midfielder
+195365,Kevin Kampl,"CM, CDM",81,30,178,RB Leipzig,Slovenia,70.0,67.0,81.0,63.0,62.0,69,44.0,CDM,Midfielder
+197965,Luís Miguel Afonso Fernandes,"CM, RM",81,31,177,SL Benfica,Portugal,75.0,77.0,81.0,64.0,66.0,76,21.0,CM,Midfielder
+199304,Danilo Luiz da Silva,"RB, LB, CB",81,29,184,Juventus,Brazil,73.0,67.0,73.0,82.0,79.0,84,6.0,CB,Defender
+199564,Sergio Roberto Carnicer,"RB, CM, RM",81,29,178,FC Barcelona,Spain,76.0,63.0,80.0,76.0,73.0,65,20.0,RB,Defender
+200260,Steven Berghuis,RW,81,29,182,Ajax,Netherlands,80.0,81.0,82.0,36.0,66.0,82,23.0,RW,Forward
+200454,Francisco Alcácer García,ST,81,27,175,Villarreal CF,Spain,77.0,84.0,69.0,35.0,61.0,82,9.0,ST,Forward
+200724,José Ignacio Fernández Iglesias,"CB, RB, LB",81,31,180,Real Madrid CF,Spain,78.0,37.0,66.0,81.0,80.0,54,6.0,CB,Defender
+200888,Danilo Luís Hélio Pereira,"CDM, CM",81,29,188,Paris Saint-Germain,Portugal,64.0,63.0,71.0,80.0,86.0,74,15.0,CDM,Midfielder
+201095,Agustín Federico Marchesín,GK,81,33,188,FC Porto,Argentina,,,,,,57,1.0,GK,Goalkeeper
+203551,Alessandro Florenzi,"RB, RWB",81,30,173,AC Milan,Italy,76.0,77.0,79.0,76.0,62.0,82,25.0,RB,Defender
+204638,Vilmos Tamás Orban,CB,81,28,186,RB Leipzig,Hungary,49.0,36.0,52.0,84.0,80.0,37,4.0,CB,Defender
+206511,Maximilian Arnold,"CDM, CM",81,27,184,VfL Wolfsburg,Germany,65.0,81.0,79.0,76.0,74.0,88,27.0,CDM,Midfielder
+207439,Leandro Daniel Paredes,"CDM, CM",81,27,180,Paris Saint-Germain,Argentina,66.0,71.0,83.0,76.0,79.0,88,8.0,CDM,Midfielder
+208448,Emil Peter Forsberg,"CAM, CF",81,29,177,RB Leipzig,Sweden,70.0,73.0,82.0,35.0,62.0,71,10.0,CAM,Midfielder
+208618,Lucas Vázquez Iglesias,"RW, RB, RM",81,30,173,Real Madrid CF,Spain,82.0,73.0,79.0,69.0,69.0,80,17.0,RB,Defender
+209297,Frederico Rodrigues de Paula Santos,"CDM, CM",81,28,169,Manchester United,Brazil,77.0,66.0,77.0,75.0,71.0,77,17.0,CDM,Midfielder
+210008,Adrien Rabiot,"CM, CDM",81,26,192,Juventus,France,76.0,74.0,76.0,76.0,79.0,86,25.0,CDM,Midfielder
+210411,Otávio Edmilson da Silva Monteiro,"LM, RM, CM",81,26,172,FC Porto,Portugal,78.0,69.0,79.0,63.0,68.0,73,25.0,CM,Midfielder
+211300,Anthony Martial,"ST, LM",81,25,184,Manchester United,France,87.0,80.0,73.0,35.0,68.0,83,9.0,LM,Midfielder
+211990,Odisseas Vlachodimos,GK,81,27,191,SL Benfica,Greece,,,,,,50,99.0,GK,Goalkeeper
+212194,Julian Brandt,"CAM, CM, CF",81,25,185,Borussia Dortmund,Germany,73.0,75.0,80.0,48.0,66.0,81,19.0,CM,Midfielder
+214979,Juan Agustín Musso,GK,81,27,191,Atalanta,Argentina,,,,,,55,1.0,GK,Goalkeeper
+215330,Carlos Joaquín Correa,"CF, ST, CAM",81,26,189,Inter,Argentina,84.0,75.0,77.0,39.0,69.0,79,19.0,CAM,Midfielder
+220093,Hans Hateboer,"RWB, RB, RM",81,27,185,Atalanta,Netherlands,84.0,64.0,72.0,77.0,79.0,72,33.0,RB,Defender
+221363,Donny van de Beek,"CM, CAM, CDM",81,24,184,Manchester United,Netherlands,68.0,78.0,76.0,72.0,77.0,83,34.0,CDM,Midfielder
+225375,Konrad Laimer,"CDM, CM, RB",81,24,180,RB Leipzig,Austria,81.0,68.0,77.0,80.0,77.0,72,27.0,RB,Defender
+226166,Nordi Mukiele Mulere,"RWB, CB, RM",81,23,187,RB Leipzig,France,80.0,49.0,69.0,82.0,80.0,67,22.0,CB,Defender
+231969,Ruslan Malinovskyi,"CF, CM",81,28,181,Atalanta,Ukraine,74.0,80.0,83.0,64.0,79.0,90,18.0,CM,Midfielder
+232411,Christopher Nkunku,"CAM, CM, CF",81,23,179,RB Leipzig,France,79.0,74.0,81.0,69.0,65.0,79,18.0,CM,Midfielder
+238074,Reece James,"RWB, RB",81,21,178,Chelsea,England,80.0,58.0,77.0,76.0,80.0,75,24.0,RB,Defender
+240950,Pedro António Pereira Gonçalves,"RW, CM",81,23,173,Sporting CP,Portugal,76.0,81.0,79.0,56.0,65.0,81,28.0,CM,Midfielder
+247394,Dejan Kulusevski,"RW, CF",81,21,186,Juventus,Sweden,84.0,74.0,77.0,56.0,76.0,74,44.0,CF,Forward
+251573,Renan Augusto Lodi dos Santos,LB,81,23,173,Atlético de Madrid,Brazil,84.0,67.0,76.0,77.0,75.0,76,12.0,LB,Defender
+251854,Pedro González López,CM,81,18,174,FC Barcelona,Spain,78.0,65.0,79.0,66.0,63.0,62,16.0,CM,Midfielder
+173426,Simon Luc Hildebert Mignolet,GK,80,33,193,Club Brugge KV,Belgium,,,,,,57,22.0,GK,Goalkeeper
+176676,Marcelo Vieira da Silva Júnior,LB,80,33,174,Real Madrid CF,Brazil,73.0,72.0,80.0,75.0,71.0,81,12.0,LB,Defender
+184941,Alexis Alejandro Sánchez Sánchez,"CF, ST",80,32,168,Inter,Chile,78.0,76.0,78.0,43.0,68.0,80,7.0,CF,Forward
+186561,Aaron Ramsey,"CM, CAM, LM",80,30,183,Juventus,Wales,66.0,70.0,81.0,66.0,66.0,80,8.0,CM,Midfielder
+187598,Rafael Tolói,CB,80,30,185,Atalanta,Italy,66.0,47.0,58.0,82.0,80.0,75,2.0,CB,Defender
+189117,Roman Bürki,GK,80,30,187,Borussia Dortmund,Switzerland,,,,,,45,38.0,GK,Goalkeeper
+189271,Francis Coquelin,"CM, CDM, RM",80,30,176,Villarreal CF,France,68.0,67.0,76.0,78.0,79.0,75,19.0,CDM,Midfielder
+198009,Mattia Perin,GK,80,28,188,Juventus,Italy,,,,,,53,36.0,GK,Goalkeeper
+198031,Sérgio Miguel Relvas de Oliveira,CM,80,29,181,FC Porto,Portugal,58.0,79.0,82.0,72.0,70.0,88,27.0,CM,Midfielder
+198950,Pablo Sarabia García,"RW, CAM",80,29,174,Sporting CP,Spain,72.0,76.0,81.0,57.0,59.0,75,17.0,CAM,Midfielder
+201119,Ismaily Gonçalves dos Santos,LB,80,31,177,Shakhtar Donetsk,Brazil,82.0,64.0,74.0,75.0,75.0,75,31.0,LB,Defender
+201143,Aïssa Mandi,CB,80,29,184,Villarreal CF,Algeria,66.0,46.0,74.0,81.0,74.0,52,22.0,CB,Defender
+201400,Rafael Alcântara do Nascimento,"CM, CAM",80,28,174,Paris Saint-Germain,Brazil,71.0,75.0,80.0,69.0,68.0,80,12.0,CM,Midfielder
+202024,Remo Marco Freuler,CM,80,29,180,Atalanta,Switzerland,69.0,71.0,77.0,75.0,73.0,73,11.0,CM,Midfielder
+202166,Julian Draxler,"CAM, LW, CM",80,27,187,Paris Saint-Germain,Germany,74.0,76.0,80.0,58.0,66.0,80,23.0,CM,Midfielder
+203890,Šime Vrsaljko,"RB, RM",80,29,181,Atlético de Madrid,Croatia,79.0,55.0,73.0,78.0,77.0,75,24.0,RB,Defender
+204399,Eran Zahavi,ST,80,33,182,PSV,Israel,77.0,82.0,74.0,39.0,73.0,80,7.0,ST,Forward
+205600,Samuel Yves Umtiti,CB,80,27,182,FC Barcelona,France,65.0,62.0,68.0,80.0,78.0,83,23.0,CB,Defender
+205693,Sébastien Haller,ST,80,27,190,Ajax,Côte d'Ivoire,66.0,79.0,62.0,51.0,81.0,81,22.0,ST,Forward
+205705,Zouhair Feddal Agharbi,CB,80,31,192,Sporting CP,Morocco,61.0,50.0,63.0,82.0,77.0,67,3.0,CB,Defender
+212187,Philipp Martin Max,LB,80,27,177,PSV,Germany,82.0,67.0,79.0,73.0,75.0,82,31.0,LB,Defender
+212814,João Mário Naval da Costa Eduardo,"CM, CAM",80,28,179,SL Benfica,Portugal,69.0,69.0,80.0,66.0,68.0,76,20.0,CM,Midfielder
+213661,Andreas Bødtker Christensen,CB,80,25,187,Chelsea,Denmark,65.0,31.0,65.0,83.0,72.0,31,4.0,CB,Defender
+215316,Gerónimo Rulli,GK,80,29,189,Villarreal CF,Argentina,,,,,,59,13.0,GK,Goalkeeper
+219683,Corentin Tolisso,"CM, CDM",80,26,181,FC Bayern München,France,66.0,77.0,77.0,76.0,78.0,85,24.0,CDM,Midfielder
+220971,Naby Keïta,CM,80,26,172,Liverpool,Guinea,70.0,73.0,75.0,65.0,66.0,76,8.0,CM,Midfielder
+221660,Victor Jörgen Nilsson Lindelöf,CB,80,26,187,Manchester United,Sweden,63.0,51.0,73.0,81.0,78.0,72,2.0,CB,Defender
+222331,Lukas Manuel Klostermann,"CB, RB, RWB",80,25,187,RB Leipzig,Germany,85.0,51.0,64.0,82.0,77.0,58,16.0,CB,Defender
+222716,Éverton Sousa Soares,"LM, CAM",80,25,174,SL Benfica,Brazil,86.0,75.0,73.0,32.0,62.0,77,7.0,CAM,Midfielder
+224309,Joan Jordán Moreno,"CM, CDM",80,26,183,Sevilla FC,Spain,63.0,75.0,81.0,67.0,76.0,80,8.0,CDM,Midfielder
+225085,Jonathan Bamba,LM,80,25,175,LOSC Lille,France,89.0,75.0,74.0,39.0,69.0,78,7.0,LM,Midfielder
+226754,Ismaël Bennacer,"CM, CDM",80,23,175,AC Milan,Algeria,73.0,67.0,80.0,73.0,73.0,74,4.0,CDM,Midfielder
+227290,Marko Dmitrović,GK,80,29,194,Sevilla FC,Serbia,,,,,,59,1.0,GK,Goalkeeper
+227813,Oleksandr Zinchenko,"LB, CDM",80,24,175,Manchester City,Ukraine,73.0,65.0,80.0,77.0,69.0,77,11.0,LB,Defender
+229237,Manuel Obafemi Akanji,CB,80,25,187,Borussia Dortmund,Switzerland,81.0,48.0,67.0,81.0,77.0,75,16.0,CB,Defender
+229857,Stefano Sensi,"CM, CDM",80,25,168,Inter,Italy,67.0,60.0,83.0,67.0,59.0,69,12.0,CDM,Midfielder
+230767,Renato Júnior Luz Sanches,"CM, RM",80,23,176,LOSC Lille,Portugal,84.0,74.0,77.0,72.0,84.0,89,18.0,CM,Midfielder
+231447,Donyell Malen,ST,80,22,179,Borussia Dortmund,Netherlands,90.0,79.0,72.0,30.0,74.0,79,21.0,ST,Forward
+233195,Xaver Schlager,"CDM, CM",80,23,174,VfL Wolfsburg,Austria,69.0,70.0,73.0,73.0,81.0,78,24.0,CDM,Midfielder
+233306,Dean Henderson,GK,80,24,188,Manchester United,England,,,,,,59,26.0,GK,Goalkeeper
+236401,Noussair Mazraoui,RB,80,23,183,Ajax,Morocco,82.0,61.0,74.0,75.0,71.0,67,12.0,RB,Defender
+237238,Scott McTominay,"CDM, CM",80,24,193,Manchester United,Scotland,66.0,75.0,75.0,78.0,84.0,85,39.0,CDM,Midfielder
+237383,Alessandro Bastoni,CB,80,22,190,Inter,Italy,65.0,33.0,65.0,82.0,80.0,49,95.0,CB,Defender
+238794,Vinícius José Paixão de Oliveira Júnior,LW,80,20,176,Real Madrid CF,Brazil,95.0,70.0,71.0,29.0,66.0,73,20.0,LW,Forward
+240709,Ridle Bote Baku,"RM, RB, CM",80,23,176,VfL Wolfsburg,Germany,84.0,73.0,73.0,70.0,78.0,77,20.0,RB,Defender
+241084,Luis Fernando Díaz Marulanda,LM,80,24,180,FC Porto,Colombia,92.0,77.0,70.0,32.0,71.0,82,7.0,LM,Midfielder
+243576,Pedro Antonio Porro Sauceda,"RWB, RM",80,21,176,Sporting CP,Spain,80.0,67.0,73.0,75.0,75.0,81,24.0,RWB,Defender
+244369,Viktor Tsygankov,RM,80,23,178,Dynamo Kyiv,Ukraine,85.0,73.0,78.0,45.0,57.0,70,15.0,RM,Midfielder
+138412,James Philip Milner,"CM, LB, RB",79,35,175,Liverpool,England,56.0,70.0,81.0,77.0,75.0,82,7.0,LB,Defender
+178509,Olivier Giroud,ST,79,34,193,AC Milan,France,39.0,80.0,70.0,42.0,77.0,84,9.0,ST,Forward
+189560,Vicente Iborra de la Fuente,"CDM, CM",79,33,190,Villarreal CF,Spain,33.0,70.0,75.0,77.0,79.0,79,10.0,CDM,Midfielder
+189805,Luuk de Jong,ST,79,30,188,FC Barcelona,Netherlands,50.0,78.0,71.0,46.0,75.0,83,17.0,ST,Forward
+191202,Nemanja Matić,CDM,79,32,194,Manchester United,Serbia,36.0,67.0,75.0,80.0,73.0,84,31.0,CDM,Midfielder
+191740,Ander Herrera Agüera,"CM, CDM",79,31,182,Paris Saint-Germain,Spain,65.0,70.0,77.0,78.0,75.0,78,21.0,CDM,Midfielder
+192638,Marcos Alonso Mendoza,"LWB, LB",79,30,188,Chelsea,Spain,58.0,74.0,78.0,75.0,77.0,84,3.0,LB,Defender
+192789,Mario Gaspar Pérez Martínez,RB,79,30,180,Villarreal CF,Spain,74.0,69.0,71.0,78.0,76.0,78,2.0,RB,Defender
+193198,Nemanja Gudelj,"CDM, CM, CB",79,29,187,Sevilla FC,Serbia,60.0,70.0,79.0,75.0,83.0,85,6.0,CB,Defender
+198784,Alex Oxlade-Chamberlain,CM,79,27,175,Liverpool,England,81.0,74.0,77.0,67.0,74.0,83,15.0,CM,Midfielder
+198946,Danilo D'Ambrosio,"CB, RB",79,32,180,Inter,Italy,70.0,56.0,67.0,80.0,79.0,66,33.0,CB,Defender
+200726,Benjamin Lecomte,GK,79,30,187,Atlético de Madrid,France,,,,,,58,1.0,GK,Goalkeeper
+201455,Geoffrey Edwin Kondogbia,"CM, CDM",79,28,188,Atlético de Madrid,Central African Republic,68.0,74.0,75.0,78.0,89.0,86,4.0,CDM,Midfielder
+203483,Davy Klaassen,"CAM, CM",79,28,179,Ajax,Netherlands,71.0,80.0,73.0,72.0,78.0,81,6.0,CM,Midfielder
+204884,Benjamin Mendy,LB,79,26,185,Manchester City,France,74.0,54.0,76.0,75.0,76.0,79,22.0,LB,Defender
+206413,Taras Stepanenko,CDM,79,31,181,Shakhtar Donetsk,Ukraine,65.0,63.0,71.0,79.0,79.0,75,6.0,CDM,Midfielder
+206545,Manuel Trigueros Muñoz,"CM, RM, LM",79,29,178,Villarreal CF,Spain,56.0,71.0,78.0,70.0,67.0,77,14.0,CM,Midfielder
+206585,Kepa Arrizabalaga Revuelta,GK,79,26,186,Chelsea,Spain,,,,,,64,1.0,GK,Goalkeeper
+207494,Jesse Lingard,CAM,79,28,175,Manchester United,England,76.0,79.0,75.0,58.0,68.0,79,14.0,CAM,Midfielder
+208165,Berat Djimsiti,CB,79,28,190,Atalanta,Albania,68.0,39.0,59.0,82.0,79.0,52,19.0,CB,Defender
+210625,Melingo Kevin Mbabu,RB,79,26,184,VfL Wolfsburg,Switzerland,88.0,51.0,69.0,74.0,80.0,66,19.0,RB,Defender
+210897,Chancel Mbemba Mangulu,CB,79,26,182,FC Porto,Congo DR,72.0,53.0,56.0,80.0,78.0,76,19.0,CB,Defender
+211241,Rubén Peña Jiménez,"RB, RM, LB",79,29,170,Villarreal CF,Spain,80.0,70.0,72.0,75.0,68.0,75,20.0,LB,Defender
+212404,Federico Bernardeschi,"CAM, LM, RM",79,27,185,Juventus,Italy,79.0,71.0,80.0,61.0,65.0,80,20.0,CAM,Midfielder
+214047,Andrés Mateus Uribe Villa,"CM, CDM",79,30,182,FC Porto,Colombia,75.0,74.0,75.0,75.0,81.0,76,8.0,CDM,Midfielder
+216150,Davide Zappacosta,"RWB, RM, LM",79,29,182,Atalanta,Italy,76.0,66.0,73.0,75.0,71.0,75,77.0,RWB,Defender
+216531,João Paulo Dias Fernandes,ST,79,28,188,Sporting CP,Portugal,67.0,78.0,64.0,44.0,81.0,80,21.0,ST,Forward
+218339,Mahmoud Dahoud,"CM, CDM",79,25,178,Borussia Dortmund,Germany,70.0,69.0,76.0,67.0,70.0,81,8.0,CDM,Midfielder
+219809,Tiemoué Bakayoko,"CDM, CM",79,26,189,AC Milan,France,64.0,48.0,68.0,77.0,84.0,72,99.0,CDM,Midfielder
+220253,Munir El Haddadi Mohamed,"LW, RW, ST",79,25,175,Sevilla FC,Morocco,79.0,78.0,75.0,35.0,66.0,78,11.0,ST,Forward
+222028,Julian Weigl,"CM, CDM",79,25,186,SL Benfica,Germany,59.0,60.0,75.0,80.0,75.0,48,28.0,CDM,Midfielder
+223597,Ruben Aguilar,RB,79,28,172,AS Monaco,France,79.0,53.0,72.0,74.0,77.0,70,26.0,RB,Defender
+224490,Mehmet Zeki Çelik,RB,79,24,180,LOSC Lille,Turkey,79.0,58.0,71.0,75.0,79.0,63,2.0,RB,Defender
+225508,Eric Bertrand Bailly,CB,79,27,186,Manchester United,Côte d'Ivoire,73.0,42.0,58.0,79.0,77.0,55,3.0,CB,Defender
+225663,Aleksandr Golovin,"CM, CAM, CF",79,25,180,AS Monaco,Russia,81.0,72.0,79.0,67.0,69.0,78,17.0,CM,Midfielder
+226851,Benjamin Pavard,"RB, CB",79,25,186,FC Bayern München,France,69.0,53.0,72.0,78.0,76.0,71,5.0,CB,Defender
+232432,Luka Jović,ST,79,23,182,Real Madrid CF,Serbia,75.0,80.0,68.0,29.0,74.0,82,16.0,ST,Forward
+232756,Fikayo Tomori,CB,79,23,185,AC Milan,England,82.0,37.0,57.0,80.0,79.0,42,23.0,CB,Defender
+234612,Nanitamo Jonathan Ikoné,"RM, ST",79,23,175,LOSC Lille,France,89.0,70.0,74.0,35.0,60.0,75,10.0,RM,Midfielder
+235073,Gregor Kobel,GK,79,23,195,Borussia Dortmund,Switzerland,,,,,,58,1.0,GK,Goalkeeper
+235688,Lucas Veríssimo da Silva,CB,79,25,188,SL Benfica,Brazil,81.0,39.0,57.0,80.0,79.0,59,4.0,CB,Defender
+236610,Moise Bioty Kean,ST,79,21,182,Juventus,Italy,85.0,77.0,56.0,40.0,75.0,84,18.0,ST,Forward
+236632,David Neres Campos,"RW, LW",79,24,176,Ajax,Brazil,85.0,72.0,73.0,37.0,64.0,73,7.0,LW,Forward
+237942,Pervis Josué Estupiñán Tenorio,"LB, LWB",79,23,175,Villarreal CF,Ecuador,82.0,34.0,68.0,75.0,75.0,41,12.0,LB,Defender
+239301,Lisandro Martínez,"CB, LB, CDM",79,23,178,Ajax,Argentina,71.0,58.0,73.0,79.0,80.0,68,21.0,CB,Defender
+240243,Matheus Santos Carneiro Da Cunha,"CAM, LM, ST",79,22,183,Atlético de Madrid,Brazil,85.0,78.0,74.0,31.0,69.0,77,19.0,CAM,Midfielder
+240679,Teun Koopmeiners,"CDM, CM, CB",79,23,183,Atalanta,Netherlands,65.0,72.0,79.0,76.0,77.0,78,7.0,CB,Defender
+241637,Aurélien Tchouaméni,"CM, CDM",79,21,187,AS Monaco,France,72.0,69.0,75.0,77.0,82.0,76,8.0,CDM,Midfielder
+241788,Mehdi Taremi,"ST, CF",79,28,187,FC Porto,Iran,76.0,79.0,70.0,38.0,71.0,81,9.0,CF,Forward
+242516,Cody Mathès Gakpo,"LM, ST",79,22,189,PSV,Netherlands,85.0,78.0,74.0,41.0,72.0,83,11.0,LM,Midfielder
+243812,Rodrygo Silva de Goes,RW,79,20,174,Real Madrid CF,Brazil,87.0,76.0,71.0,32.0,56.0,71,21.0,RW,Forward
+244067,Maxence Lacroix,CB,79,21,190,VfL Wolfsburg,France,88.0,33.0,56.0,80.0,77.0,46,4.0,CB,Defender
+251809,Sven Botman,CB,79,21,193,LOSC Lille,Netherlands,60.0,36.0,59.0,80.0,84.0,65,4.0,CB,Defender
+252371,Jude Victor William Bellingham,"CM, LM",79,18,186,Borussia Dortmund,England,75.0,69.0,73.0,75.0,77.0,74,22.0,CM,Midfielder
+255475,Antony Matheus dos Santos,RW,79,21,174,Ajax,Brazil,91.0,72.0,72.0,37.0,65.0,69,11.0,RW,Forward
+170368,Erik Lamela,"RM, CAM",78,29,184,Sevilla FC,Argentina,70.0,77.0,79.0,53.0,68.0,81,17.0,CAM,Midfielder
+178088,Juan Manuel Mata García,"CAM, RM",78,33,170,Manchester United,Spain,55.0,71.0,81.0,36.0,42.0,72,8.0,CAM,Midfielder
+178213,Etienne Capoue,"CM, CDM",78,32,190,Villarreal CF,France,48.0,72.0,75.0,77.0,76.0,77,6.0,CDM,Midfielder
+178415,Ruud Willem Vormer,CM,78,33,178,Club Brugge KV,Netherlands,58.0,75.0,79.0,75.0,79.0,78,25.0,CM,Midfielder
+184392,Matteo Darmian,"RWB, LWB, RB",78,31,182,Inter,Italy,70.0,58.0,69.0,78.0,68.0,69,36.0,RB,Defender
+185103,Aleksandar Kolarov,"LB, CB",78,35,187,Inter,Serbia,63.0,74.0,79.0,79.0,74.0,95,11.0,CB,Defender
+190243,Marwin Hitz,GK,78,33,194,Borussia Dortmund,Switzerland,,,,,,59,35.0,GK,Goalkeeper
+193408,Haris Seferović,ST,78,29,189,SL Benfica,Switzerland,72.0,78.0,67.0,48.0,84.0,83,14.0,ST,Forward
+199189,Ross Barkley,"CAM, CM",78,27,189,Chelsea,England,69.0,73.0,77.0,57.0,72.0,81,18.0,CM,Midfielder
+200155,Hans Vanaken,"CM, CAM",78,28,195,Club Brugge KV,Belgium,47.0,78.0,79.0,59.0,73.0,75,20.0,CM,Midfielder
+201042,Djibril Sidibé,"RB, CB",78,28,182,AS Monaco,France,74.0,62.0,74.0,74.0,79.0,69,29.0,CB,Defender
+204082,John Anthony Brooks,CB,78,28,193,VfL Wolfsburg,United States,59.0,39.0,59.0,80.0,76.0,50,25.0,CB,Defender
+206590,Moisés Gómez Bordonado,"LM, RM, CM",78,27,176,Villarreal CF,Spain,68.0,74.0,77.0,55.0,61.0,74,23.0,CM,Midfielder
+208364,Clinton Mukoni Mata Pedro Lourenço,"RB, CB",78,28,180,Club Brugge KV,Angola,82.0,61.0,68.0,76.0,80.0,78,77.0,CB,Defender
+208920,Nathan Aké,CB,78,26,180,Manchester City,Netherlands,76.0,53.0,70.0,80.0,75.0,63,6.0,CB,Defender
+209973,Jean-Pierre Nsame,ST,78,28,188,BSC Young Boys,Cameroon,79.0,77.0,55.0,27.0,80.0,79,18.0,ST,Forward
+210537,Renato Steffen,"LM, RM",78,29,170,VfL Wolfsburg,Switzerland,79.0,75.0,74.0,48.0,65.0,77,11.0,LM,Midfielder
+210665,Marcel Halstenberg,"CB, LB",78,29,188,RB Leipzig,Germany,63.0,66.0,73.0,76.0,80.0,79,23.0,CB,Defender
+212213,Ricardo Sousa Esgaio,"RWB, RB, RM",78,28,173,Sporting CP,Portugal,74.0,67.0,75.0,70.0,69.0,69,47.0,RB,Defender
+213951,Helton Brant Aleixo Leite,GK,78,30,196,SL Benfica,Brazil,,,,,,53,77.0,GK,Goalkeeper
+214092,Aleksey Miranchuk,"CAM, ST",78,25,182,Atalanta,Russia,75.0,70.0,76.0,31.0,62.0,65,59.0,CAM,Midfielder
+219985,Matías Vecino Falero,"CM, CDM",78,29,187,Inter,Uruguay,65.0,71.0,75.0,76.0,73.0,78,8.0,CDM,Midfielder
+223273,Mario Pašalić,"CM, CAM",78,26,188,Atalanta,Croatia,64.0,75.0,75.0,67.0,76.0,78,88.0,CM,Midfielder
+225711,Abdou Diallo,"CB, LB",78,25,187,Paris Saint-Germain,Senegal,74.0,39.0,71.0,78.0,77.0,51,22.0,CB,Defender
+227055,Gelson Dany Batalha Martins,"RM, LM, RW",78,26,173,AS Monaco,Portugal,93.0,71.0,70.0,51.0,61.0,77,7.0,LM,Midfielder
+227535,Rodrigo Bentancur Colmán,CM,78,24,187,Juventus,Uruguay,73.0,62.0,79.0,75.0,76.0,69,30.0,CM,Midfielder
+227890,Nuno Miguel Gomes dos Santos,"LW, RW",78,26,176,Sporting CP,Portugal,81.0,75.0,75.0,43.0,67.0,83,11.0,LW,Forward
+228881,Davide Calabria,RB,78,24,177,AC Milan,Italy,77.0,50.0,67.0,76.0,72.0,62,2.0,RB,Defender
+231340,Gonzalo Ariel Montiel,"RB, RWB",78,24,175,Sevilla FC,Argentina,86.0,53.0,70.0,73.0,81.0,65,2.0,RB,Defender
+231410,Brahim Abdelkader Díaz,"CAM, LW, LM",78,21,171,AC Milan,Spain,78.0,69.0,76.0,30.0,50.0,70,10.0,CAM,Midfielder
+231887,Yusuf Yazıcı,"CF, ST, CAM",78,24,185,LOSC Lille,Turkey,67.0,76.0,79.0,47.0,72.0,81,11.0,CAM,Midfielder
+236045,Reinildo Isnard Mandava,LB,78,27,180,LOSC Lille,Mozambique,77.0,54.0,65.0,76.0,78.0,58,28.0,LB,Defender
+237678,Ibrahima Konaté,CB,78,22,194,Liverpool,France,71.0,34.0,57.0,80.0,76.0,45,5.0,CB,Defender
+238463,Amadou Haïdara,"CM, RM, LM",78,23,175,RB Leipzig,Mali,70.0,72.0,76.0,68.0,70.0,77,8.0,CM,Midfielder
+238476,Dan-Axel Zagadou,CB,78,22,196,Borussia Dortmund,France,59.0,34.0,61.0,80.0,80.0,66,5.0,CB,Defender
+239380,Noa Noëll Lang,"LW, RW, CAM",78,22,179,Club Brugge KV,Netherlands,82.0,74.0,72.0,51.0,67.0,72,10.0,CAM,Midfielder
+239613,Matteo Pessina,"CAM, CM, CF",78,24,183,Atalanta,Italy,70.0,70.0,74.0,67.0,72.0,66,32.0,CM,Midfielder
+243238,Aluísio Chaves Ribeiro Moraes Júnior,ST,78,34,176,Shakhtar Donetsk,Ukraine,79.0,79.0,60.0,27.0,68.0,75,10.0,ST,Forward
+243630,Jonathan Christian David,ST,78,21,177,LOSC Lille,Canada,85.0,76.0,71.0,25.0,70.0,75,9.0,ST,Forward
+244193,Jovane Eduardo Borges Cabral,"LW, RW",78,23,176,Sporting CP,Cape Verde Islands,86.0,76.0,73.0,38.0,69.0,82,10.0,LW,Forward
+245630,Youssouf Fofana,"CM, CDM",78,22,176,AS Monaco,France,71.0,67.0,74.0,74.0,78.0,76,22.0,CDM,Midfielder
+246104,Ryan Jiro Gravenberch,"CM, CDM",78,19,190,Ajax,Netherlands,77.0,74.0,77.0,68.0,71.0,77,8.0,CDM,Midfielder
+246147,Mason Greenwood,"RM, ST",78,19,181,Manchester United,England,84.0,78.0,73.0,39.0,68.0,83,11.0,RM,Midfielder
+248243,Eduardo Camavinga,"CM, CDM",78,18,182,Real Madrid CF,France,72.0,65.0,76.0,75.0,77.0,72,25.0,CDM,Midfielder
+252145,Nuno Alexandre Tavares Mendes,"LWB, LB, LM",78,19,176,Paris Saint-Germain,Portugal,85.0,57.0,68.0,74.0,72.0,80,25.0,LB,Defender
+173521,Iván Marcano Sierra,CB,77,34,189,FC Porto,Spain,55.0,46.0,60.0,79.0,74.0,65,5.0,CB,Defender
+179605,Adel Taarabt,"CM, CAM",77,32,180,SL Benfica,Morocco,68.0,69.0,77.0,65.0,74.0,76,49.0,CM,Midfielder
+189068,Bas Leon Dost,ST,77,32,196,Club Brugge KV,Netherlands,45.0,79.0,57.0,50.0,76.0,80,29.0,ST,Forward
+193290,Martin Braithwaite Christensen,"ST, LW",77,30,177,FC Barcelona,Denmark,80.0,76.0,72.0,35.0,74.0,77,12.0,ST,Forward
+194022,André Gomes Magalhães de Almeida,RB,77,30,186,SL Benfica,Portugal,66.0,63.0,75.0,79.0,75.0,76,34.0,RB,Defender
+198118,Josuha Guilavogui,"CDM, CM, CB",77,30,188,VfL Wolfsburg,France,67.0,59.0,65.0,80.0,78.0,78,23.0,CB,Defender
+200536,Nico Schulz,"LB, LM, LWB",77,28,181,Borussia Dortmund,Germany,86.0,51.0,72.0,72.0,77.0,65,14.0,LB,Defender
+201325,Anton Ciprian Tătărușanu,GK,77,35,198,AC Milan,Romania,,,,,,56,1.0,GK,Goalkeeper
+202371,Thomas Meunier,"RB, RM",77,29,191,Borussia Dortmund,Belgium,73.0,74.0,72.0,73.0,80.0,80,24.0,RB,Defender
+202562,Jérôme Roussillon,"LB, LM",77,28,175,VfL Wolfsburg,France,88.0,65.0,72.0,73.0,73.0,75,15.0,LB,Defender
+204341,Luís Carlos Novo Neto,CB,77,33,185,Sporting CP,Portugal,65.0,37.0,56.0,79.0,73.0,42,13.0,CB,Defender
+206652,Sergio Rico González,GK,77,27,196,Paris Saint-Germain,Spain,,,,,,58,16.0,GK,Goalkeeper
+207791,Yussuf Yurary Poulsen,ST,77,27,192,RB Leipzig,Denmark,82.0,70.0,67.0,56.0,81.0,73,9.0,ST,Forward
+208777,Óliver Torres Muñoz,"CM, LW",77,26,175,Sevilla FC,Spain,63.0,67.0,78.0,63.0,54.0,69,21.0,CM,Midfielder
+210617,Samuel Castillejo Azuaga,"RW, RM",77,26,182,AC Milan,Spain,80.0,69.0,74.0,43.0,53.0,76,7.0,RM,Midfielder
+211147,Valentino Lazaro,"RM, RB",77,25,180,SL Benfica,Austria,78.0,69.0,75.0,69.0,66.0,69,22.0,RB,Defender
+211320,Daniele Rugani,CB,77,26,190,Juventus,Italy,59.0,40.0,55.0,79.0,72.0,61,24.0,CB,Defender
+212153,Roberto Gagliardini,"CDM, CM",77,27,188,Inter,Italy,53.0,63.0,71.0,77.0,75.0,76,5.0,CDM,Midfielder
+212245,Yannick Gerhardt,CM,77,27,184,VfL Wolfsburg,Germany,64.0,71.0,75.0,72.0,76.0,78,31.0,CM,Midfielder
+216497,Maximilian Philipp,"CF, CAM, LM",77,27,183,VfL Wolfsburg,Germany,78.0,79.0,71.0,42.0,61.0,82,17.0,CAM,Midfielder
+217196,José Luis Palomino,CB,77,31,188,Atalanta,Argentina,46.0,32.0,55.0,79.0,81.0,48,6.0,CB,Defender
+219145,Guillermo Alfonso Maripán Loaysa,CB,77,27,193,AS Monaco,Chile,34.0,41.0,54.0,78.0,80.0,58,3.0,CB,Defender
+220085,Gian-Luca Waldschmidt,"CF, ST",77,25,181,VfL Wolfsburg,Germany,74.0,80.0,70.0,29.0,62.0,81,7.0,CF,Forward
+221174,Mislav Oršić,"LM, LW, ST",77,28,179,Dinamo Zagreb,Croatia,90.0,82.0,71.0,56.0,62.0,82,99.0,LM,Midfielder
+222509,Daniel Ceballos Fernández,"CM, CDM",77,24,179,Real Madrid CF,Spain,60.0,68.0,77.0,66.0,67.0,76,19.0,CDM,Midfielder
+225997,Benjamin Verbič,LM,77,27,179,Dynamo Kyiv,Slovenia,82.0,72.0,72.0,45.0,71.0,73,7.0,LM,Midfielder
+228302,Alfonso Pedraza Sag,"LB, LM, LWB",77,25,184,Villarreal CF,Spain,78.0,72.0,70.0,73.0,77.0,78,24.0,LB,Defender
+229942,Axel Arthur Disasi,CB,77,23,190,AS Monaco,France,52.0,28.0,53.0,77.0,83.0,54,6.0,CB,Defender
+230043,Christ-Emmanuel Faitout Maouassa,LB,77,22,170,Club Brugge KV,France,84.0,64.0,71.0,72.0,76.0,80,11.0,LB,Defender
+231628,Rafael Mir Vicente,ST,77,24,191,Sevilla FC,Spain,72.0,79.0,64.0,45.0,76.0,82,12.0,ST,Forward
+232440,Caio Henrique Oliveira Silva,"LB, LM",77,23,179,AS Monaco,Brazil,72.0,54.0,74.0,73.0,59.0,60,12.0,LB,Defender
+232999,Tyler Shaan Adams,"CDM, RWB",77,22,175,RB Leipzig,United States,81.0,48.0,70.0,74.0,75.0,51,14.0,RWB,Defender
+234568,Gedson Carvalho Fernandes,CM,77,22,181,SL Benfica,Portugal,79.0,70.0,75.0,71.0,75.0,80,83.0,CM,Midfielder
+234678,Joakim Mæhle Pedersen,"RWB, RB, RM",77,24,185,Atalanta,Denmark,89.0,56.0,68.0,66.0,78.0,65,3.0,RB,Defender
+234777,Zack Thomas Steffen,GK,77,26,191,Manchester City,United States,,,,,,56,13.0,GK,Goalkeeper
+235173,Ibrahim Sangaré,"CDM, CM",77,23,191,PSV,Côte d'Ivoire,66.0,65.0,70.0,77.0,84.0,74,6.0,CDM,Midfielder
+235844,Edson Omar Álvarez Velázquez,"CDM, CB",77,23,187,Ajax,Mexico,69.0,53.0,66.0,79.0,84.0,69,4.0,CB,Defender
+235945,Marc Roca Junqué,"CDM, CM",77,24,184,FC Bayern München,Spain,50.0,62.0,77.0,70.0,68.0,66,22.0,CDM,Midfielder
+236639,Miguel Ângelo da Silva Rocha,"CDM, CM",77,26,186,LOSC Lille,Portugal,55.0,61.0,74.0,71.0,77.0,81,8.0,CDM,Midfielder
+236772,Dominik Szoboszlai,"CAM, LM",77,20,186,RB Leipzig,Hungary,79.0,78.0,79.0,34.0,64.0,84,17.0,CAM,Midfielder
+238160,Merih Demiral,CB,77,23,190,Atalanta,Turkey,73.0,39.0,47.0,79.0,80.0,60,28.0,CB,Defender
+238744,Weston James Earl McKennie,"CM, RM, LM",77,22,183,Juventus,United States,81.0,71.0,74.0,76.0,83.0,74,14.0,CM,Midfielder
+238857,Wilson Miguéis Manafá Jancó,"RB, LB",77,26,177,FC Porto,Portugal,87.0,60.0,67.0,70.0,69.0,66,18.0,LB,Defender
+238896,Eduardo Gabriel Aquino Cossa,"LW, RW",77,24,175,FC Porto,Brazil,85.0,67.0,68.0,29.0,46.0,52,11.0,LW,Forward
+240702,Roman Yaremchuk,ST,77,25,191,SL Benfica,Ukraine,79.0,76.0,70.0,45.0,75.0,77,15.0,ST,Forward
+240740,Callum Hudson-Odoi,"RW, LW",77,20,178,Chelsea,England,82.0,67.0,74.0,40.0,59.0,67,20.0,LW,Forward
+241096,Sandro Tonali,"CDM, CM",77,21,181,AC Milan,Italy,78.0,65.0,77.0,72.0,76.0,75,8.0,CDM,Midfielder
+241721,Rafael Alexandre Conceição Leão,"LW, ST, LM",77,22,188,AC Milan,Portugal,88.0,73.0,68.0,27.0,70.0,78,17.0,LM,Midfielder
+244621,Carlos Vinícius Alves Morais,ST,77,26,190,PSV,Brazil,71.0,78.0,60.0,41.0,82.0,84,9.0,ST,Forward
+244892,Sofiane Diop,"LM, RM, CF",77,21,175,AS Monaco,France,76.0,70.0,73.0,52.0,53.0,74,37.0,LM,Midfielder
+245037,Eric García Martret,CB,77,20,182,FC Barcelona,Spain,65.0,44.0,65.0,79.0,72.0,51,24.0,CB,Defender
+245155,Mohammed Kudus,"CAM, CM",77,20,177,Ajax,Ghana,88.0,72.0,70.0,60.0,75.0,77,20.0,CM,Midfielder
+245541,Giovanni Alejandro Reyna,"CAM, LM, RM",77,18,185,Borussia Dortmund,United States,77.0,71.0,74.0,36.0,71.0,78,7.0,CAM,Midfielder
+246172,Samuel Chimerenka Chukwueze,"RM, RW, CF",77,22,172,Villarreal CF,Nigeria,87.0,73.0,66.0,36.0,62.0,76,11.0,RM,Midfielder
+246242,Boulaye Dia,ST,77,24,180,Villarreal CF,Senegal,78.0,77.0,55.0,27.0,75.0,79,16.0,ST,Forward
+253163,Ronald Federico Araújo da Silva,CB,77,22,192,FC Barcelona,Uruguay,77.0,36.0,53.0,79.0,76.0,41,4.0,CB,Defender
+254796,Chukwunonso Tristan Madueke,"RM, ST",77,19,182,PSV,England,90.0,71.0,68.0,36.0,62.0,73,10.0,RM,Midfielder
+2147,Maarten Stekelenburg,GK,76,38,197,Ajax,Netherlands,,,,,,56,1.0,GK,Goalkeeper
+162895,Francesc Fàbregas i Soler,"CM, CAM, CDM",76,34,179,AS Monaco,Spain,40.0,67.0,81.0,62.0,55.0,70,4.0,CDM,Midfielder
+163264,Tom Heaton,GK,76,35,188,Manchester United,England,,,,,,56,22.0,GK,Goalkeeper
+173474,Zlatko Junuzović,"CM, CDM, CAM",76,33,172,FC Red Bull Salzburg,Austria,70.0,73.0,79.0,67.0,69.0,78,16.0,CDM,Midfielder
+183569,Jean-Eric Maxim Choupo-Moting,"ST, LW",76,32,191,FC Bayern München,Cameroon,71.0,73.0,68.0,38.0,73.0,78,13.0,ST,Forward
+191627,Mats Rits,"CDM, CM",76,27,178,Club Brugge KV,Belgium,67.0,65.0,72.0,72.0,75.0,63,26.0,CDM,Midfielder
+199767,Marco van Ginkel,"CM, CDM",76,28,186,PSV,Netherlands,60.0,76.0,76.0,70.0,74.0,78,8.0,CDM,Midfielder
+201510,Layvin Kurzawa,LB,76,28,182,Paris Saint-Germain,France,74.0,65.0,72.0,73.0,72.0,69,20.0,LB,Defender
+205391,Soualiho Meïté,"CM, CDM",76,27,187,SL Benfica,France,66.0,59.0,73.0,71.0,79.0,74,11.0,CDM,Midfielder
+205566,Alberto Moreno Pérez,"LB, LM",76,28,171,Villarreal CF,Spain,82.0,66.0,68.0,69.0,69.0,80,18.0,LB,Defender
+206003,Yvon Landry Mvogo Nganoma,GK,76,27,189,PSV,Switzerland,,,,,,56,38.0,GK,Goalkeeper
+206058,Mattia De Sciglio,"RB, LB",76,28,182,Juventus,Italy,68.0,46.0,70.0,75.0,69.0,67,2.0,LB,Defender
+208001,Paulo Otávio Rosa da Silva,"LB, LM",76,26,174,VfL Wolfsburg,Brazil,91.0,55.0,67.0,70.0,59.0,66,6.0,LB,Defender
+208141,Gabriel Appelt Pires,"CM, CDM",76,27,187,SL Benfica,Brazil,59.0,72.0,74.0,75.0,80.0,82,8.0,CDM,Midfielder
+211368,Armindo Tué Na Bangna,"LM, RM",76,26,173,PSV,Portugal,89.0,71.0,69.0,32.0,61.0,75,19.0,LM,Midfielder
+212204,Brandon Mechele,CB,76,28,190,Club Brugge KV,Belgium,62.0,38.0,50.0,80.0,76.0,56,44.0,CB,Defender
+212678,Hans Carl Ludwig Augustinsson,"LB, LM",76,27,181,Sevilla FC,Sweden,67.0,60.0,75.0,72.0,71.0,69,3.0,LB,Defender
+213135,Divock Okoth Origi,"ST, LW",76,26,189,Liverpool,Belgium,79.0,75.0,67.0,27.0,74.0,80,27.0,ST,Forward
+215455,Bruno Petković,"ST, CAM",76,26,193,Dinamo Zagreb,Croatia,75.0,72.0,75.0,39.0,77.0,82,21.0,CAM,Midfielder
+216065,Marco Sportiello,GK,76,29,192,Atalanta,Italy,,,,,,51,57.0,GK,Goalkeeper
+216350,Arijan Ademi,"CDM, CM",76,30,185,Dinamo Zagreb,North Macedonia,66.0,64.0,65.0,75.0,83.0,69,5.0,CDM,Midfielder
+219244,David von Ballmoos,GK,76,26,192,BSC Young Boys,Switzerland,,,,,,56,26.0,GK,Goalkeeper
+223329,Andrea Conti,"RB, RM",76,27,184,AC Milan,Italy,75.0,58.0,69.0,73.0,64.0,68,14.0,RB,Defender
+225863,Olivier Maxime Boscagli,"CB, LB, CDM",76,23,181,PSV,France,74.0,33.0,73.0,77.0,74.0,39,18.0,CB,Defender
+226229,Jan Thilo Kehrer,"CB, RB",76,24,186,Paris Saint-Germain,Germany,68.0,44.0,65.0,77.0,78.0,65,24.0,CB,Defender
+226268,Federico Dimarco,"LWB, LB, CB",76,23,175,Inter,Italy,75.0,61.0,75.0,70.0,62.0,65,32.0,CB,Defender
+228579,Benjamin Henrichs,"RB, LB, RM",76,24,183,RB Leipzig,Germany,74.0,53.0,71.0,73.0,69.0,62,39.0,LB,Defender
+228747,Oussama Idrissi,LW,76,25,175,Sevilla FC,Morocco,83.0,76.0,70.0,35.0,69.0,81,22.0,LW,Forward
+231390,Diogo António Cupido Gonçalves,"RM, RWB",76,24,178,SL Benfica,Portugal,85.0,72.0,70.0,68.0,72.0,77,17.0,RWB,Defender
+231416,Dodi Lukébakio,"RM, ST",76,23,187,VfL Wolfsburg,Belgium,84.0,75.0,69.0,31.0,60.0,83,28.0,RM,Midfielder
+232381,Wesley Moraes Ferreira da Silva,ST,76,24,191,Club Brugge KV,Brazil,66.0,76.0,67.0,38.0,82.0,84,7.0,ST,Forward
+232639,堂安 律,"RM, CAM",76,23,172,PSV,Japan,79.0,70.0,72.0,39.0,57.0,76,25.0,CAM,Midfielder
+234574,José Diogo Dalot Teixeira,"RB, LB",76,22,184,Manchester United,Portugal,79.0,60.0,70.0,72.0,75.0,78,20.0,LB,Defender
+234826,Antonio Martínez López,ST,76,24,187,FC Porto,Spain,72.0,77.0,58.0,24.0,75.0,80,29.0,ST,Forward
+236276,Arnaut Danjuma Groeneveld,"LW, LM, ST",76,24,178,Villarreal CF,Netherlands,83.0,73.0,70.0,42.0,67.0,79,15.0,LM,Midfielder
+238227,Krépin Diatta,RM,76,22,175,AS Monaco,Senegal,93.0,69.0,66.0,47.0,69.0,73,27.0,RM,Midfielder
+239956,Myron Boadu,ST,76,20,183,AS Monaco,Netherlands,89.0,75.0,61.0,28.0,66.0,77,9.0,ST,Forward
+241497,Colin Dagba,RB,76,22,170,Paris Saint-Germain,France,82.0,53.0,70.0,72.0,61.0,68,17.0,RB,Defender
+242578,Benoît Badiashile Mukinayi,CB,76,20,194,AS Monaco,France,62.0,39.0,63.0,77.0,76.0,70,5.0,CB,Defender
+242663,Sebastiaan Bornauw,CB,76,22,191,VfL Wolfsburg,Belgium,72.0,45.0,60.0,78.0,76.0,61,3.0,CB,Defender
+242664,Alexis Saelemaekers,"RW, RM",76,22,180,AC Milan,Belgium,81.0,66.0,74.0,62.0,68.0,62,56.0,RM,Midfielder
+242816,Ricard Puig Martí,CM,76,21,169,FC Barcelona,Spain,67.0,61.0,75.0,58.0,63.0,60,6.0,CM,Midfielder
+244373,Vitaliy Buyalskyi,"CM, CAM",76,28,175,Dynamo Kyiv,Ukraine,75.0,69.0,72.0,70.0,56.0,66,29.0,CM,Midfielder
+244374,Mykola Shaparenko,"CM, CAM",76,22,177,Dynamo Kyiv,Ukraine,77.0,71.0,76.0,64.0,58.0,69,10.0,CM,Midfielder
+244380,Vitaliy Mykolenko,LB,76,22,180,Dynamo Kyiv,Ukraine,78.0,44.0,62.0,73.0,63.0,47,16.0,LB,Defender
+244960,Bruno Xavier Almeida Costa,CM,76,24,174,FC Porto,Portugal,67.0,73.0,75.0,64.0,63.0,74,28.0,CM,Midfielder
+246791,Manor Solomon,"RM, LM, CAM",76,21,170,Shakhtar Donetsk,Israel,81.0,70.0,72.0,37.0,60.0,75,19.0,CAM,Midfielder
+247641,Mateus Cardoso Lemos Martins,RM,76,21,175,Shakhtar Donetsk,Brazil,83.0,70.0,72.0,39.0,59.0,74,14.0,RM,Midfielder
+251528,Zaidu Sanusi,LB,76,24,182,FC Porto,Nigeria,93.0,36.0,57.0,72.0,72.0,49,12.0,LB,Defender
+251804,Sergiño Gianni Dest,"RB, RM",76,20,175,FC Barcelona,United States,87.0,59.0,72.0,67.0,66.0,65,2.0,RB,Defender
+253004,Anssumane Fati,LW,76,18,178,FC Barcelona,Spain,88.0,74.0,68.0,29.0,53.0,68,10.0,LW,Forward
+253072,Darwin Gabriel Núñez Ribeiro,ST,76,22,187,SL Benfica,Uruguay,84.0,75.0,69.0,40.0,84.0,83,9.0,ST,Forward
+253124,Matheus Luiz Nunes,CM,76,22,183,Sporting CP,Brazil,73.0,70.0,70.0,67.0,73.0,73,8.0,CM,Midfielder
+257179,Gonçalo Bernardo Inácio,CB,76,19,186,Sporting CP,Portugal,79.0,30.0,60.0,77.0,74.0,44,25.0,CB,Defender
+142902,Andriy Pyatov,GK,75,37,190,Shakhtar Donetsk,Ukraine,,,,,,59,30.0,GK,Goalkeeper
+162328,Remko Pasveer,GK,75,37,188,Ajax,Netherlands,,,,,,64,32.0,GK,Goalkeeper
+177019,Fabian Lustenberger,"CB, CDM",75,33,182,BSC Young Boys,Switzerland,46.0,37.0,60.0,77.0,73.0,47,28.0,CB,Defender
+186569,Sven Ulreich,GK,75,32,192,FC Bayern München,Germany,,,,,,47,26.0,GK,Goalkeeper
+193158,David Petrus Wenceslaus Henri Pröpper,"CM, CDM",75,29,185,PSV,Netherlands,54.0,70.0,76.0,66.0,72.0,80,14.0,CDM,Midfielder
+198640,Zakaria Labyad,"CAM, CF",75,28,175,Ajax,Morocco,72.0,75.0,76.0,36.0,54.0,83,19.0,CAM,Midfielder
+199792,Anders Christiansen,"CM, CAM",75,31,175,Malmö FF,Denmark,75.0,72.0,73.0,65.0,73.0,73,10.0,CM,Midfielder
+203775,Loris Karius,GK,75,28,189,Liverpool,Germany,,,,,,56,22.0,GK,Goalkeeper
+204472,Bouna Sarr,"RB, RM",75,29,177,FC Bayern München,France,73.0,70.0,73.0,68.0,72.0,78,20.0,RB,Defender
+205965,Stefan Ristovski,"RB, RWB, RM",75,29,180,Dinamo Zagreb,North Macedonia,80.0,61.0,67.0,71.0,78.0,68,13.0,RB,Defender
+210136,Tomasz Karol Kędziora,RB,75,27,183,Dynamo Kyiv,Poland,77.0,46.0,67.0,73.0,74.0,56,94.0,RB,Defender
+211382,Ibrahim Amadou,"CDM, CB, CM",75,28,183,Sevilla FC,France,64.0,55.0,65.0,73.0,80.0,75,27.0,CB,Defender
+213666,Ruben Loftus-Cheek,"RM, CAM",75,25,191,Chelsea,England,65.0,67.0,73.0,59.0,75.0,76,12.0,CAM,Midfielder
+213899,Éder Fabián Álvarez Balanta,"CDM, CM, CB",75,28,181,Club Brugge KV,Colombia,66.0,43.0,61.0,75.0,82.0,65,3.0,CB,Defender
+213917,Fábio Rafael Rodrigues Cardoso,CB,75,27,187,FC Porto,Portugal,61.0,32.0,52.0,75.0,79.0,60,2.0,CB,Defender
+213928,Eduard Sobol,"LB, LM",75,26,186,Club Brugge KV,Ukraine,79.0,64.0,68.0,71.0,73.0,77,2.0,LB,Defender
+216466,Wendell Nascimento Borges,"LB, CB",75,27,176,FC Porto,Brazil,79.0,49.0,70.0,70.0,70.0,60,22.0,CB,Defender
+220948,Serhiy Sydorchuk,"CDM, CM",75,30,189,Dynamo Kyiv,Ukraine,66.0,68.0,67.0,72.0,72.0,78,5.0,CDM,Midfielder
+221639,Mariano Díaz Mejía,ST,75,27,180,Real Madrid CF,Dominican Republic,76.0,78.0,61.0,45.0,78.0,84,24.0,ST,Forward
+223885,Alexander Nübel,GK,75,24,193,AS Monaco,Germany,,,,,,53,16.0,GK,Goalkeeper
+224425,Marius Wolf,"RM, RB, RWB",75,26,188,Borussia Dortmund,Germany,84.0,70.0,70.0,67.0,76.0,75,39.0,RB,Defender
+225161,Jesús Vallejo Lázaro,CB,75,24,184,Real Madrid CF,Spain,68.0,42.0,57.0,76.0,68.0,49,5.0,CB,Defender
+226627,南野 拓実,"RW, ST, LM",75,26,174,Liverpool,Japan,79.0,73.0,69.0,36.0,63.0,71,18.0,LM,Midfielder
+228279,Joël Drommel,GK,75,24,193,PSV,Netherlands,,,,,,58,16.0,GK,Goalkeeper
+229453,Gil Bastião Dias,"LM, LWB",75,24,183,SL Benfica,Portugal,76.0,66.0,70.0,64.0,69.0,73,31.0,LWB,Defender
+229758,Rade Krunić,"CM, CAM",75,27,184,AC Milan,Bosnia and Herzegovina,67.0,72.0,74.0,68.0,70.0,76,33.0,CM,Midfielder
+230625,Matheus Reis de Lima,LB,75,26,183,Sporting CP,Brazil,70.0,52.0,65.0,71.0,78.0,59,2.0,LB,Defender
+232099,Marko Grujić,"CM, CDM",75,25,191,FC Porto,Serbia,61.0,71.0,71.0,72.0,77.0,76,16.0,CDM,Midfielder
+233301,Rasmus Nissen Kristensen,"RB, RWB, RM",75,23,187,FC Red Bull Salzburg,Denmark,77.0,59.0,68.0,70.0,82.0,73,43.0,RB,Defender
+234102,Ionuț Andrei Radu,GK,75,24,188,Inter,Romania,,,,,,54,97.0,GK,Goalkeeper
+234913,Christian Fassnacht,"RM, LM, CAM",75,27,185,BSC Young Boys,Switzerland,82.0,70.0,69.0,37.0,71.0,68,16.0,CAM,Midfielder
+235172,Rúben Gonçalo Silva Nascimento Vinagre,"LWB, LB",75,22,174,Sporting CP,Portugal,86.0,55.0,71.0,65.0,63.0,64,16.0,LB,Defender
+236898,Michel Aebischer,"CM, CDM",75,24,183,BSC Young Boys,Switzerland,72.0,65.0,75.0,65.0,75.0,68,20.0,CDM,Midfielder
+237221,Juan Marcos Foyth,"CB, RB, CDM",75,23,187,Villarreal CF,Argentina,66.0,45.0,67.0,76.0,73.0,56,8.0,CB,Defender
+238370,Marin Pongračić,CB,75,23,190,Borussia Dortmund,Croatia,72.0,26.0,51.0,74.0,78.0,40,34.0,CB,Defender
+238858,Bruno Vinícius Souza Ramos,"RW, LW",75,24,175,Sporting CP,Brazil,79.0,67.0,71.0,46.0,61.0,73,7.0,LW,Forward
+239335,Óscar Rodríguez Arnaiz,"CAM, CM, RM",75,23,174,Sevilla FC,Spain,63.0,74.0,74.0,49.0,55.0,72,14.0,CM,Midfielder
+242236,Francisco Reis Ferreira,CB,75,24,191,SL Benfica,Portugal,52.0,43.0,54.0,76.0,75.0,81,97.0,CB,Defender
+243656,Nemanja Radonjić,"LM, RM",75,25,185,SL Benfica,Serbia,88.0,71.0,71.0,30.0,58.0,77,23.0,LM,Midfielder
+243854,Mohamed Simakan,"CB, RB",75,21,187,RB Leipzig,France,68.0,36.0,62.0,76.0,77.0,61,2.0,CB,Defender
+244385,Georgiy Bushchan,GK,75,27,196,Dynamo Kyiv,Ukraine,,,,,,60,1.0,GK,Goalkeeper
+251470,Charles De Ketelaere,"LW, CAM, ST",75,20,192,Club Brugge KV,Belgium,72.0,72.0,75.0,62.0,71.0,72,90.0,CAM,Midfielder
+251517,Joško Gvardiol,"CB, LB",75,19,185,RB Leipzig,Croatia,83.0,54.0,67.0,71.0,83.0,76,32.0,CB,Defender
+251805,Jurriën David Norman Timber,"CB, RB",75,20,179,Ajax,Netherlands,83.0,44.0,64.0,75.0,79.0,58,2.0,CB,Defender
+252000,Domagoj Bradarić,LB,75,21,178,LOSC Lille,Croatia,79.0,55.0,68.0,70.0,68.0,59,29.0,LB,Defender
+252143,Daniel Santos Bragança,CM,75,22,169,Sporting CP,Portugal,80.0,66.0,75.0,64.0,52.0,66,68.0,CM,Midfielder
+252931,Luka Ivanušec,"CAM, RM, LM",75,22,175,Dinamo Zagreb,Croatia,81.0,71.0,71.0,56.0,71.0,77,7.0,CAM,Midfielder
+255472,Pedro Victor Delmino da Silva,RM,75,23,172,Shakhtar Donetsk,Brazil,82.0,68.0,71.0,34.0,55.0,74,38.0,RM,Midfielder
+256790,Jamal Musiala,"CAM, LM",75,18,180,FC Bayern München,Germany,76.0,70.0,67.0,31.0,49.0,68,42.0,CAM,Midfielder
+259694,Óscar Mingueza García,"CB, RB",75,22,184,FC Barcelona,Spain,78.0,35.0,66.0,75.0,75.0,61,22.0,CB,Defender
+169324,Andreas Ulmer,"LB, LWB, LM",74,35,175,FC Red Bull Salzburg,Austria,70.0,63.0,70.0,70.0,70.0,74,17.0,LB,Defender
+182168,Andrea Ranocchia,CB,74,33,195,Inter,Italy,36.0,32.0,57.0,78.0,66.0,59,13.0,CB,Defender
+188770,Admir Mehmedi,"CF, LM, CAM",74,30,183,VfL Wolfsburg,Switzerland,68.0,74.0,70.0,43.0,66.0,77,14.0,CAM,Midfielder
+194911,Adrián San Miguel del Castillo,GK,74,34,190,Liverpool,Spain,,,,,,51,13.0,GK,Goalkeeper
+194957,Phil Jones,CB,74,29,185,Manchester United,England,51.0,50.0,60.0,75.0,67.0,68,4.0,CB,Defender
+198513,Cláudio Pires de Morais Ramos,GK,74,29,183,FC Porto,Portugal,,,,,,48,14.0,GK,Goalkeeper
+199909,Pavao Pervan,GK,74,33,194,VfL Wolfsburg,Austria,,,,,,52,12.0,GK,Goalkeeper
+200641,Yevhen Konoplyanka,"LM, LW",74,31,178,Shakhtar Donetsk,Ukraine,75.0,72.0,68.0,32.0,66.0,75,70.0,LM,Midfielder
+205193,Karim Rekik,"CB, LB",74,26,186,Sevilla FC,Netherlands,67.0,39.0,58.0,73.0,76.0,60,4.0,CB,Defender
+206414,Sergiy Kryvtsov,CB,74,30,186,Shakhtar Donetsk,Ukraine,65.0,44.0,51.0,74.0,78.0,65,4.0,CB,Defender
+210007,André Ramalho Silva,CB,74,29,182,PSV,Brazil,48.0,60.0,66.0,75.0,77.0,76,5.0,CB,Defender
+211567,Gilberto Moraes Júnior,"RB, RM",74,28,181,SL Benfica,Brazil,78.0,55.0,68.0,71.0,74.0,62,2.0,RB,Defender
+219814,Sean Desmond Klaiber,RB,74,26,184,Ajax,Suriname,80.0,64.0,70.0,70.0,81.0,82,5.0,RB,Defender
+220763,Ryan Jared Thomas,"CM, CAM, CDM",74,26,174,PSV,New Zealand,72.0,66.0,73.0,61.0,68.0,70,30.0,CDM,Midfielder
+226085,Leonardo César Jardim,GK,74,26,188,LOSC Lille,Brazil,,,,,,51,30.0,GK,Goalkeeper
+230084,Lukas Nmecha,ST,74,22,185,VfL Wolfsburg,Germany,82.0,73.0,64.0,39.0,78.0,76,10.0,ST,Forward
+231012,Carlos María de Pena Bonino,LM,74,29,177,Dynamo Kyiv,Uruguay,75.0,69.0,74.0,29.0,52.0,76,14.0,LM,Midfielder
+231108,Silvan Hefti,"RB, CB",74,23,183,BSC Young Boys,Switzerland,75.0,49.0,64.0,70.0,80.0,70,36.0,CB,Defender
+231361,Joris Gnagnon,CB,74,24,182,Sevilla FC,France,50.0,39.0,56.0,74.0,79.0,67,26.0,CB,Defender
+231838,Maximilian Wöber,"CB, LB",74,23,189,FC Red Bull Salzburg,Austria,72.0,45.0,63.0,73.0,80.0,67,39.0,CB,Defender
+232223,Konstantinos Tsimikas,"LB, LWB",74,25,179,Liverpool,Greece,83.0,57.0,69.0,69.0,74.0,69,21.0,LB,Defender
+235026,Omar Tyrell Crawford Richards,"LB, LWB",74,23,174,FC Bayern München,England,81.0,46.0,60.0,69.0,63.0,43,3.0,LB,Defender
+235454,Malang Sarr,"CB, LB",74,22,182,Chelsea,France,68.0,52.0,68.0,75.0,75.0,68,31.0,CB,Defender
+235996,Nicolas Brice Moumi Ngamaleu,"LM, RM",74,26,181,BSC Young Boys,Cameroon,91.0,70.0,65.0,34.0,74.0,73,13.0,LM,Midfielder
+240938,Junior Walter Messias,"CAM, CF, CM",74,30,179,AC Milan,Brazil,82.0,68.0,72.0,37.0,54.0,68,30.0,CM,Midfielder
+240976,Marcelo Josemir Saracchi Pintos,LB,74,23,172,RB Leipzig,Uruguay,82.0,63.0,70.0,69.0,69.0,68,43.0,LB,Defender
+241496,Timothy Tarpeh Weah,"ST, RM",74,21,183,LOSC Lille,United States,87.0,71.0,67.0,45.0,61.0,70,22.0,RM,Midfielder
+241509,Mauro Jaqueson Júnior Ferreira dos Santos,"CAM, LM",74,22,171,PSV,Brazil,84.0,65.0,72.0,49.0,50.0,68,17.0,CAM,Midfielder
+241854,Perr Schuurs,CB,74,21,191,Ajax,Netherlands,67.0,64.0,70.0,75.0,73.0,84,3.0,CB,Defender
+243237,Luca Pellegrini,LB,74,22,178,Juventus,Italy,83.0,54.0,64.0,69.0,61.0,65,17.0,LB,Defender
+243952,Andriy Lunin,GK,74,22,192,Real Madrid CF,Ukraine,,,,,,55,13.0,GK,Goalkeeper
+244383,Mykyta Burda,CB,74,26,187,Dynamo Kyiv,Ukraine,65.0,23.0,43.0,77.0,74.0,34,26.0,CB,Defender
+245211,Jordan Teze,"CB, RB",74,21,183,PSV,Netherlands,82.0,48.0,63.0,74.0,77.0,60,3.0,CB,Defender
+251217,Jean Lucas de Souza Oliveira,"CM, CDM",74,23,181,AS Monaco,Brazil,70.0,67.0,74.0,68.0,73.0,77,11.0,CDM,Midfielder
+252339,Tiago Emanuel Embaló Djaló,CB,74,21,190,LOSC Lille,Portugal,83.0,42.0,60.0,74.0,77.0,57,3.0,CB,Defender
+257073,Tiago Barreiros de Melo Tomás,ST,74,19,183,Sporting CP,Portugal,77.0,70.0,56.0,37.0,72.0,73,19.0,ST,Forward
+176794,Ola Toivonen,"CAM, ST",73,34,192,Malmö FF,Sweden,40.0,77.0,75.0,41.0,71.0,79,11.0,CAM,Midfielder
+179560,Miralem Sulejmani,"LM, RM",73,32,179,BSC Young Boys,Serbia,75.0,71.0,73.0,31.0,48.0,73,10.0,LM,Midfielder
+183497,Orestis Spyridon Karnezis,GK,73,35,190,LOSC Lille,Greece,,,,,,52,40.0,GK,Goalkeeper
+190868,Kévin Théophile-Catherine,"CB, RB",73,31,183,Dinamo Zagreb,France,73.0,50.0,65.0,72.0,80.0,60,28.0,CB,Defender
+192445,Daniel Ginczek,"ST, RW",73,30,190,VfL Wolfsburg,Germany,64.0,74.0,51.0,38.0,75.0,82,33.0,ST,Forward
+206411,Denys Garmash,"CAM, CM",73,31,186,Dynamo Kyiv,Ukraine,67.0,72.0,73.0,69.0,76.0,80,19.0,CM,Midfielder
+220854,Érick Gabriel Gutiérrez Galaviz,"CM, CDM",73,26,178,PSV,Mexico,71.0,70.0,73.0,63.0,64.0,76,15.0,CDM,Midfielder
+225948,Rasmus Lauritsen,CB,73,25,189,Dinamo Zagreb,Denmark,61.0,41.0,58.0,74.0,76.0,45,6.0,CB,Defender
+229221,William de Asevedo Furtado,"RB, RM",73,26,171,VfL Wolfsburg,Brazil,72.0,50.0,68.0,70.0,68.0,76,2.0,RB,Defender
+229528,Mykola Matvienko,"CB, LB",73,25,181,Shakhtar Donetsk,Ukraine,74.0,43.0,62.0,74.0,74.0,73,22.0,CB,Defender
+229683,Rodrigo Cunha Pereira de Pinho,ST,73,30,185,SL Benfica,Brazil,65.0,77.0,60.0,25.0,61.0,76,18.0,ST,Forward
+230918,Trevoh Chalobah,"CB, CDM, CM",73,21,191,Chelsea,England,65.0,43.0,63.0,72.0,77.0,50,14.0,CB,Defender
+232226,Denys Boyko,GK,73,33,197,Dynamo Kyiv,Ukraine,,,,,,51,71.0,GK,Goalkeeper
+232437,Federico Ricca Rostagnol,"LB, CB",73,26,178,Club Brugge KV,Uruguay,70.0,52.0,60.0,72.0,73.0,72,18.0,CB,Defender
+232805,Bernardo Fernandes da Silva Junior,"LB, LWB",73,26,186,FC Red Bull Salzburg,Brazil,71.0,49.0,61.0,72.0,73.0,72,95.0,LB,Defender
+234112,Domilson Cordeiro dos Santos,RB,73,22,166,Shakhtar Donetsk,Brazil,88.0,58.0,64.0,66.0,67.0,60,2.0,RB,Defender
+234577,Diogo Meireles Costa,GK,73,21,187,FC Porto,Portugal,,,,,,49,99.0,GK,Goalkeeper
+234701,Maycon de Andrade Barberan,"CM, CDM",73,23,175,Shakhtar Donetsk,Brazil,70.0,67.0,72.0,65.0,69.0,82,27.0,CDM,Midfielder
+236524,Anel Ahmedhodžić,CB,73,22,192,Malmö FF,Bosnia and Herzegovina,77.0,32.0,59.0,71.0,75.0,57,15.0,CB,Defender
+236822,Gabriel Gudmundsson,"LB, LM",73,22,181,LOSC Lille,Sweden,87.0,64.0,67.0,66.0,70.0,75,5.0,LB,Defender
+237109,Oleksandr Karavaev,"RM, RB",73,29,175,Dynamo Kyiv,Ukraine,79.0,54.0,70.0,58.0,65.0,55,20.0,RB,Defender
+239744,Michaël Bruno Dominique Cuisance,"CM, CAM, CDM",73,21,181,FC Bayern München,France,69.0,67.0,78.0,53.0,62.0,78,17.0,CDM,Midfielder
+240926,Nathaniel Phillips,CB,73,24,190,Liverpool,England,53.0,30.0,49.0,73.0,78.0,49,47.0,CB,Defender
+241463,Daniel Raba Antolín,"RM, CAM",73,25,184,Villarreal CF,Spain,66.0,71.0,72.0,38.0,58.0,71,17.0,CAM,Midfielder
+241981,Eulânio Ângelo Chipela Gomes,"RB, RM",73,27,177,FC Porto,Guinea Bissau,86.0,62.0,64.0,67.0,73.0,70,31.0,RB,Defender
+242434,Curtis Jones,CM,73,20,185,Liverpool,England,67.0,65.0,70.0,63.0,70.0,71,17.0,CM,Midfielder
+243661,Albert Vallçi,"RB, CB, LB",73,25,191,FC Red Bull Salzburg,Austria,78.0,57.0,60.0,71.0,82.0,71,5.0,CB,Defender
+244426,Bogdan Lednev,"CAM, RM, LM",73,23,173,Dynamo Kyiv,Ukraine,74.0,72.0,72.0,53.0,53.0,76,17.0,CAM,Midfielder
+245132,Denys Popov,CB,73,22,187,Dynamo Kyiv,Ukraine,63.0,38.0,46.0,74.0,73.0,42,4.0,CB,Defender
+246174,Harvey Elliott,"RW, CM",73,18,170,Liverpool,England,79.0,62.0,71.0,30.0,41.0,60,67.0,CM,Midfielder
+246762,Sékou Koïta,ST,73,21,173,FC Red Bull Salzburg,Mali,91.0,74.0,62.0,35.0,72.0,75,20.0,ST,Forward
+246764,Mohamed Camara,"CDM, CM",73,21,169,FC Red Bull Salzburg,Mali,81.0,56.0,65.0,69.0,75.0,66,19.0,CDM,Midfielder
+247377,Marcos Antonio Silva Santos,"CM, CDM",73,21,168,Shakhtar Donetsk,Brazil,84.0,65.0,69.0,59.0,49.0,65,8.0,CDM,Midfielder
+248820,Mateu Jaume Morey Bauzá,"RB, RM",73,21,173,Borussia Dortmund,Spain,75.0,46.0,67.0,68.0,62.0,51,2.0,RB,Defender
+251810,Brian Ebenezer Adjei Brobbey,ST,73,19,180,RB Leipzig,Netherlands,83.0,71.0,54.0,30.0,81.0,72,21.0,ST,Forward
+256612,Francisco Evanilson de Lima Barbosa,ST,73,21,183,FC Porto,Brazil,72.0,75.0,58.0,25.0,63.0,75,30.0,ST,Forward
+258390,Ivo Grbić,GK,73,25,195,LOSC Lille,Croatia,,,,,,53,1.0,GK,Goalkeeper
+258826,Devyne Fabian Jairo Rensch,RB,73,18,179,Ajax,Netherlands,80.0,55.0,64.0,70.0,69.0,56,15.0,RB,Defender
+259233,Moriba Kourouma Kourouma,CM,73,18,185,RB Leipzig,Spain,72.0,70.0,64.0,64.0,65.0,73,26.0,CM,Midfielder
+259377,Yeremi Jesús Santos Pino,"RM, LM, ST",73,18,172,Villarreal CF,Spain,71.0,66.0,70.0,31.0,46.0,63,21.0,LM,Midfielder
+149258,Alex Cordaz,GK,72,38,188,Inter,Italy,,,,,,47,21.0,GK,Goalkeeper
+183916,Jérémy Pied,"RB, LB",72,32,173,LOSC Lille,France,59.0,64.0,72.0,72.0,66.0,77,26.0,LB,Defender
+189342,Carlo Pinsoglio,GK,72,31,194,Juventus,Italy,,,,,,44,23.0,GK,Goalkeeper
+194020,Judilson Mamadu Tuncará Gomes,"CDM, CM",72,29,182,AS Monaco,Guinea Bissau,71.0,60.0,65.0,70.0,79.0,73,28.0,CDM,Midfielder
+194781,Renan Ribeiro,GK,72,31,193,Sporting CP,Brazil,,,,,,48,40.0,GK,Goalkeeper
+204233,Charly Musonda Junior,"RM, LM",72,24,173,Chelsea,Belgium,78.0,63.0,69.0,24.0,37.0,70,34.0,LM,Midfielder
+215703,Marlon Santos da Silva Barbosa,CB,72,25,182,Shakhtar Donetsk,Brazil,64.0,44.0,59.0,73.0,71.0,61,5.0,CB,Defender
+216275,Phillipp Mwene,"RB, LB",72,27,172,PSV,Austria,78.0,43.0,61.0,66.0,60.0,48,29.0,LB,Defender
+219411,José Heriberto Izquierdo Mena,"LM, LW",72,28,171,Club Brugge KV,Colombia,80.0,68.0,67.0,38.0,48.0,78,87.0,LM,Midfielder
+220785,Antonio-Mirko Čolak,ST,72,27,188,Malmö FF,Croatia,71.0,73.0,55.0,34.0,76.0,69,9.0,ST,Forward
+227558,Theoson-Jordan Siebatcheu Pefok,ST,72,25,190,BSC Young Boys,United States,66.0,71.0,59.0,29.0,74.0,72,17.0,ST,Forward
+230681,Giuseppe Pezzella,"LB, LM",72,23,185,Atalanta,Italy,76.0,52.0,64.0,67.0,74.0,67,13.0,LB,Defender
+231007,Josip Mišić,"CM, CDM, CAM",72,27,184,Dinamo Zagreb,Croatia,65.0,68.0,73.0,63.0,70.0,74,27.0,CDM,Midfielder
+234515,Jordan Lefort,"LB, CB",72,27,184,BSC Young Boys,France,65.0,26.0,60.0,71.0,75.0,25,25.0,CB,Defender
+236259,Sergio Fernando Peña Flores,"CAM, CM",72,25,178,Malmö FF,Peru,66.0,68.0,76.0,54.0,64.0,76,8.0,CM,Midfielder
+236723,Fodé Ballo-Touré,"LB, LM",72,24,182,AC Milan,Senegal,85.0,51.0,67.0,66.0,72.0,56,5.0,LB,Defender
+244376,Volodymyr Shepelev,"CM, CDM",72,24,184,Dynamo Kyiv,Ukraine,64.0,63.0,62.0,66.0,63.0,60,8.0,CDM,Midfielder
+246728,Lassina Chamste Soudine Franck Traoré,ST,72,20,183,Shakhtar Donetsk,Burkina Faso,77.0,70.0,57.0,29.0,76.0,76,23.0,ST,Forward
+248573,Eric Junior Dina Ebimbe,"CM, RW",72,20,175,Paris Saint-Germain,France,83.0,61.0,68.0,66.0,75.0,71,36.0,CM,Midfielder
+250753,Anatoliy Trubin,GK,72,19,198,Shakhtar Donetsk,Ukraine,,,,,,50,81.0,GK,Goalkeeper
+253306,Manuel Ugarte Ribeiro,"CM, CDM",72,20,182,Sporting CP,Uruguay,68.0,59.0,63.0,69.0,70.0,54,15.0,CDM,Midfielder
+256903,Gonçalo Matias Ramos,"CF, ST",72,20,184,SL Benfica,Portugal,81.0,70.0,63.0,33.0,83.0,70,88.0,CF,Forward
+256958,Fábio Daniel Ferreira Vieira,"CAM, RM",72,21,170,FC Porto,Portugal,74.0,69.0,73.0,36.0,52.0,72,50.0,CAM,Midfielder
+258308,Oleksandr Tymchyk,RB,72,24,180,Dynamo Kyiv,Ukraine,87.0,24.0,53.0,69.0,52.0,22,24.0,RB,Defender
+258781,Illia Zabarnyi,CB,72,18,186,Dynamo Kyiv,Ukraine,66.0,36.0,54.0,74.0,72.0,45,25.0,CB,Defender
+258946,Matteo Lovato,CB,72,21,188,Atalanta,Italy,68.0,30.0,51.0,74.0,70.0,40,66.0,CB,Defender
+158777,Philipp Tschauner,GK,71,35,196,RB Leipzig,Germany,,,,,,50,13.0,GK,Goalkeeper
+164484,Johan Dahlin,GK,71,34,192,Malmö FF,Sweden,,,,,,50,27.0,GK,Goalkeeper
+172862,Niklas Moisander,CB,71,35,183,Malmö FF,Finland,46.0,49.0,68.0,72.0,67.0,67,4.0,CB,Defender
+184472,Martin Tony Waikwa Olsson,"LB, CB",71,33,178,Malmö FF,Sweden,71.0,62.0,68.0,69.0,70.0,75,13.0,CB,Defender
+186556,Bruno Ferreira Bonfim,ST,71,32,176,Shakhtar Donetsk,Brazil,77.0,69.0,66.0,47.0,71.0,68,9.0,ST,Forward
+188802,Marcel Schmelzer,LB,71,33,180,Borussia Dortmund,Germany,55.0,48.0,65.0,74.0,70.0,73,29.0,LB,Defender
+204246,Marcus Bettinelli,GK,71,29,194,Chelsea,England,,,,,,55,13.0,GK,Goalkeeper
+220466,Federico Mattiello,"RM, LM",71,25,184,Atalanta,Italy,72.0,64.0,70.0,69.0,61.0,76,14.0,LM,Midfielder
+221323,Jérôme Junior Onguéné,CB,71,23,186,FC Red Bull Salzburg,Cameroon,70.0,30.0,42.0,71.0,73.0,45,6.0,CB,Defender
+223143,Ulisses Alexandre Garcia Lopes,"LB, LM",71,25,183,BSC Young Boys,Switzerland,75.0,42.0,61.0,66.0,74.0,44,21.0,LB,Defender
+232207,Ivan Šaponjić,ST,71,23,190,Atlético de Madrid,Serbia,71.0,71.0,48.0,31.0,66.0,75,20.0,ST,Forward
+234795,Antoine Joseph Emmanuel Bernède,"CDM, CM",71,22,177,FC Red Bull Salzburg,France,65.0,59.0,67.0,67.0,66.0,66,10.0,CDM,Midfielder
+235413,Radosław Majecki,GK,71,21,193,AS Monaco,Poland,,,,,,50,1.0,GK,Goalkeeper
+237209,Matej Mitrović,CB,71,27,187,Club Brugge KV,Croatia,45.0,50.0,57.0,73.0,73.0,68,15.0,CB,Defender
+240507,Adilson Angel Abreu de Almeida Gomes,"LM, ST",71,20,168,LOSC Lille,England,75.0,70.0,69.0,40.0,58.0,69,20.0,LM,Midfielder
+241171,Armando Obispo,CB,71,22,185,PSV,Netherlands,74.0,42.0,57.0,70.0,76.0,62,4.0,CB,Defender
+242530,Noah Arinzechukwu Okafor,"RM, LM, CAM",71,21,185,FC Red Bull Salzburg,Switzerland,84.0,67.0,63.0,32.0,74.0,68,77.0,CAM,Midfielder
+242603,Jean Harisson Marcelin,CB,71,21,197,AS Monaco,France,62.0,35.0,49.0,71.0,75.0,59,15.0,CB,Defender
+244259,Sadegh Moharrami,"RB, RM",71,25,174,Dinamo Zagreb,Iran,81.0,30.0,52.0,70.0,59.0,34,2.0,RB,Defender
+244368,Artem Besedin,ST,71,25,185,Dynamo Kyiv,Ukraine,72.0,67.0,48.0,41.0,63.0,66,41.0,ST,Forward
+244401,Mohamed Ali Camara,CB,71,23,191,BSC Young Boys,Guinea,72.0,35.0,51.0,70.0,78.0,37,4.0,CB,Defender
+245396,Vladyslav Supriaha,ST,71,21,182,Dynamo Kyiv,Ukraine,87.0,70.0,50.0,19.0,51.0,68,89.0,ST,Forward
+251532,Meschack Elia Lina,"ST, RM",71,23,173,BSC Young Boys,Congo DR,90.0,69.0,65.0,26.0,68.0,71,15.0,RM,Midfielder
+251852,Karim-David Adeyemi,ST,71,19,177,FC Red Bull Salzburg,Germany,92.0,72.0,65.0,24.0,62.0,70,27.0,ST,Forward
+252018,Kamil Piątkowski,"CB, RM",71,21,191,FC Red Bull Salzburg,Poland,81.0,47.0,64.0,69.0,82.0,68,4.0,CB,Defender
+252293,Ismail Joshua Jakobs,"LM, LWB",71,21,184,AS Monaco,Germany,86.0,58.0,58.0,61.0,69.0,65,14.0,LWB,Defender
+252961,Tanguy-Austin Nianzou Kouassi,"CB, CDM",71,19,187,FC Bayern München,France,69.0,37.0,55.0,71.0,74.0,57,23.0,CB,Defender
+254544,Reinier Jesus Carvalho,"CF, CAM",71,19,185,Borussia Dortmund,Brazil,77.0,68.0,64.0,43.0,65.0,72,20.0,CAM,Midfielder
+257290,João Mário Neto Lopes,"RB, RM",71,21,178,FC Porto,Portugal,75.0,63.0,64.0,68.0,60.0,68,23.0,RB,Defender
+258262,Marko Tolić,"CAM, LW, RW",71,24,189,Dinamo Zagreb,Croatia,63.0,72.0,73.0,40.0,68.0,78,24.0,CAM,Midfielder
+259036,Viktor Korniienko,LB,71,22,175,Shakhtar Donetsk,Ukraine,75.0,43.0,71.0,65.0,76.0,68,44.0,LB,Defender
+261987,Antonio Blanco Conde,"CM, CDM",71,20,176,Real Madrid CF,Spain,61.0,56.0,67.0,62.0,58.0,52,27.0,CDM,Midfielder
+179547,Vito Mannone,GK,70,33,189,AS Monaco,Italy,,,,,,50,30.0,GK,Goalkeeper
+197996,Eric Larsson,RB,70,29,176,Malmö FF,Sweden,65.0,54.0,66.0,64.0,79.0,67,2.0,RB,Defender
+211504,Lewis Baker,"CDM, CAM, CM",70,26,182,Chelsea,England,67.0,67.0,71.0,64.0,70.0,76,52.0,CDM,Midfielder
+227903,Maximiliano Samuel Romero,ST,70,22,179,PSV,Argentina,77.0,71.0,49.0,31.0,71.0,79,20.0,ST,Forward
+228080,Felix Passlack,"RM, RB",70,23,170,Borussia Dortmund,Germany,71.0,60.0,67.0,65.0,75.0,70,30.0,RB,Defender
+229900,Sandro Mike Lauper,"CM, CB, CDM",70,24,186,BSC Young Boys,Switzerland,73.0,63.0,65.0,70.0,73.0,66,30.0,CB,Defender
+236369,Cédric Zesiger,"CB, LB",70,23,194,BSC Young Boys,Switzerland,62.0,32.0,47.0,70.0,77.0,41,5.0,CB,Defender
+237156,Moussa Wagué,"RB, RWB, LB",70,22,177,FC Barcelona,Senegal,77.0,40.0,61.0,67.0,66.0,56,40.0,LB,Defender
+239816,Nico Mantl,GK,70,21,193,FC Red Bull Salzburg,Germany,,,,,,50,1.0,GK,Goalkeeper
+239881,Danilo Pereira Da Silva,ST,70,22,174,Ajax,Brazil,76.0,70.0,58.0,22.0,65.0,67,9.0,ST,Forward
+241941,Stanley Pierre N'Soki,"CB, LB",70,22,184,Club Brugge KV,France,68.0,38.0,59.0,70.0,76.0,47,4.0,CB,Defender
+242238,Oumar Mickael Solet Bomawoko,CB,70,21,192,FC Red Bull Salzburg,France,86.0,39.0,54.0,68.0,78.0,59,22.0,CB,Defender
+243538,Karlo Letica,GK,70,24,201,Club Brugge KV,Croatia,,,,,,48,43.0,GK,Goalkeeper
+244272,Dino Perić,CB,70,26,197,Dinamo Zagreb,Croatia,64.0,33.0,44.0,68.0,79.0,40,55.0,CB,Defender
+244389,Fernando Dos Santos Pedro,ST,70,22,176,Shakhtar Donetsk,Brazil,86.0,69.0,59.0,31.0,43.0,71,99.0,ST,Forward
+244584,Oleksiy Shevchenko,GK,70,29,188,Shakhtar Donetsk,Ukraine,,,,,,55,1.0,GK,Goalkeeper
+244853,Kamal Sowah,"CF, CAM, LM",70,21,179,Club Brugge KV,Ghana,81.0,69.0,65.0,44.0,63.0,73,19.0,CAM,Midfielder
+246885,Nicolás Capaldo Toboas,"CM, RB",70,22,177,FC Red Bull Salzburg,Argentina,77.0,59.0,66.0,68.0,76.0,65,7.0,RB,Defender
+247361,Brenden Russell Aaronson,"CAM, CM, LM",70,20,176,FC Red Bull Salzburg,United States,80.0,62.0,63.0,50.0,56.0,61,11.0,CM,Midfielder
+248698,Valeriy Bondar,CB,70,22,184,Shakhtar Donetsk,Ukraine,71.0,30.0,50.0,71.0,72.0,58,77.0,CB,Defender
+251873,Yusuf Demir,"CAM, RM",70,18,173,FC Barcelona,Austria,84.0,66.0,65.0,19.0,50.0,65,11.0,CAM,Midfielder
+254928,Bartol Franjić,"CDM, LB, CB",70,21,188,Dinamo Zagreb,Croatia,76.0,50.0,62.0,68.0,75.0,64,38.0,CB,Defender
+258433,Eliot Matazo,"CDM, CM",70,19,174,AS Monaco,Belgium,74.0,58.0,68.0,65.0,70.0,68,36.0,CDM,Midfielder
+261050,Francisco Fernandes Conceição,RM,70,18,170,FC Porto,Portugal,78.0,61.0,63.0,31.0,44.0,62,10.0,RM,Midfielder
+261307,Veljko Birmančević,LW,70,23,179,Malmö FF,Serbia,83.0,65.0,60.0,37.0,56.0,65,19.0,LW,Forward
+183339,Jo Inge Berget,RW,69,30,186,Malmö FF,Norway,76.0,69.0,66.0,59.0,76.0,74,32.0,RW,Forward
+199574,Alexandre Letellier,GK,69,30,193,Paris Saint-Germain,France,,,,,,47,60.0,GK,Goalkeeper
+199748,Jonas Knudsen,"LB, CB",69,28,187,Malmö FF,Denmark,67.0,44.0,62.0,66.0,77.0,70,3.0,CB,Defender
+204043,Emir Dilaver,"CB, RB",69,30,184,Dinamo Zagreb,Austria,70.0,52.0,59.0,68.0,75.0,70,66.0,CB,Defender
+205210,Oscar Lewicki,"CDM, CM",69,28,171,Malmö FF,Sweden,62.0,54.0,60.0,69.0,74.0,64,6.0,CDM,Midfielder
+225316,Jack Hendry,CB,69,26,194,Club Brugge KV,Scotland,70.0,59.0,52.0,67.0,78.0,77,5.0,CB,Defender
+232192,Christopher Martins Pereira,"CDM, CM",69,24,187,BSC Young Boys,Luxembourg,57.0,54.0,62.0,67.0,76.0,67,35.0,CDM,Midfielder
+238497,Marvin Spielmann,LM,69,25,181,BSC Young Boys,Switzerland,85.0,68.0,64.0,36.0,60.0,75,7.0,LM,Midfielder
+244264,Amer Gojak,"CM, CAM",69,24,184,Dinamo Zagreb,Bosnia and Herzegovina,69.0,66.0,67.0,62.0,77.0,82,8.0,CM,Midfielder
+244381,Artem Shabanov,CB,69,29,190,Dynamo Kyiv,Ukraine,61.0,24.0,55.0,70.0,71.0,34,13.0,CB,Defender
+246139,Ignacio Peña Sotorres,GK,69,22,184,FC Barcelona,Spain,,,,,,52,26.0,GK,Goalkeeper
+246459,Mohamed Daramy,"LW, ST, RW",69,19,180,Ajax,Denmark,87.0,59.0,60.0,25.0,65.0,62,30.0,ST,Forward
+254840,Strahinja Pavlović,CB,69,20,194,AS Monaco,Serbia,62.0,43.0,50.0,68.0,75.0,56,21.0,CB,Defender
+255654,Pierre Kazeye Rommel Kalulu Kyatengwa,"RB, CB",69,21,184,AC Milan,France,72.0,36.0,58.0,70.0,64.0,45,20.0,CB,Defender
+257170,Oleksandr Syrota,CB,69,21,189,Dynamo Kyiv,Ukraine,69.0,22.0,38.0,71.0,73.0,33,34.0,CB,Defender
+258432,Chrislain Iris Aurel Matsima,CB,69,19,193,AS Monaco,France,55.0,34.0,48.0,69.0,71.0,54,34.0,CB,Defender
+258775,Luka Sučić,"CAM, CM, RM",69,18,185,FC Red Bull Salzburg,Croatia,75.0,65.0,69.0,50.0,62.0,72,21.0,CM,Midfielder
+260020,Yorbe Vertessen,"RM, ST",69,20,176,PSV,Belgium,91.0,62.0,62.0,30.0,66.0,64,32.0,RM,Midfielder
+260644,Kaio Jorge Pinto Ramos,ST,69,19,182,Juventus,Brazil,77.0,68.0,52.0,23.0,62.0,65,21.0,ST,Forward
+261143,Marko Bulat,"CM, CDM",69,19,178,Dinamo Zagreb,Croatia,68.0,65.0,73.0,59.0,69.0,75,31.0,CDM,Midfielder
+261145,Dario Špikić,"RW, LW, RM",69,22,183,Dinamo Zagreb,Croatia,84.0,65.0,64.0,33.0,62.0,69,77.0,RM,Midfielder
+262262,Jay Gorter,GK,69,21,190,Ajax,Netherlands,,,,,,48,16.0,GK,Goalkeeper
+121134,Alexander Walke,GK,68,38,189,FC Red Bull Salzburg,Germany,,,,,,54,33.0,GK,Goalkeeper
+177373,Lasse Nielsen,CB,68,33,185,Malmö FF,Denmark,68.0,33.0,52.0,66.0,80.0,48,24.0,CB,Defender
+179633,Søren Krukow Rieks,LW,68,34,185,Malmö FF,Denmark,70.0,68.0,65.0,64.0,72.0,68,5.0,LW,Forward
+193250,Marin Leovac,"LB, LM",68,32,180,Dinamo Zagreb,Croatia,81.0,55.0,60.0,62.0,72.0,70,22.0,LB,Defender
+206546,Pablo Íñiguez de Heredia Larraz,CB,68,27,184,Villarreal CF,Spain,40.0,42.0,58.0,69.0,67.0,59,41.0,CB,Defender
+228593,Vincent Olivier Sierro,CM,68,25,187,BSC Young Boys,Switzerland,64.0,59.0,65.0,58.0,71.0,66,8.0,CM,Midfielder
+229337,Matheus Pereira da Silva,"CAM, RM",68,23,181,FC Barcelona,Brazil,69.0,60.0,65.0,35.0,58.0,58,47.0,CAM,Midfielder
+230872,Mile Svilar,GK,68,21,189,SL Benfica,Serbia,,,,,,47,1.0,GK,Goalkeeper
+237823,安部 裕葵,LM,68,22,171,FC Barcelona,Japan,89.0,61.0,56.0,33.0,59.0,66,35.0,LM,Midfielder
+238873,Pietro Pellegri,ST,68,20,188,AC Milan,Italy,69.0,67.0,55.0,21.0,63.0,70,64.0,ST,Forward
+240277,Matteo Gabbia,CB,68,21,185,AC Milan,Italy,52.0,33.0,42.0,72.0,71.0,52,46.0,CB,Defender
+240371,Adam Jakubech,GK,68,24,188,LOSC Lille,Slovakia,,,,,,48,16.0,GK,Goalkeeper
+243057,Neco Williams,RB,68,20,183,Liverpool,Wales,74.0,36.0,61.0,63.0,59.0,42,76.0,RB,Defender
+243311,Josep Martínez Riera,GK,68,23,191,RB Leipzig,Spain,,,,,,48,31.0,GK,Goalkeeper
+252594,Isaac Lihadji,RM,68,19,177,LOSC Lille,France,79.0,59.0,62.0,26.0,42.0,61,19.0,RM,Midfielder
+254088,Amad Diallo Traoré,RM,68,18,173,Manchester United,Côte d'Ivoire,81.0,63.0,57.0,25.0,43.0,60,16.0,RM,Midfielder
+254267,Bartosz Białek,ST,68,19,191,VfL Wolfsburg,Poland,67.0,67.0,46.0,35.0,73.0,71,21.0,ST,Forward
+255009,Kenneth Ina Dorothea Taylor,CM,68,19,182,Ajax,Netherlands,68.0,67.0,72.0,58.0,63.0,74,25.0,CM,Midfielder
+255069,Nicolás González Iglesias,"CM, CAM",68,19,188,FC Barcelona,Spain,71.0,60.0,66.0,55.0,67.0,60,28.0,CM,Midfielder
+255105,Ilya Shkurin,ST,68,21,188,Dynamo Kyiv,Belarus,74.0,65.0,56.0,34.0,75.0,64,73.0,ST,Forward
+256008,Felipe Rodrigues da Silva,CB,68,20,190,SL Benfica,Brazil,63.0,35.0,51.0,66.0,78.0,49,91.0,CB,Defender
+257057,Amadou Zeund Georges Ba Mvom Onana,"CDM, CM",68,19,195,LOSC Lille,Belgium,71.0,53.0,61.0,66.0,74.0,59,24.0,CDM,Midfielder
+257876,Nicolas Seiwald,"CM, CDM",68,20,179,FC Red Bull Salzburg,Austria,65.0,60.0,67.0,64.0,66.0,67,13.0,CDM,Midfielder
+260592,Benjamin Šeško,ST,68,18,193,FC Red Bull Salzburg,Slovenia,71.0,67.0,60.0,42.0,73.0,68,30.0,ST,Forward
+260823,Nicolò Fagioli,"CM, CAM",68,20,178,Juventus,Italy,67.0,59.0,70.0,54.0,58.0,70,34.0,CM,Midfielder
+264453,Micky van de Ven,"CB, LB",68,20,193,VfL Wolfsburg,Netherlands,72.0,43.0,56.0,67.0,73.0,48,5.0,CB,Defender
+157804,Scott Carson,GK,67,35,190,Manchester City,England,,,,,,49,33.0,GK,Goalkeeper
+189536,Duje Čop,"ST, LW",67,31,184,Dinamo Zagreb,Croatia,48.0,69.0,63.0,33.0,65.0,72,90.0,ST,Forward
+215574,Erdal Rakip,"CM, CDM",67,25,178,Malmö FF,Sweden,69.0,58.0,63.0,61.0,73.0,62,7.0,CDM,Midfielder
+226523,Franz Brorsson,CB,67,25,187,Malmö FF,Sweden,67.0,30.0,48.0,64.0,78.0,47,31.0,CB,Defender
+238222,Felix Beijmo,RB,67,23,186,Malmö FF,Sweden,80.0,37.0,53.0,62.0,73.0,66,14.0,RB,Defender
+239363,Kouadio-Yves Dabila,CB,67,24,183,LOSC Lille,Côte d'Ivoire,54.0,31.0,47.0,69.0,67.0,48,25.0,CB,Defender
+239364,Philipp Köhn,GK,67,23,190,FC Red Bull Salzburg,Switzerland,,,,,,47,18.0,GK,Goalkeeper
+240913,Caoimhin Kelleher,GK,67,22,188,Liverpool,Republic of Ireland,,,,,,50,62.0,GK,Goalkeeper
+242999,Álex Collado Gutiérrez,"RW, CM",67,22,177,FC Barcelona,Spain,63.0,65.0,70.0,56.0,39.0,68,32.0,CM,Midfielder
+244258,Danijel Zagorac,GK,67,34,186,Dinamo Zagreb,Croatia,,,,,,47,1.0,GK,Goalkeeper
+244266,Luka Menalo,"LW, RW",67,24,181,Dinamo Zagreb,Bosnia and Herzegovina,78.0,61.0,59.0,26.0,54.0,66,70.0,LW,Forward
+244375,Oleksandr Andrievskyi,"CDM, CM",67,27,180,Dynamo Kyiv,Ukraine,66.0,51.0,62.0,64.0,59.0,69,18.0,CDM,Midfielder
+248385,Roberto Piccoli,ST,67,20,183,Atalanta,Italy,58.0,67.0,49.0,34.0,64.0,66,99.0,ST,Forward
+248661,Cheikh Ahmet Tidian Niasse,"CDM, CB",67,21,188,LOSC Lille,Senegal,59.0,44.0,59.0,64.0,70.0,58,27.0,CB,Defender
+251330,Vincent Carsten Maria Müller,GK,67,20,190,PSV,Germany,,,,,,50,13.0,GK,Goalkeeper
+251751,Saad Agouzoul,CB,67,23,192,LOSC Lille,Morocco,55.0,38.0,53.0,67.0,67.0,46,23.0,CB,Defender
+252027,Aster Jan Vranckx,"CM, CDM",67,18,183,VfL Wolfsburg,Belgium,72.0,57.0,65.0,60.0,73.0,68,8.0,CDM,Midfielder
+253400,Vitor Eduardo da Silva Matos,CB,67,21,186,Shakhtar Donetsk,Brazil,66.0,33.0,48.0,67.0,64.0,35,49.0,CB,Defender
+255253,Vítor Machado Ferreira,"CAM, CM",67,21,172,FC Porto,Portugal,72.0,57.0,67.0,51.0,49.0,62,20.0,CM,Midfielder
+256098,Richard Ledezma,CAM,67,20,174,PSV,United States,75.0,59.0,66.0,47.0,45.0,59,37.0,CAM,Midfielder
+256325,Josip Šutalo,"CB, RB",67,21,190,Dinamo Zagreb,Croatia,66.0,27.0,46.0,67.0,73.0,38,37.0,CB,Defender
+257540,Ansgar Knauff,RM,67,19,180,Borussia Dortmund,Germany,84.0,55.0,59.0,35.0,51.0,54,36.0,RM,Midfielder
+257877,Junior Chukwubuike Adamu,ST,67,20,183,FC Red Bull Salzburg,Austria,83.0,66.0,49.0,21.0,62.0,66,9.0,ST,Forward
+258922,Marvin Olawale Akinlabi Park,"RW, RM, RB",67,21,178,Real Madrid CF,Spain,81.0,60.0,59.0,19.0,48.0,56,28.0,RB,Defender
+259065,Arnau Tenas Ureña,GK,67,20,185,FC Barcelona,Spain,,,,,,51,36.0,GK,Goalkeeper
+264251,Deni Jurić,"ST, CAM",67,23,188,Dinamo Zagreb,Australia,76.0,69.0,53.0,26.0,77.0,76,39.0,CAM,Midfielder
+264311,Ruben Providence,"LW, RW, ST",67,19,172,Club Brugge KV,France,83.0,58.0,52.0,27.0,37.0,68,14.0,ST,Forward
+264325,Martín Satriano,ST,67,20,187,Inter,Uruguay,67.0,66.0,52.0,29.0,65.0,61,48.0,ST,Forward
+224875,Bonke Innocent,"CDM, CM",66,25,178,Malmö FF,Nigeria,76.0,43.0,54.0,60.0,83.0,47,20.0,CDM,Midfielder
+232130,Vladyslav Kulach,ST,66,28,178,Dynamo Kyiv,Ukraine,73.0,63.0,50.0,21.0,63.0,55,28.0,ST,Forward
+234834,Komnen Andrić,ST,66,26,189,Dinamo Zagreb,Serbia,65.0,66.0,50.0,22.0,67.0,67,9.0,ST,Forward
+235266,Christian Früchtl,GK,66,21,193,FC Bayern München,Germany,,,,,,50,36.0,GK,Goalkeeper
+236378,Alessandro Plizzari,GK,66,21,187,AC Milan,Italy,,,,,,44,77.0,GK,Goalkeeper
+237704,João Manuel Neves Virgínia,GK,66,21,191,Sporting CP,Portugal,,,,,,49,31.0,GK,Goalkeeper
+238656,Steffen Tigges,ST,66,22,193,Borussia Dortmund,Germany,57.0,67.0,55.0,42.0,79.0,75,27.0,ST,Forward
+238820,Quentin Maceiras Pralong,"RB, RWB",66,25,180,BSC Young Boys,Switzerland,81.0,57.0,60.0,62.0,69.0,60,24.0,RB,Defender
+239379,Victor Christoffer Jensen,CAM,66,21,175,Ajax,Denmark,71.0,58.0,63.0,41.0,54.0,58,26.0,CAM,Midfielder
+239589,Aka Wilfried Kanga,ST,66,23,189,BSC Young Boys,France,72.0,63.0,59.0,24.0,62.0,65,9.0,ST,Forward
+244364,Gabriel Nascimento Resende Brazão,GK,66,20,192,Inter,Brazil,,,,,,45,91.0,GK,Goalkeeper
+245367,Xavi Simons,CM,66,18,168,Paris Saint-Germain,Netherlands,68.0,57.0,66.0,57.0,60.0,59,34.0,CM,Midfielder
+245461,Facundo Colidio,"ST, CAM",66,21,179,Inter,Argentina,68.0,67.0,63.0,25.0,44.0,63,49.0,CAM,Midfielder
+246340,Mykhailo Mudryk,LM,66,20,175,Shakhtar Donetsk,Ukraine,81.0,48.0,58.0,32.0,60.0,51,20.0,LM,Midfielder
+246385,Adi Nalić,"CAM, RW, ST",66,23,190,Malmö FF,Bosnia and Herzegovina,78.0,62.0,58.0,43.0,70.0,73,22.0,CAM,Midfielder
+247335,Wilson Isidor,ST,66,20,186,AS Monaco,France,67.0,65.0,54.0,21.0,57.0,68,39.0,ST,Forward
+251464,Ignace Van der Brempt,"RB, RM",66,19,191,Club Brugge KV,Belgium,74.0,52.0,57.0,60.0,67.0,60,28.0,RB,Defender
+257318,Kays Ruiz-Atil,"CAM, CM",66,18,173,FC Barcelona,Morocco,67.0,54.0,64.0,44.0,41.0,60,44.0,CM,Midfielder
+259252,Eric Kleybel Ramírez Matheus,ST,66,22,190,Dynamo Kyiv,Venezuela,51.0,66.0,46.0,22.0,65.0,65,9.0,ST,Forward
+260080,Daniel Alejandro Pérez Córdova,ST,66,19,189,Club Brugge KV,Venezuela,69.0,67.0,40.0,27.0,70.0,66,30.0,ST,Forward
+261146,Daniel Štefulj,"LB, LWB, LM",66,21,186,Dinamo Zagreb,Croatia,72.0,50.0,57.0,59.0,69.0,66,3.0,LB,Defender
+261865,Miguel Gutiérrez Ortega,LB,66,19,180,Real Madrid CF,Spain,71.0,40.0,47.0,64.0,58.0,48,35.0,LB,Defender
+262053,Kayky da Silva Chagas,RW,66,18,173,Manchester City,Brazil,82.0,58.0,57.0,28.0,45.0,62,82.0,RW,Forward
+263578,Alejandro Balde Martínez,"LB, LM",66,17,175,FC Barcelona,Spain,76.0,35.0,53.0,62.0,48.0,44,31.0,LB,Defender
+263759,Tibo Persyn,"RM, RW, RWB",66,19,179,Club Brugge KV,Belgium,82.0,62.0,62.0,49.0,61.0,75,16.0,RWB,Defender
+264240,Pablo Martín Páez Gavira,CM,66,16,173,FC Barcelona,Spain,66.0,53.0,67.0,50.0,48.0,49,30.0,CM,Midfielder
+53739,Lee Grant,GK,65,38,193,Manchester United,England,,,,,,52,13.0,GK,Goalkeeper
+216255,Marvin Stefaniak,"CAM, LW, LM",65,26,178,VfL Wolfsburg,Germany,75.0,60.0,64.0,29.0,58.0,69,44.0,CAM,Midfielder
+228869,Sergio Camus Perojo,"RB, CB",65,24,176,Atlético de Madrid,Spain,72.0,47.0,56.0,62.0,66.0,61,38.0,CB,Defender
+236028,Javier Díaz Sánchez,GK,65,24,182,Sevilla FC,Spain,,,,,,49,31.0,GK,Goalkeeper
+236615,Dante Rigo,"CDM, CM",65,22,180,PSV,Belgium,54.0,58.0,69.0,60.0,60.0,65,34.0,CDM,Midfielder
+243773,Kilian Ludewig,"RWB, RB",65,21,174,FC Red Bull Salzburg,Germany,74.0,46.0,60.0,60.0,59.0,52,29.0,RB,Defender
+244024,Oliver Batista Meier,"CAM, LW",65,20,178,FC Bayern München,Germany,75.0,64.0,57.0,29.0,44.0,69,45.0,CAM,Midfielder
+244919,Martín Pascual Castillo,"CB, CDM",65,21,190,Villarreal CF,Spain,58.0,25.0,41.0,66.0,59.0,39,31.0,CB,Defender
+247122,Danylo Sikan,ST,65,20,185,Shakhtar Donetsk,Ukraine,74.0,65.0,47.0,20.0,52.0,58,45.0,ST,Forward
+247519,Felix Khonde Mambimbi,"ST, LM, RM",65,20,171,BSC Young Boys,Switzerland,88.0,64.0,53.0,24.0,55.0,62,19.0,LM,Midfielder
+247721,Tobias Raschl,CM,65,21,177,Borussia Dortmund,Germany,66.0,53.0,64.0,55.0,64.0,59,37.0,CM,Midfielder
+253396,Giuliano Simeone,"ST, LM",65,18,184,Atlético de Madrid,Argentina,74.0,66.0,49.0,25.0,69.0,67,27.0,LM,Midfielder
+257470,Anthony David Junior Elanga,"LM, ST",65,19,180,Manchester United,Sweden,81.0,60.0,58.0,29.0,51.0,64,36.0,LM,Midfielder
+258923,Sergio Arribas Calvo,"CAM, RM, LM",65,19,173,Real Madrid CF,Spain,68.0,53.0,56.0,33.0,51.0,47,30.0,CAM,Midfielder
+259067,André Filipe Eusébio Paulo,GK,65,24,188,Sporting CP,Portugal,,,,,,48,22.0,GK,Goalkeeper
+261249,Édouard Michut,CM,65,18,178,Paris Saint-Germain,France,65.0,53.0,64.0,56.0,49.0,58,38.0,CM,Midfielder
+263028,Bryan Okoh,CB,65,18,187,FC Red Bull Salzburg,Switzerland,79.0,31.0,53.0,62.0,72.0,53,3.0,CB,Defender
+263804,Yukhym Konoplia,"RB, RWB",65,21,180,Shakhtar Donetsk,Ukraine,77.0,42.0,50.0,58.0,60.0,59,26.0,RB,Defender
+264022,Gonçalo Esteves,"RWB, RB",65,17,177,Sporting CP,Portugal,70.0,39.0,60.0,60.0,54.0,42,87.0,RB,Defender
+170785,Guillaume Faivre,GK,64,34,188,BSC Young Boys,Switzerland,,,,,,44,91.0,GK,Goalkeeper
+224798,Romain Gall,LM,64,26,175,Malmö FF,United States,81.0,64.0,57.0,39.0,45.0,71,18.0,LM,Midfielder
+233051,Luke Bolton,"RB, RWB, RM",64,21,176,Manchester City,England,81.0,51.0,59.0,59.0,63.0,56,74.0,RB,Defender
+241462,Ramiro Guerra Pereyra,CDM,64,24,183,Villarreal CF,Uruguay,48.0,58.0,56.0,63.0,59.0,60,29.0,CDM,Midfielder
+244262,Dinko Horkaš,GK,64,22,189,Dinamo Zagreb,Croatia,,,,,,46,23.0,GK,Goalkeeper
+245290,Adrián de la Fuente Barquilla,CB,64,22,179,Villarreal CF,Spain,50.0,39.0,50.0,64.0,63.0,49,37.0,CB,Defender
+246061,Andrés Felipe Solano Dávila,RB,64,23,176,Atlético de Madrid,Colombia,63.0,35.0,54.0,61.0,57.0,49,32.0,RB,Defender
+250822,Bandiougou Fadiga,"CM, CAM",64,20,178,Paris Saint-Germain,France,75.0,47.0,60.0,59.0,53.0,52,37.0,CM,Midfielder
+250955,Josip Stanišić,"RB, CB",64,21,186,FC Bayern München,Croatia,65.0,28.0,49.0,64.0,60.0,36,44.0,CB,Defender
+252789,Ruslan Neshcheret,GK,64,19,190,Dynamo Kyiv,Ukraine,,,,,,47,35.0,GK,Goalkeeper
+253465,Teden Mengi,CB,64,19,183,Manchester United,England,78.0,39.0,54.0,63.0,68.0,54,43.0,CB,Defender
+254123,Miguel Ángel Leal Díaz,"RB, RM",64,24,176,Villarreal CF,Spain,67.0,45.0,57.0,60.0,64.0,58,46.0,RB,Defender
+254803,Senne Lammens,GK,64,18,193,Club Brugge KV,Belgium,,,,,,44,91.0,GK,Goalkeeper
+257110,Francisco Manuel Gonzalez Verjara,CB,64,22,188,Atlético de Madrid,Spain,48.0,26.0,45.0,61.0,76.0,35,36.0,CB,Defender
+257534,Cole Palmer,"RW, CAM",64,19,189,Manchester City,England,77.0,58.0,60.0,45.0,54.0,65,80.0,CAM,Midfielder
+259031,Liam Delap,ST,64,18,186,Manchester City,England,76.0,64.0,47.0,24.0,66.0,69,48.0,ST,Forward
+259306,Fabian Rieder,CM,64,19,179,BSC Young Boys,Switzerland,70.0,54.0,64.0,49.0,60.0,62,32.0,CM,Midfielder
+259679,Jayden Jezairo Braaf,"LW, RW",64,18,179,Manchester City,Netherlands,83.0,60.0,57.0,40.0,64.0,69,51.0,LW,Forward
+260237,Daouda Guindo,LB,64,18,183,FC Red Bull Salzburg,Mali,80.0,28.0,51.0,58.0,65.0,38,37.0,LB,Defender
+261531,Flávio Basilua Jacinto Nazinho,"LB, LM",64,17,180,Sporting CP,Portugal,71.0,33.0,53.0,61.0,57.0,26,71.0,LB,Defender
+262842,Martin Baturina,"CM, CAM",64,18,172,Dinamo Zagreb,Croatia,73.0,54.0,63.0,51.0,54.0,67,46.0,CM,Midfielder
+263943,Javier Serrano Martínez,CDM,64,18,175,Atlético de Madrid,Spain,71.0,56.0,60.0,59.0,63.0,56,26.0,CDM,Midfielder
+263945,Alberto Moreno Rebanal,CM,64,19,175,Atlético de Madrid,Spain,69.0,59.0,63.0,52.0,55.0,61,34.0,CM,Midfielder
+264266,Fodé Fofana,ST,64,18,188,PSV,Netherlands,79.0,64.0,58.0,22.0,66.0,66,42.0,ST,Forward
+264430,Christian Gómez Vela,GK,64,21,187,Atlético de Madrid,Spain,,,,,,46,28.0,GK,Goalkeeper
+224426,Nicolas Sandro Bürgy,CB,63,25,185,BSC Young Boys,Switzerland,48.0,29.0,43.0,64.0,65.0,39,14.0,CB,Defender
+238189,Tariq Uwakwe,LWB,63,21,183,Chelsea,England,74.0,52.0,55.0,57.0,62.0,55,53.0,LWB,Defender
+250754,Nick Shinton,GK,63,20,194,Club Brugge KV,Belgium,,,,,,44,33.0,GK,Goalkeeper
+252598,Sergio Lozano Lluch,"CM, CAM, RM",63,22,175,Villarreal CF,Spain,62.0,51.0,62.0,54.0,48.0,54,38.0,CM,Midfielder
+258185,Luis Carbonell Artajona,"ST, LW",63,18,169,Real Madrid CF,Spain,74.0,64.0,51.0,19.0,43.0,69,29.0,ST,Forward
+258485,Filip Jörgensen,GK,63,19,189,Villarreal CF,Sweden,,,,,,51,35.0,GK,Goalkeeper
+258763,Maxime Delanghe,GK,63,20,189,PSV,Belgium,,,,,,47,21.0,GK,Goalkeeper
+259171,José Manuel Cabrera López,RB,63,20,177,Villarreal CF,Spain,67.0,39.0,52.0,59.0,55.0,52,27.0,RB,Defender
+259405,Antonio Zarzana Pérez,"RM, LM, CAM",63,19,177,Sevilla FC,Spain,70.0,51.0,65.0,22.0,49.0,57,30.0,CAM,Midfielder
+260100,Fredrik Oppegård,LB,63,18,175,PSV,Norway,76.0,51.0,55.0,56.0,60.0,59,35.0,LB,Defender
+260232,Ivan Šaranić,"RW, CAM",63,18,185,Dinamo Zagreb,Croatia,72.0,56.0,62.0,28.0,61.0,64,35.0,CAM,Midfielder
+262260,Sergio Guerrero Romero,CM,63,22,174,Atlético de Madrid,Spain,66.0,51.0,64.0,62.0,54.0,50,30.0,CM,Midfielder
+262889,Anselmo Garcia MacNulty,CB,63,18,187,VfL Wolfsburg,Republic of Ireland,64.0,35.0,41.0,64.0,68.0,48,18.0,CB,Defender
+263194,Ismaël Gharbi,"LW, CAM",63,17,167,Paris Saint-Germain,France,71.0,55.0,60.0,40.0,40.0,60,35.0,CAM,Midfielder
+264170,Luis Federico López Andúgar,GK,63,20,190,Real Madrid CF,Spain,,,,,,44,32.0,GK,Goalkeeper
+233211,Niklas Klinger,GK,62,25,187,VfL Wolfsburg,Germany,,,,,,47,30.0,GK,Goalkeeper
+246863,Felix Kalu Nmecha,"CAM, CM",62,20,185,VfL Wolfsburg,England,73.0,54.0,61.0,45.0,59.0,62,22.0,CM,Midfielder
+251502,Abdul Malik Abubakari,ST,62,21,184,Malmö FF,Ghana,68.0,61.0,44.0,23.0,79.0,55,17.0,ST,Forward
+256887,Taylor Anthony Booth,"CM, RW",62,20,174,FC Bayern München,United States,66.0,59.0,61.0,45.0,49.0,61,37.0,CM,Midfielder
+258171,Hannibal Mejbri,"CAM, CM",62,18,182,Manchester United,Tunisia,69.0,51.0,61.0,52.0,58.0,54,46.0,CM,Midfielder
+258319,Nikita Iosifov,LM,62,20,175,Villarreal CF,Russia,71.0,62.0,59.0,26.0,46.0,71,36.0,LM,Midfielder
+258722,Osvaldo Pedro Capemba,"LM, RM",62,19,171,LOSC Lille,Angola,73.0,50.0,57.0,20.0,40.0,45,35.0,LM,Midfielder
+259530,Alfonso Pastor Vacas,GK,62,20,190,Sevilla FC,Spain,,,,,,50,33.0,GK,Goalkeeper
+259913,Heorhii Sudakov,CAM,62,18,177,Shakhtar Donetsk,Ukraine,71.0,59.0,56.0,39.0,64.0,71,61.0,CAM,Midfielder
+259918,Ismael Diawara,GK,62,26,194,Malmö FF,Mali,,,,,,45,30.0,GK,Goalkeeper
+260876,Maurits Kjaergaard,"CAM, CM",62,18,189,FC Red Bull Salzburg,Denmark,71.0,58.0,59.0,57.0,68.0,67,14.0,CM,Midfielder
+260910,Shola Maxwell Shoretire,"RM, LM",62,17,175,Manchester United,England,72.0,56.0,56.0,37.0,55.0,56,47.0,LM,Midfielder
+261580,Edward Campbell Sutherland,RM,62,21,176,Atlético de Madrid,England,74.0,54.0,58.0,27.0,45.0,63,45.0,RM,Midfielder
+261621,Luke Mbete,CB,62,17,185,Manchester City,England,65.0,32.0,47.0,61.0,66.0,49,79.0,CB,Defender
+263620,Romeo Lavia,CDM,62,17,181,Manchester City,Belgium,58.0,41.0,52.0,62.0,59.0,55,90.0,CDM,Midfielder
+263953,Samuel Edozie,LW,62,18,167,Manchester City,England,75.0,55.0,55.0,28.0,47.0,59,53.0,LW,Forward
+264116,Alejandro Iturbe Encabo,GK,62,17,184,Atlético de Madrid,Spain,,,,,,47,31.0,GK,Goalkeeper
+264220,Youri Baas,LB,62,18,182,Ajax,Netherlands,68.0,34.0,54.0,60.0,56.0,36,35.0,LB,Defender
+242732,Ebeguowen Owen Otasowie,"CDM, CB, CM",61,20,191,Club Brugge KV,United States,59.0,46.0,57.0,57.0,67.0,50,8.0,CB,Defender
+256058,Pablo Pérez Rico,"LB, LM",61,19,170,Sevilla FC,Spain,66.0,35.0,51.0,56.0,58.0,38,40.0,LB,Defender
+256853,Malik Tillman,ST,61,19,186,FC Bayern München,Germany,66.0,64.0,48.0,18.0,56.0,68,40.0,ST,Forward
+259419,中井 卓大,CAM,61,17,178,Real Madrid CF,Japan,58.0,50.0,60.0,31.0,47.0,53,31.0,CAM,Midfielder
+260235,Mamady Diambou,CDM,61,18,176,FC Red Bull Salzburg,Mali,73.0,52.0,54.0,56.0,63.0,68,15.0,CDM,Midfielder
+260577,Cisse Sandra,"CAM, LM, CF",61,17,183,Club Brugge KV,Belgium,66.0,60.0,61.0,34.0,59.0,63,98.0,CAM,Midfielder
+260990,Rocco Ascone,CM,61,17,180,LOSC Lille,France,66.0,47.0,60.0,50.0,50.0,56,14.0,CM,Midfielder
+261495,Soumaila Coulibaly,CB,61,17,190,Borussia Dortmund,France,62.0,36.0,48.0,59.0,61.0,56,4.0,CB,Defender
+263355,Robin Friedrich,ST,61,18,173,RB Leipzig,Germany,67.0,63.0,47.0,21.0,39.0,64,50.0,ST,Forward
+264026,Nathan Bitumazala,"RB, CDM",61,18,178,Paris Saint-Germain,France,67.0,42.0,55.0,59.0,56.0,53,39.0,RB,Defender
+264221,Ar'jany Martha,RW,61,17,180,Ajax,Netherlands,80.0,55.0,56.0,30.0,41.0,54,42.0,RW,Forward
+264265,Aron van Lare,GK,61,18,190,PSV,Netherlands,,,,,,50,41.0,GK,Goalkeeper
+264349,James McAtee,CAM,61,18,187,Manchester City,England,63.0,59.0,58.0,40.0,53.0,62,87.0,CAM,Midfielder
+194894,Francesco Rossi,GK,60,30,193,Atalanta,Italy,,,,,,47,31.0,GK,Goalkeeper
+241160,George McEachran,"CM, CDM",60,20,172,Chelsea,England,61.0,45.0,63.0,49.0,44.0,47,41.0,CDM,Midfielder
+255074,Artem Bondarenko,"CAM, CM, RM",60,20,188,Shakhtar Donetsk,Ukraine,65.0,54.0,55.0,35.0,50.0,45,15.0,CM,Midfielder
+255391,Eugenio Pizzuto Puga,"CDM, CM",60,19,179,LOSC Lille,Mexico,63.0,43.0,54.0,56.0,59.0,55,15.0,CDM,Midfielder
+256500,Nnamdi Collins,CB,60,17,188,Borussia Dortmund,Germany,85.0,25.0,39.0,59.0,67.0,33,41.0,CB,Defender
+256610,Dillon Hoogewerf,"RM, CF",60,18,165,Manchester United,Netherlands,79.0,58.0,51.0,25.0,48.0,57,66.0,RM,Midfielder
+257244,Alexandre Tounde Dimitri Jankewitz,CM,60,19,185,BSC Young Boys,Switzerland,66.0,56.0,60.0,44.0,68.0,67,11.0,CM,Midfielder
+258041,Hugo Novoa Ramos,ST,60,18,182,RB Leipzig,Spain,54.0,63.0,45.0,22.0,45.0,62,38.0,ST,Forward
+259424,Israel Salazar Píriz,ST,60,18,177,Real Madrid CF,Spain,53.0,64.0,45.0,20.0,48.0,60,26.0,ST,Forward
+260241,Jannis Lang,CB,60,18,188,VfL Wolfsburg,Germany,60.0,32.0,35.0,62.0,62.0,48,38.0,CB,Defender
+263289,Denys Antyukh,LM,60,23,183,Dynamo Kyiv,Ukraine,63.0,46.0,57.0,26.0,55.0,45,99.0,LM,Midfielder
+264172,José Ángel Carmona Navarro,"RB, CB",60,19,183,Sevilla FC,Spain,66.0,27.0,42.0,58.0,61.0,27,28.0,CB,Defender
+264173,Iván Romero de Ávila,"ST, RW, LW",60,20,172,Sevilla FC,Spain,69.0,58.0,43.0,22.0,53.0,55,36.0,ST,Forward
+264175,Pedro Ortiz Bernat,"CM, CAM",60,20,184,Sevilla FC,Spain,65.0,55.0,53.0,49.0,60.0,48,34.0,CM,Midfielder
+264561,James Norris,LB,60,18,178,Liverpool,England,72.0,35.0,51.0,57.0,54.0,36,54.0,LB,Defender
+242436,Jonathan Russell,CM,59,20,188,Chelsea,England,65.0,52.0,57.0,55.0,63.0,54,47.0,CM,Midfielder
+245397,Peter Gwargis,"RW, LW",59,20,181,Malmö FF,Sweden,71.0,53.0,59.0,48.0,52.0,64,21.0,LW,Forward
+255611,Daniel Maldini,CAM,59,19,186,AC Milan,Italy,68.0,51.0,59.0,38.0,50.0,60,27.0,CAM,Midfielder
+256782,Sebastian Nanasi,"CAM, LW",59,19,178,Malmö FF,Sweden,70.0,56.0,50.0,29.0,58.0,52,37.0,CAM,Midfielder
+257239,Josh Brooking,"CB, RB",59,18,185,Chelsea,England,59.0,29.0,36.0,62.0,55.0,47,44.0,CB,Defender
+259165,Joscha Wosz,"CM, RB",59,18,173,RB Leipzig,Germany,66.0,50.0,58.0,48.0,45.0,65,47.0,RB,Defender
+261241,Mehmet Ibrahimi,"LW, CAM, RW",59,18,181,RB Leipzig,Germany,67.0,49.0,53.0,30.0,38.0,52,45.0,CAM,Midfielder
+261294,Calvin Owen Harm Raatsie,GK,59,19,188,Ajax,Netherlands,,,,,,45,52.0,GK,Goalkeeper
+263353,Eric Uhlmann,CDM,59,18,176,RB Leipzig,Germany,70.0,47.0,55.0,56.0,57.0,63,51.0,CDM,Midfielder
+263354,Julius Pfennig,CB,59,18,181,RB Leipzig,Germany,55.0,30.0,37.0,63.0,56.0,45,48.0,CB,Defender
+263155,Ben Klefisch,CM,58,18,179,RB Leipzig,Germany,62.0,45.0,59.0,59.0,58.0,59,46.0,CM,Midfielder
+263272,Philipp Schulze,GK,58,18,190,VfL Wolfsburg,Germany,,,,,,43,35.0,GK,Goalkeeper
+263352,David Lelle,CB,58,18,178,RB Leipzig,Germany,55.0,32.0,36.0,62.0,49.0,46,52.0,CB,Defender
+264415,Charlie Setford,GK,58,17,193,Ajax,England,,,,,,44,51.0,GK,Goalkeeper
+242787,Elijah Dixon-Bonner,CDM,57,20,180,Liverpool,England,64.0,51.0,56.0,53.0,53.0,56,45.0,CDM,Midfielder
+243391,Iker Pozo La Rosa,CDM,57,20,178,Manchester City,Spain,66.0,44.0,56.0,51.0,55.0,55,56.0,CDM,Midfielder
+250866,Morgan Boyes,"CB, LB",57,20,179,Liverpool,Wales,65.0,36.0,49.0,57.0,56.0,45,52.0,CB,Defender
+253429,Thomas Clayton,CB,57,20,183,Liverpool,Scotland,61.0,32.0,40.0,57.0,60.0,41,57.0,CB,Defender
+254588,Billy Koumetio,CB,57,18,195,Liverpool,France,53.0,32.0,41.0,58.0,60.0,45,89.0,CB,Defender
+258924,Joël Monteiro Almada,ST,57,21,191,BSC Young Boys,Portugal,62.0,55.0,44.0,23.0,60.0,54,77.0,ST,Forward
+259430,Marcelo Pitaluga,GK,57,18,191,Liverpool,Brazil,,,,,,39,53.0,GK,Goalkeeper
+261180,Nico Maier,"CAM, RM",57,20,173,BSC Young Boys,Switzerland,68.0,49.0,59.0,35.0,47.0,52,22.0,CAM,Midfielder
+262988,Göktan Gürpüz,CM,57,18,175,Borussia Dortmund,Turkey,65.0,43.0,58.0,43.0,45.0,46,42.0,CM,Midfielder
+264213,Gil-Linnart Walther,LM,57,18,178,VfL Wolfsburg,Germany,66.0,50.0,52.0,29.0,44.0,55,48.0,LM,Midfielder
+253483,Sam McClelland,CB,55,19,190,Chelsea,Northern Ireland,51.0,32.0,36.0,56.0,60.0,48,45.0,CB,Defender
+261375,Lucas Bergström,GK,54,18,200,Chelsea,Finland,,,,,,42,36.0,GK,Goalkeeper
+263827,Leandro Zbinden,GK,53,18,187,BSC Young Boys,Switzerland,,,,,,43,61.0,GK,Goalkeeper
+259987,Melker Ellborg,GK,52,18,191,Malmö FF,Sweden,,,,,,38,1.0,GK,Goalkeeper
+260001,Noah Eile,CB,52,18,195,Malmö FF,Sweden,58.0,26.0,34.0,51.0,59.0,39,29.0,CB,Defender
+262913,Markus Björkqvist,CM,51,17,181,Malmö FF,Sweden,67.0,41.0,47.0,42.0,73.0,53,34.0,CM,Midfielder
