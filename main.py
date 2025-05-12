@@ -1,138 +1,124 @@
-from fastapi import FastAPI, Depends, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, Depends, HTTPException, Path, Body, Query
 from sqlalchemy.ext.asyncio import AsyncSession
-from crud_jugador import *
-from database import *
-from jugador import Jugador
+from sqlmodel import select
 from typing import List
-from crud_player import *
-from player import Metricplayer
+from models_sqlmodel import Jugador, JugadorPatchBody, Metricplayer, MetricplayerPatchBody
+from database import get_session
+from crud_jugador import (
+    get_all_jugadores,
+    get_jugador,
+    get_jugadores_by_pais,
+    create_jugador,
+    patch_jugador,
+    delete_jugador
+)
+from models_sqlmodel import Metricplayer
+from crud_player import (
+    get_all_players,
+    get_player,
+    create_player,
+    update_player,
+    delete_player,
+    get_players_by_overall
+)
 
 app = FastAPI()
 
-async def get_db():
-    async with AsyncSessionLocal() as session:
-        yield session
-
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+    return {"message": "API UEFA 2021-2022."}
 
 
 @app.get("/jugadores", response_model=List[Jugador])
-async def read_jugadores(db: AsyncSession = Depends(get_db)):
-    return await get_all_jugadores(db)
+async def read_jugadores(session: AsyncSession = Depends(get_session)):
+    return await get_all_jugadores(session)
+
 
 @app.get("/jugadores/{sofifa_id}", response_model=Jugador)
-async def read_jugador(sofifa_id: int, db: AsyncSession = Depends(get_db)):
-    jugador = await get_jugador(db, sofifa_id)
-    if jugador is None:
-        raise HTTPException(status_code=404, detail="Jugador no encontrado")
-    return jugador
-
-@app.post("/jugadores", response_model=Jugador)
-async def create_jugador1(jugador: Jugador, db: AsyncSession = Depends(get_db)):
-    return await create_jugador(db,jugador)
-
-
-
-@app.put("/jugadores/{sofifa_id}", response_model=Jugador)
-async def update_jugador1(
-    sofifa_id: int,
-    jugador_update: Jugador,
-    db: AsyncSession = Depends(get_db)
-):
-    updated = await update_jugador(
-        db, sofifa_id, jugador_update.dict(exclude_unset=True)
-    )
-
-    if not updated:
-        raise HTTPException(status_code=404, detail="Jugador no modificado")
-
-    jugador_actualizado = await get_jugador(db, sofifa_id)
-    return jugador_actualizado
-
-@app.delete("/jugadores/{sofifa_id}", response_model=Jugador)
-async def delete_jugador_endpoint(sofifa_id: int, db: AsyncSession = Depends(get_db)):
-    jugador = await get_jugador(db, sofifa_id)
+async def read_jugador_by_id(sofifa_id: int, session: AsyncSession = Depends(get_session)):
+    jugador = await get_jugador(session, sofifa_id)
     if not jugador:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
-
-    eliminado = await delete_jugador(db, sofifa_id)
-    if not eliminado:
-        raise HTTPException(status_code=400, detail="No se pudo eliminar el jugador")
-
     return jugador
 
 
-@app.get("/players", response_model=List[Metricplayer])
-async def read_players(db: AsyncSession = Depends(get_db)):
-    return await get_all_players(db)
+@app.get("/jugadores/pais/{pais}", response_model=List[Jugador])
+async def jugadores_por_pais(pais: str, session: AsyncSession = Depends(get_session)):
+    return await get_jugadores_by_pais(session, pais)
 
-@app.get("/players/{sofifa_id}", response_model=Metricplayer)
-async def read_player(sofifa_id: int, db: AsyncSession = Depends(get_db)):
-    player = await get_player(db, sofifa_id)
-    if not player:
-        raise HTTPException(status_code=404, detail="Jugador no encontrado")
-    return player
 
-@app.post("/players", response_model=Metricplayer)
-async def create_new_player(player: Metricplayer, db: AsyncSession = Depends(get_db)):
-    return await create_player(db, player)
+@app.post("/jugadores", response_model=Jugador)
+async def create_jugador_endpoint(jugador: Jugador, session: AsyncSession = Depends(get_session)):
+    return await create_jugador(session, jugador)
 
-@app.put("/players/{sofifa_id}", response_model=Metricplayer)
-async def update_existing_player(
+
+from models_sqlmodel import JugadorPatchBody
+
+@app.patch("/jugadores/{sofifa_id}", response_model=Jugador)
+async def patch_jugador_endpoint(
     sofifa_id: int,
-    player_update: Metricplayer,
-    db: AsyncSession = Depends(get_db)
+    payload: JugadorPatchBody,
+    session: AsyncSession = Depends(get_session)
 ):
-    updated = await update_player(db, sofifa_id, player_update.dict(exclude_unset=True))
-    if not updated:
-        raise HTTPException(status_code=404, detail="Jugador no actualiazado")
-    return await get_player(db, sofifa_id)
+    jugador = await patch_jugador(session, sofifa_id, payload.dict(exclude_unset=True))
+    if not jugador:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return jugador
 
-@app.delete("/players/{sofifa_id}", response_model=Metricplayer)
-async def delete_player_detailed(sofifa_id: int, db: AsyncSession = Depends(get_db)):
-    player = await get_player(db, sofifa_id)
+
+@app.delete("/jugadores/{sofifa_id}")
+async def delete_jugador_endpoint(sofifa_id: int, session: AsyncSession = Depends(get_session)):
+    success = await delete_jugador(session, sofifa_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return {"message": "Jugador eliminado correctamente"}
+
+
+@app.get("/fifa_players", response_model=List[Metricplayer])
+async def read_players(session: AsyncSession = Depends(get_session)):
+    return await get_all_players(session)
+
+
+@app.get("/fifa_players/{sofifa_id}", response_model=Metricplayer)
+async def read_player_by_id(sofifa_id: int, session: AsyncSession = Depends(get_session)):
+    player = await get_player(session, sofifa_id)
     if not player:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
-
-    success = await delete_player(db, sofifa_id)
-    if not success:
-        raise HTTPException(status_code=400, detail="No se pudo eliminar el jugador")
-
     return player
 
-@app.get("/players1/export", response_class=FileResponse)
-async def export_players(db: AsyncSession = Depends(get_db)):
-    filepath = "players.csv"
-    await export_players_to_csv(db, filepath)
-    return FileResponse(path=filepath, filename="players.csv", media_type="text/csv")
 
-@app.get("/jugadores1/export", response_class=FileResponse)
-async def exportar_jugadores(db: AsyncSession = Depends(get_db)):
-    filepath = await export_jugadores_to_csv(db)
-    return FileResponse(filepath, filename="jugadores.csv", media_type="text/csv")
-
-@app.get("/jugadores/filtrar/pais/{pais}", response_model=list[Jugador])
-async def filtrar_jugadores_por_pais(pais: str, db: AsyncSession = Depends(get_db)):
-    jugadores = await get_jugadores_by_pais(db, pais)
-    if not jugadores:
-        raise HTTPException(status_code=404, detail="No se encontraron jugadores para ese país")
+@app.get("/fifa_players/overall/{min_overall}", response_model=List[Metricplayer])
+async def read_players_by_overall(
+    min_overall: float = Path(..., ge=0, description="Minimum overall rating (must be 0 or higher)"),
+    session: AsyncSession = Depends(get_session)
+):
+    result = await session.execute(
+        select(Metricplayer).where(Metricplayer.overall >= min_overall)
+    )
+    jugadores = result.scalars().all()
     return jugadores
 
-@app.get("/players/filter/overall")
-async def filtrar_players_por_overall(min_overall: float = Query(..., description="Valor mínimo de overall"), db: AsyncSession = Depends(get_db)):
-    players = await get_players_by_overall(db, min_overall)
-    if not players:
-        raise HTTPException(status_code=404, detail="No se encontraron jugadores con ese overall o superior")
-    return players
 
-@app.get("/players1/eliminados")
-async def get_deleted_players(db: AsyncSession = Depends(get_db)):
-    result = await db.execute(select(Player).where(Player.is_active == False))
-    return result.scalars().all()
+@app.post("/fifa_players", response_model=Metricplayer)
+async def create_player_endpoint(player: Metricplayer, session: AsyncSession = Depends(get_session)):
+    return await create_player(session, player)
+
+
+@app.patch("/metricplayers/{sofifa_id}", response_model=Metricplayer)
+async def patch_metricplayer_endpoint(
+    sofifa_id: int,
+    payload: MetricplayerPatchBody,
+    session: AsyncSession = Depends(get_session)
+):
+    jugador = await patch_metricplayer(session, sofifa_id, payload.dict(exclude_unset=True))
+    if not jugador:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return jugador
+
+
+@app.delete("/fifa_players/{sofifa_id}")
+async def delete_player_endpoint(sofifa_id: int, session: AsyncSession = Depends(get_session)):
+    success = await delete_player(session, sofifa_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    return {"message": "Jugador marcado como inactivo"}
