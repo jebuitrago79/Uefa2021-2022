@@ -18,7 +18,7 @@ class Jugador(BaseModel):
     nationality_name: str = Field(..., min_length=2, max_length=40)
     height_cm: float = Field(..., gt=0)
     club_name: str = Field(..., min_length=2, max_length=40)
-    player_positions: str = Field(..., min_length=2, max_length=40)
+    position_category: PlayerCategory = Field(sa_column=Column(String))
     club_jersey_number: float = Field(..., gt=0)
 
 
