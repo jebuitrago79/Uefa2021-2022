@@ -1,20 +1,30 @@
 import pandas as pd
-import asyncio
 from sqlmodel import SQLModel, Field, create_engine, Session
+from sqlalchemy.ext.asyncio import create_async_engine
+from sqlmodel.ext.asyncio.session import AsyncSession
+from sqlalchemy.orm import sessionmaker
 from models_sqlmodel import Jugador, Metricplayer
 
-# Leer CSV
-df = pd.read_csv("players_equipos_europeos_22.csv")
+df = pd.read_csv("Player_Equipos_Europeos2021_22.csv")
 
-# Crear motor de base de datos (puedes cambiar a PostgreSQL si quieres luego)
-DATABASE_URL = "sqlite:///uefa.db"  # Sin "async" porque usaremos Session síncrono aquí
-engine = create_engine(DATABASE_URL, echo=False)
+
+DATABASE_URL = "sqlite+aiosqlite:///./uefa.db"
+engine = create_async_engine(DATABASE_URL, echo=True)
+async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
+
+
+async def get_session() -> AsyncSession:
+    async with async_session() as session:
+        yield session
+
+
+sync_engine = create_engine("sqlite:///uefa.db", echo=False)
 
 def crear_tablas():
-    SQLModel.metadata.create_all(engine)
+    SQLModel.metadata.create_all(sync_engine)
 
 def cargar_datos():
-    with Session(engine) as session:
+    with Session(sync_engine) as session:
         for _, row in df.iterrows():
             jugador = Jugador(
                 sofifa_id=row["sofifa_id"],
@@ -23,7 +33,7 @@ def cargar_datos():
                 nationality_name=row["nationality_name"],
                 height_cm=row["height_cm"],
                 club_name=row["club_name"],
-                player_positions=row["player_positions"],
+                position_category=PlayerCategory(row["position_category"]),
                 club_jersey_number=row["club_jersey_number"]
             )
 
@@ -34,7 +44,7 @@ def cargar_datos():
                 nationality_name=row["nationality_name"],
                 height_cm=row["height_cm"],
                 club_name=row["club_name"],
-                player_positions=row["player_positions"],
+                position_category=PlayerCategory(row["position_category"]),
                 club_jersey_number=row["club_jersey_number"],
                 overall=row["overall"],
                 pace=row.get("pace"),
