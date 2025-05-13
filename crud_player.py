@@ -2,6 +2,7 @@ from typing import List, Optional
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 from models_sqlmodel import Metricplayer, PlayerCategory
+import math
 
 
 async def get_all_players(session: AsyncSession) -> List[Metricplayer]:
@@ -96,4 +97,17 @@ async def delete_player(session: AsyncSession, sofifa_id: int) -> bool:
     player.is_active = False
     await session.commit()
     return True
+
+def json_safe(data):
+    if isinstance(data, dict):
+        return {
+            k: (None if isinstance(v, float) and (math.isnan(v) or math.isinf(v)) else v)
+            for k, v in data.items()
+        }
+    elif isinstance(data, list):
+        return [json_safe(item) for item in data]
+    elif hasattr(data, "dict"):
+        return json_safe(data.dict())
+    return data
+
 

@@ -1,7 +1,7 @@
 from typing import List, Optional
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
-from models_sqlmodel import Jugador, JugadorPatchBody
+from models_sqlmodel import Jugador, JugadorPatchBody, PlayerCategory
 
 
 async def get_all_jugadores(session: AsyncSession) -> List[Jugador]:

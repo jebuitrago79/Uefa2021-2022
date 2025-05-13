@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException, Path, Body, Query
+from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 from typing import List
@@ -19,7 +20,9 @@ from crud_player import (
     create_player,
     update_player,
     delete_player,
-    get_players_by_overall
+    get_players_by_overall,
+    json_safe,
+    patch_metricplayer
 )
 
 app = FastAPI()
@@ -76,7 +79,9 @@ async def delete_jugador_endpoint(sofifa_id: int, session: AsyncSession = Depend
 
 @app.get("/fifa_players", response_model=List[Metricplayer])
 async def read_players(session: AsyncSession = Depends(get_session)):
-    return await get_all_players(session)
+    players = await get_all_players(session)
+    return json_safe(players)
+
 
 
 @app.get("/fifa_players/{sofifa_id}", response_model=Metricplayer)
@@ -84,10 +89,11 @@ async def read_player_by_id(sofifa_id: int, session: AsyncSession = Depends(get_
     player = await get_player(session, sofifa_id)
     if not player:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
-    return player
+    return json_safe(player)
 
 
-@app.get("/fifa_players/overall/{min_overall}", response_model=List[Metricplayer])
+
+@app.get("/fifa_players/overall/{min_overall}")
 async def read_players_by_overall(
     min_overall: float = Path(..., ge=0, description="Minimum overall rating (must be 0 or higher)"),
     session: AsyncSession = Depends(get_session)
@@ -96,7 +102,8 @@ async def read_players_by_overall(
         select(Metricplayer).where(Metricplayer.overall >= min_overall)
     )
     jugadores = result.scalars().all()
-    return jugadores
+    return JSONResponse(content=json_safe(jugadores))
+
 
 
 @app.post("/fifa_players", response_model=Metricplayer)
