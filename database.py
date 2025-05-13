@@ -1,16 +1,31 @@
+import os
 import pandas as pd
-from sqlmodel import SQLModel, Field, create_engine, Session
+from dotenv import load_dotenv
+from sqlmodel import SQLModel, create_engine, Session, select
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlalchemy.orm import sessionmaker
-from models_sqlmodel import Jugador, Metricplayer
+from models_sqlmodel import Jugador, Metricplayer, PlayerCategory
+
+
+load_dotenv()
+
+#
+DB_USER = os.getenv("POSTGRESQL_ADDON_USER")
+DB_PASS = os.getenv("POSTGRESQL_ADDON_PASSWORD")
+DB_HOST = os.getenv("POSTGRESQL_ADDON_HOST")
+DB_PORT = os.getenv("POSTGRESQL_ADDON_PORT")
+DB_NAME = os.getenv("POSTGRESQL_ADDON_DB")
+
+ASYNC_DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+SYNC_DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+
+engine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
+sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
+async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 df = pd.read_csv("Player_Equipos_Europeos2021_22.csv")
-
-
-DATABASE_URL = "sqlite+aiosqlite:///./uefa.db"
-engine = create_async_engine(DATABASE_URL, echo=True)
-async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 
 async def get_session() -> AsyncSession:
@@ -18,10 +33,9 @@ async def get_session() -> AsyncSession:
         yield session
 
 
-sync_engine = create_engine("sqlite:///uefa.db", echo=False)
-
 def crear_tablas():
     SQLModel.metadata.create_all(sync_engine)
+
 
 def cargar_datos():
     with Session(sync_engine) as session:
@@ -60,6 +74,17 @@ def cargar_datos():
 
         session.commit()
 
+def verificar_conexion():
+    with Session(sync_engine) as session:
+        result = session.exec(select(Jugador)).all()
+        print(f"Total de jugadores en la base: {len(result)}")
+
 if __name__ == "__main__":
-    crear_tablas()
-    cargar_datos()
+    try:
+        crear_tablas()
+        print("Tablas creadas correctamente")
+        cargar_datos()
+        print("Datos cargados correctamente")
+        verificar_conexion()
+    except Exception as e:
+        print("Error durante la ejecución:", e)
