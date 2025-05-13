@@ -19,6 +19,44 @@ Este proyecto está construido con **FastAPI** y permite comparar las métricas 
 - Backend desplegado en **Render.com**.
 
 ---
+🧭 Mapa de Endpoints
+🔹 Generales
+GET / → Mensaje de bienvenida
+
+GET /hello/{name} → Saludo personalizado
+
+🔹 Jugadores FIFA
+GET /jugadores
+
+GET /jugadores/{id}
+
+POST /jugadores
+
+PUT /jugadores/{id}
+
+DELETE /jugadores/{id}
+
+GET /jugadores/filtrar/pais/{pais}
+
+GET /jugadores1/export
+
+🔹 Estadísticas UEFA
+GET /players
+
+GET /players/{id}
+
+POST /players
+
+PUT /players/{id}
+
+DELETE /players/{id} → (eliminación lógica)
+
+GET /players/filter/overall?min_overall=
+
+GET /players1/export
+
+GET /players1/eliminados
+
 
 ## 🧱 Arquitectura general
 
@@ -85,43 +123,6 @@ uefa2021-22/
 ├── requirements.txt       # Dependencias del proyecto
 └── README.md              # Este archivo
 
-🧭 Mapa de Endpoints
-🔹 Generales
-GET / → Mensaje de bienvenida
-
-GET /hello/{name} → Saludo personalizado
-
-🔹 Jugadores FIFA
-GET /jugadores
-
-GET /jugadores/{id}
-
-POST /jugadores
-
-PUT /jugadores/{id}
-
-DELETE /jugadores/{id}
-
-GET /jugadores/filtrar/pais/{pais}
-
-GET /jugadores1/export
-
-🔹 Estadísticas UEFA
-GET /players
-
-GET /players/{id}
-
-POST /players
-
-PUT /players/{id}
-
-DELETE /players/{id} → (eliminación lógica)
-
-GET /players/filter/overall?min_overall=
-
-GET /players1/export
-
-GET /players1/eliminados
 
 🌐 URLs del despliegue
 render:https://uefa2021-2022.onrender.com
