@@ -69,3 +69,64 @@ flowchart TD
     D2 --> E2
     F2 --> D1
     F3 --> D1
+
+
+uefa2021-22/
+├── main.py                # Punto de entrada FastAPI
+├── models_sqlmodel.py     # Modelos SQLModel
+├── database.py            # Conexión a PostgreSQL
+├── crud_jugador.py        # CRUD para Jugadores FIFA
+├── crud_player.py         # CRUD para Estadísticas UEFA
+├── jugador.py             # Modelo Pydantic
+├── player.py              # Modelo Pydantic
+├── Analisis_metricas.py   # Comparación y regresión
+├── cargar_datos_sqlmodel.py # Script de carga inicial
+├── uefa.db                # (Versión local SQLite de pruebas)
+├── requirements.txt       # Dependencias del proyecto
+└── README.md              # Este archivo
+
+🧭 Mapa de Endpoints
+🔹 Generales
+GET / → Mensaje de bienvenida
+
+GET /hello/{name} → Saludo personalizado
+
+🔹 Jugadores FIFA
+GET /jugadores
+
+GET /jugadores/{id}
+
+POST /jugadores
+
+PUT /jugadores/{id}
+
+DELETE /jugadores/{id}
+
+GET /jugadores/filtrar/pais/{pais}
+
+GET /jugadores1/export
+
+🔹 Estadísticas UEFA
+GET /players
+
+GET /players/{id}
+
+POST /players
+
+PUT /players/{id}
+
+DELETE /players/{id} → (eliminación lógica)
+
+GET /players/filter/overall?min_overall=
+
+GET /players1/export
+
+GET /players1/eliminados
+
+🌐 URLs del despliegue
+render:https://uefa2021-2022.onrender.com
+Repositorio GitHub:[ https://github.com/tu_usuario/uefa-fifa22-comparator](https://github.com/jebuitrago79/Uefa2021-2022.git)
+
+Autor
+Julian Buitrago Camacho
+Proyecto académico · FastAPI · 2025
