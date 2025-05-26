@@ -24,12 +24,17 @@ from crud_player import (
     json_safe,
     patch_metricplayer
 )
+from fastapi import Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "API UEFA 2021-2022."}
+templates = Jinja2Templates(directory="templates")
+@app.get("/", response_class=HTMLResponse)
+def read_home(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
 
 
 @app.get("/jugadores", response_model=List[Jugador])
@@ -129,3 +134,4 @@ async def delete_player_endpoint(sofifa_id: int, session: AsyncSession = Depends
     if not success:
         raise HTTPException(status_code=404, detail="Jugador no encontrado")
     return {"message": "Jugador marcado como inactivo"}
+
