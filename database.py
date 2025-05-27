@@ -7,10 +7,9 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlalchemy.orm import sessionmaker
 from models_sqlmodel import Jugador, Metricplayer, PlayerCategory
 
-
 load_dotenv()
 
-#
+# Datos de conexión a Clever Cloud
 DB_USER = os.getenv("POSTGRESQL_ADDON_USER")
 DB_PASS = os.getenv("POSTGRESQL_ADDON_PASSWORD")
 DB_HOST = os.getenv("POSTGRESQL_ADDON_HOST")
@@ -20,22 +19,19 @@ DB_NAME = os.getenv("POSTGRESQL_ADDON_DB")
 ASYNC_DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 SYNC_DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-
 engine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
 sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
 async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
-df = pd.read_csv("Player_Equipos_Europeos2021_22.csv")
-
+# Asegúrate de que este CSV tiene las columnas nuevas
+df = pd.read_csv("Jugadores_2021_22.csv")
 
 async def get_session() -> AsyncSession:
     async with async_session() as session:
         yield session
 
-
 def crear_tablas():
     SQLModel.metadata.create_all(sync_engine)
-
 
 def cargar_datos():
     with Session(sync_engine) as session:
@@ -48,7 +44,7 @@ def cargar_datos():
                 height_cm=row["height_cm"],
                 club_name=row["club_name"],
                 position_category=PlayerCategory(row["position_category"]),
-                club_jersey_number=row["club_jersey_number"]
+                club_jersey_number=row.get("club_jersey_number")
             )
 
             metric = Metricplayer(
@@ -58,14 +54,21 @@ def cargar_datos():
                 nationality_name=row["nationality_name"],
                 height_cm=row["height_cm"],
                 club_name=row["club_name"],
+                player_positions=row.get("player_positions") or "Unknown",  # ✅ este es el nuevo campo
                 position_category=PlayerCategory(row["position_category"]),
-                club_jersey_number=row["club_jersey_number"],
-                overall=row["overall"],
+                club_jersey_number=row.get("club_jersey_number"),
+                overall=row.get("overall"),
                 pace=row.get("pace"),
                 shooting=row.get("shooting"),
                 defending=row.get("defending"),
                 physical=row.get("physic"),
                 power_shot=row.get("power_shot_power"),
+                goalkeeping_diving=row.get("goalkeeping_diving"),
+                goalkeeping_handling=row.get("goalkeeping_handling"),
+                goalkeeping_kicking=row.get("goalkeeping_kicking"),
+                goalkeeping_positioning=row.get("goalkeeping_positioning"),
+                goalkeeping_reflexes=row.get("goalkeeping_reflexes"),
+                goalkeeping_speed=row.get("goalkeeping_speed"),
                 is_active=True
             )
 
@@ -77,14 +80,14 @@ def cargar_datos():
 def verificar_conexion():
     with Session(sync_engine) as session:
         result = session.exec(select(Jugador)).all()
-        print(f"Total de jugadores en la base: {len(result)}")
+        print(f"✅ Total de jugadores en la base: {len(result)}")
 
 if __name__ == "__main__":
     try:
         crear_tablas()
-        print("Tablas creadas correctamente")
+        print("✅ Tablas creadas correctamente")
         cargar_datos()
-        print("Datos cargados correctamente")
+        print("✅ Datos cargados correctamente")
         verificar_conexion()
     except Exception as e:
-        print("Error durante la ejecución:", e)
+        print("❌ Error durante la ejecución:", e)
