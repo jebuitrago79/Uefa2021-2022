@@ -18,6 +18,10 @@ class Metricplayer(BaseModel):
     physical: Optional[float] = None
     power_shot: Optional[float] = None
 
+
+
+
+
     is_active: Optional[bool] = True
 
     class Config:
