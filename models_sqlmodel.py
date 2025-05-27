@@ -12,7 +12,7 @@ class Jugador(SQLModel, table=True):
     nationality_name: str = Field(..., min_length=2, max_length=40)
     height_cm: float = Field(..., gt=0)
     club_name: str = Field(..., min_length=2, max_length=40)
-    position_category: str
+    position_category: Optional[PlayerCategory]
     club_jersey_number: float = Field(..., gt=0)
 
 
@@ -24,24 +24,32 @@ class JugadorPatchBody(BaseModel):
 
 
 class Metricplayer(SQLModel, table=True):
-    sofifa_id: int = Field(default=None, primary_key=True)
-    long_name: str = Field(..., min_length=2, max_length=70)
-    age: int = Field(..., ge=16)
-    nationality_name: str = Field(..., min_length=2, max_length=40)
-    height_cm: float = Field(..., gt=0)
-    club_name: str = Field(..., min_length=2, max_length=40)
-    position_category: str
-    club_jersey_number: float = Field(..., gt=0)
-    overall: float
-    pace: Optional[float] = None
-    shooting: Optional[float] = None
-    defending: Optional[float] = None
-    physical: Optional[float] = None
-    power_shot: Optional[float] = None
-    is_active: Optional[bool] = True
+    id: Optional[int] = Field(default=None, primary_key=True)
+    sofifa_id: int
+    long_name: str
+    age: int
+    nationality_name: str
+    height_cm: int
+    club_name: str
+    player_positions: Optional[str] = None
+    club_jersey_number: Optional[float] = Field(default=None, gt=0)
+    overall: Optional[int]
+    pace: Optional[float]
+    shooting: Optional[float]
+    defending: Optional[float]
+    physical: Optional[float]
+    power_shot: Optional[float]
+    position_category: Optional[PlayerCategory]
+    goalkeeping_diving: Optional[float]
+    goalkeeping_handling: Optional[float]
+    goalkeeping_kicking: Optional[float]
+    goalkeeping_positioning: Optional[float]
+    goalkeeping_reflexes: Optional[float]
+    goalkeeping_speed: Optional[float]
+    is_active: bool = True
 
 class MetricplayerPatchBody(BaseModel):
-    club_jersey_number: Optional[float] = None
+    club_jersey_number: Optional[float] = Field(default=None, gt=0)
     position_category: Optional[PlayerCategory] = None
     overall: Optional[float] = None
     pace: Optional[float] = None
@@ -49,8 +57,6 @@ class MetricplayerPatchBody(BaseModel):
     defending: Optional[float] = None
     physical: Optional[float] = None
     power_shot: Optional[float] = None
-
-
 
 
 class Estadisticas(SQLModel):

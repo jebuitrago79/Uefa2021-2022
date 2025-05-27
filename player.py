@@ -20,8 +20,6 @@ class Metricplayer(BaseModel):
 
 
 
-
-
     is_active: Optional[bool] = True
 
     class Config:
