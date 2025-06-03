@@ -28,8 +28,10 @@ from fastapi import Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from routers import player_web
 
 app = FastAPI()
+app.include_router(player_web.router)
 
 templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)

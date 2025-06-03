@@ -1,10 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 
-</body>
-</html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 400;
+    background: url("https://user-images.githubusercontent.com/22690563/67150939-14a0b180-f2c7-11e9-8016-a993a397e1c5.jpg") no-repeat center center / cover;
+  }
+
+  .fut-player-card {
+    position: relative;
+    width: 300px;
+    height: 485px;
+    background-image: url("https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 3.8rem 0;
+    z-index: 2;
+    transition: 200ms ease-in;
+  }
+
+  .player-card-top {
+    position: relative;
+    display: flex;
+    color: #e9cc74;
+    padding: 0 1.5rem;
+  }
+
+  .player-master-info {
+    position: absolute;
+    line-height: 2.2rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .player-rating {
+    font-size: 2rem;
+  }
+
+  .player-position {
+    font-size: 1.4rem;
+  }
+
+  .player-nation,
+  .player-club {
+    display: block;
+    margin: 0.3rem 0;
+  }
+
+  .player-nation img,
+  .player-club img {
+    width: 2rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .player-club img {
+    height: 40px;
+  }
+
+  .player-picture {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .player-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    right: -1.5rem;
+  }
+
+  .player-extra {
+    position: absolute;
+    right: 0;
+    bottom: -0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+
+  .player-card-bottom {
+    position: relative;
+  }
+
+  .player-info {
+    display: block;
+    padding: 0.3rem 0;
+    color: #e9cc74;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .player-name {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(233, 204, 116, 0.1);
+    padding-bottom: 0.3rem;
+  }
+
+  .player-name span {
+    display: block;
+    text-shadow: 2px 2px #111;
+  }
+
+  .player-features {
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .player-features-col {
+    border-right: 2px solid rgba(233, 204, 116, 0.1);
+    padding: 0 2.3rem;
+  }
+
+  .player-features-col:last-child {
+    border: 0;
+  }
+
+  .player-features-col span {
+    display: flex;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .player-feature-value {
+    margin-right: 0.3rem;
+    font-weight: 700;
+  }
+
+  .player-feature-title {
+    font-weight: 300;
+  }
+
+  .info-extendida {
+    font-size: 0.85rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+</style>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    {% for jugador in jugadores %}
+    <div class="col-md-4 d-flex justify-content-center mb-5 flex-column align-items-center">
+      <div class="fut-player-card">
+        <div class="player-card-top">
+          <div class="player-master-info">
+            <div class="player-rating">
+              <span>{{ jugador.overall or 0 }}</span>
+            </div>
+            <div class="player-position">
+              <span>{{ jugador.player_positions or "N/A" }}</span>
+            </div>
+            <div class="player-nation">
+              <img src="{{ jugador.nationality_flag_url }}" alt="{{ jugador.nationality_name }}" draggable="false">
+            </div>
+            <div class="player-club">
+              <img src="{{ jugador.club_logo_url }}" alt="{{ jugador.club_name }}" draggable="false">
+            </div>
+          </div>
+          <div class="player-picture">
+            <img src="{{ jugador.photo_url }}" alt="{{ jugador.long_name }}" draggable="false">
+            <div class="player-extra">
+              <span>4*SM</span>
+              <span>4*WF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-card-bottom">
+          <div class="player-info">
+            <div class="player-name">
+              <span>{{ jugador.long_name|upper }}</span>
+            </div>
+
+            <div class="player-features">
+              {% if jugador.position_category.name == "GOALKEEPER" %}
+              <div class="player-features-col">
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_diving or 0 }}</div><div class="player-feature-title">DIV</div></span>
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_handling or 0 }}</div><div class="player-feature-title">HAN</div></span>
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_kicking or 0 }}</div><div class="player-feature-title">KIC</div></span>
+              </div>
+              <div class="player-features-col">
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_positioning or 0 }}</div><div class="player-feature-title">POS</div></span>
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_reflexes or 0 }}</div><div class="player-feature-title">REF</div></span>
+                <span><div class="player-feature-value">{{ jugador.goalkeeping_speed or 0 }}</div><div class="player-feature-title">SPD</div></span>
+              </div>
+              {% else %}
+              <div class="player-features-col">
+                <span><div class="player-feature-value">{{ jugador.pace or 0 }}</div><div class="player-feature-title">PAC</div></span>
+                <span><div class="player-feature-value">{{ jugador.shooting or 0 }}</div><div class="player-feature-title">SHO</div></span>
+                <span><div class="player-feature-value">{{ jugador.power_shot or 0 }}</div><div class="player-feature-title">PWR</div></span>
+              </div>
+              <div class="player-features-col">
+                <span><div class="player-feature-value">{{ jugador.defending or 0 }}</div><div class="player-feature-title">DEF</div></span>
+                <span><div class="player-feature-value">{{ jugador.physical or 0 }}</div><div class="player-feature-title">PHY</div></span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-extendida">
+        <div><strong>Club:</strong> {{ jugador.club_name }}</div>
+        <div><strong>Edad:</strong> {{ jugador.age }}</div>
+        <div><strong>Altura:</strong> {{ jugador.height_cm }} cm</div>
+        <div><strong>Camiseta:</strong> {{ jugador.club_jersey_number or "N/A" }}</div>
+        <div><strong>Categoría:</strong> {{ jugador.position_category.name if jugador.position_category else "N/A" }}</div>
+        {% if jugador.position_category.name == "GOALKEEPER" %}
+        <div><strong>GK Stats:</strong>
+          DIV {{ jugador.goalkeeping_diving or 0 }},
+          HAN {{ jugador.goalkeeping_handling or 0 }},
+          KIC {{ jugador.goalkeeping_kicking or 0 }},
+          POS {{ jugador.goalkeeping_positioning or 0 }},
+          REF {{ jugador.goalkeeping_reflexes or 0 }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
