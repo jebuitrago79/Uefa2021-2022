@@ -14,6 +14,19 @@ class Jugador(SQLModel, table=True):
     club_name: str = Field(..., min_length=2, max_length=40)
     position_category: Optional[PlayerCategory]
     club_jersey_number: float = Field(..., gt=0)
+    goals: int = Field(..., ge=0)
+    assists: int = Field(..., ge=0)
+    yellow_cards: int = Field(..., ge=0)
+    red_cards: int = Field(..., ge=0)
+    saved: int = Field(..., ge=0)
+    conceded: int = Field(..., ge=0)
+    games: int = Field(..., ge = 0)
+    saves : int = Field(..., ge=0)
+    goals_conceded : int = Field(..., ge =0 )
+    clean_Sheets: int = Field(..., ge =0)
+    tackles: int = Field(..., ge =0)
+    interceptions: int = Field(..., ge =0)
+    fouls : int = Field(..., ge = 0)
 
 
 
@@ -57,12 +70,3 @@ class MetricplayerPatchBody(BaseModel):
     defending: Optional[float] = None
     physical: Optional[float] = None
     power_shot: Optional[float] = None
-
-
-class Estadisticas(SQLModel):
-    goals: int = Field(..., ge=0)
-    assists: int = Field(..., ge=0)
-    yellow_cards: int = Field(..., ge=0)
-    red_cards: int = Field(..., ge=0)
-    saved: int = Field(..., ge=0)
-    conceded: int = Field(..., ge=0)
