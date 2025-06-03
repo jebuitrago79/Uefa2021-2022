@@ -44,7 +44,7 @@ def cargar_datos():
                 height_cm=row["height_cm"],
                 club_name=row["club_name"],
                 position_category=PlayerCategory(row["position_category"]),
-                club_jersey_number=row.get("club_jersey_number")
+                club_jersey_number=row.get("club_jersey_number"),
             )
 
             metric = Metricplayer(
