@@ -1,0 +1,54 @@
+<h2>Crear nuevo jugador</h2>
+<form method="post" action="/players/create">
+  <label>ID Sofifa</label>
+  <input type="number" name="sofifa_id" required><br>
+
+  <label>Nombre completo</label>
+  <input type="text" name="long_name" required><br>
+
+  <label>Overall</label>
+  <input type="number" name="overall" step="0.1"><br>
+
+  <label>Edad</label>
+  <input type="number" name="age"><br>
+
+  <label>Nacionalidad</label>
+  <input type="text" name="nationality_name" required><br>
+
+  <label>Altura (cm)</label>
+  <input type="number" step="0.01" name="height_cm"><br>
+
+  <label>Club</label>
+  <input type="text" name="club_name"><br>
+
+  <label>Posiciones</label>
+  <input type="text" name="player_positions"><br>
+
+  <label>Número camiseta</label>
+  <input type="number" name="club_jersey_number"><br>
+
+  <label>Categoría</label>
+  <select name="position_category">
+    <option value="GOALKEEPER">GOALKEEPER</option>
+    <option value="DEFENDER">DEFENDER</option>
+    <option value="MIDFIELDER">MIDFIELDER</option>
+    <option value="FORWARD">FORWARD</option>
+  </select><br>
+
+  <label>Pace</label>
+  <input type="number" step="0.1" name="pace"><br>
+
+  <label>Shooting</label>
+  <input type="number" step="0.1" name="shooting"><br>
+
+  <label>Power Shot</label>
+  <input type="number" step="0.1" name="power_shot"><br>
+
+  <label>Defending</label>
+  <input type="number" step="0.1" name="defending"><br>
+
+  <label>Physical</label>
+  <input type="number" step="0.1" name="physical"><br>
+
+  <button type="submit">Crear jugador</button>
+</form>
