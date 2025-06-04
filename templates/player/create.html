@@ -1,54 +1,140 @@
-<h2>Crear nuevo jugador</h2>
+{% extends "base.html" %}
+{% block content %}
+<style>
+    body {
+        background-color: #001a33;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        background-color: #00264d;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .form-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-column h3 {
+        text-align: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #004c99;
+        padding-bottom: 5px;
+        font-size: 18px;
+        color: #00aaff;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    button {
+        background-color: #0066cc;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #004c99;
+    }
+</style>
+
+<h2>Crear Nuevo Jugador</h2>
 <form method="post" action="/players/create">
-  <label>ID Sofifa</label>
-  <input type="number" name="sofifa_id" required><br>
+    <div class="form-container">
+        <!-- Columna 1: Datos del jugador -->
+        <div class="form-column">
+            <h3>Datos del Jugador</h3>
+            <input type="number" name="sofifa_id" placeholder="Sofifa ID" required>
+            <input type="text" name="long_name" placeholder="Nombre completo" required>
+            <input type="number" name="age" placeholder="Edad" required>
+            <input type="text" name="nationality_name" placeholder="Nacionalidad" required>
+            <input type="number" step="0.01" name="height_cm" placeholder="Altura (cm)" required>
+            <input type="text" name="club_name" placeholder="Club">
+            <select name="player_positions" required>
+                <option value="">Seleccione posición</option>
+                <option value="ST">Delantero centro (ST)</option>
+                <option value="CF">Segundo delantero (CF)</option>
+                <option value="LW">Extremo izquierdo (LW)</option>
+                <option value="RW">Extremo derecho (RW)</option>
+                <option value="CAM">Mediapunta (CAM)</option>
+                <option value="CM">Centrocampista (CM)</option>
+                <option value="CDM">Mediocentro defensivo (CDM)</option>
+                <option value="LM">Lateral medio izquierdo (LM)</option>
+                <option value="RM">Lateral medio derecho (RM)</option>
+                <option value="CB">Defensa central (CB)</option>
+                <option value="LB">Lateral izquierdo (LB)</option>
+                <option value="RB">Lateral derecho (RB)</option>
+                <option value="LWB">Carrilero izquierdo (LWB)</option>
+                <option value="RWB">Carrilero derecho (RWB)</option>
+                <option value="GK">Portero (GK)</option>
+            </select>
+            <input type="number" name="club_jersey_number" placeholder="Número camiseta" step="1" min="1">
+            <select name="position_category" required>
+                <option value="">Categoría de posición</option>
+                <option value="Goalkeeper">Portero</option>
+                <option value="Defender">Defensor</option>
+                <option value="Midfielder">Mediocampista</option>
+                <option value="Forward">Delantero</option>
+            </select>
+            <select name="is_active" required>
+                <option value="true">Activo</option>
+                <option value="false">Inactivo</option>
+            </select>
+        </div>
 
-  <label>Nombre completo</label>
-  <input type="text" name="long_name" required><br>
+        <!-- Columna 2: Stats de campo -->
+        <div class="form-column">
+            <h3>Estadísticas</h3>
+            <input type="number" step="0.1" name="overall" placeholder="Overall">
+            <input type="number" step="0.1" name="pace" placeholder="Ritmo">
+            <input type="number" step="0.1" name="shooting" placeholder="Disparo">
+            <input type="number" step="0.1" name="defending" placeholder="Defensa">
+            <input type="number" step="0.1" name="physical" placeholder="Físico">
+            <input type="number" step="0.1" name="power_shot" placeholder="Potencia de tiro">
+        </div>
 
-  <label>Overall</label>
-  <input type="number" name="overall" step="0.1"><br>
+        <!-- Columna 3: Stats de portero -->
+        <div class="form-column">
+            <h3>Stats Portero</h3>
+            <input type="number" step="0.1" name="goalkeeping_diving" placeholder="Estirada">
+            <input type="number" step="0.1" name="goalkeeping_handling" placeholder="Bloqueo">
+            <input type="number" step="0.1" name="goalkeeping_kicking" placeholder="Saque">
+            <input type="number" step="0.1" name="goalkeeping_positioning" placeholder="Colocación">
+            <input type="number" step="0.1" name="goalkeeping_reflexes" placeholder="Reflejos">
+            <input type="number" step="0.1" name="goalkeeping_speed" placeholder="Velocidad">
+        </div>
+    </div>
 
-  <label>Edad</label>
-  <input type="number" name="age"><br>
-
-  <label>Nacionalidad</label>
-  <input type="text" name="nationality_name" required><br>
-
-  <label>Altura (cm)</label>
-  <input type="number" step="0.01" name="height_cm"><br>
-
-  <label>Club</label>
-  <input type="text" name="club_name"><br>
-
-  <label>Posiciones</label>
-  <input type="text" name="player_positions"><br>
-
-  <label>Número camiseta</label>
-  <input type="number" name="club_jersey_number"><br>
-
-  <label>Categoría</label>
-  <select name="position_category">
-    <option value="GOALKEEPER">GOALKEEPER</option>
-    <option value="DEFENDER">DEFENDER</option>
-    <option value="MIDFIELDER">MIDFIELDER</option>
-    <option value="FORWARD">FORWARD</option>
-  </select><br>
-
-  <label>Pace</label>
-  <input type="number" step="0.1" name="pace"><br>
-
-  <label>Shooting</label>
-  <input type="number" step="0.1" name="shooting"><br>
-
-  <label>Power Shot</label>
-  <input type="number" step="0.1" name="power_shot"><br>
-
-  <label>Defending</label>
-  <input type="number" step="0.1" name="defending"><br>
-
-  <label>Physical</label>
-  <input type="number" step="0.1" name="physical"><br>
-
-  <button type="submit">Crear jugador</button>
+    <div style="max-width: 400px; margin: 20px auto;">
+        <button type="submit">Crear Jugador</button>
+    </div>
 </form>
+{% endblock %}
+
+
