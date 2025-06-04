@@ -1,8 +1,9 @@
-from typing import Optional
 from Enum import PlayerCategory
 from sqlmodel import SQLModel, Field
 from sqlalchemy import Column, String
 from pydantic import BaseModel
+from sqlmodel import SQLModel, Field
+from typing import Optional
 
 
 class Jugador(SQLModel, table=True):
