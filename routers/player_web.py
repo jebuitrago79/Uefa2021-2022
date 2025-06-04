@@ -1,64 +1,73 @@
-from database import sync_engine
-from sqlmodel import Session, select
-from models_sqlmodel import Metricplayer
-from fastapi import APIRouter, Request
-from fastapi.responses import HTMLResponse
+# routers/players.py
+from fastapi import APIRouter, Depends, HTTPException, Path
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlmodel import select
+from fastapi.responses import JSONResponse
+from typing import List
+from models_sqlmodel import Metricplayer, MetricplayerPatchBody
+from database import get_session
+from crud_player import (
+    get_all_players, get_player, create_player, update_player,
+    delete_player, get_players_by_overall, json_safe, patch_metricplayer
+)
 from fastapi.templating import Jinja2Templates
-import pandas as pd
+from fastapi.responses import HTMLResponse
+from fastapi import Request
+from supabase import get_player_images
 
-router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
-df_imagenes = pd.read_csv("Jugadores_2021_22.csv")
+from fastapi import APIRouter
+router = APIRouter(tags=["FIFA Players"])
 
+
+from fastapi import APIRouter, Request, Depends, Query
+from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
+from database import get_session
+from crud_player import get_all_players
+from sqlmodel import select
+from models_sqlmodel import Metricplayer
+
+templates = Jinja2Templates(directory="templates")
+router = APIRouter(tags=["FIFA Players"])
 
 @router.get("/players", response_class=HTMLResponse)
-def list_players(request: Request, page: int = 1, limit: int = 50):
+async def player_list_web(
+    request: Request,
+    session: AsyncSession = Depends(get_session),
+    page: int = Query(1, ge=1),
+    limit: int = 25
+):
     offset = (page - 1) * limit
-    enriched_players = []
 
-    try:
-        with Session(sync_engine) as session:
-            total_players = session.exec(select(Metricplayer)).all()
-            jugadores_pagina = total_players[offset:offset + limit]
+    result = await session.execute(select(Metricplayer))
+    total_jugadores = len(result.scalars().all())
 
-            for j in jugadores_pagina:
-                match = df_imagenes[df_imagenes["sofifa_id"] == j.sofifa_id].to_dict("records")
-                if match:
-                    data = match[0]
-                    enriched_players.append({
-                        "long_name": j.long_name,
-                        "overall": j.overall,
-                        "player_positions": j.player_positions,
-                        "photo_url": data.get("player_face_url"),
-                        "club_logo_url": data.get("club_logo_url"),
-                        "nationality_flag_url": data.get("nation_flag_url"),
-                        "pace": j.pace,
-                        "shooting": j.shooting,
-                        "power_shot": j.power_shot,
-                        "defending": j.defending,
-                        "physical": j.physical,
-                        "goalkeeping_speed": j.goalkeeping_speed,
-                        "goalkeeping_diving": j.goalkeeping_diving,
-                        "goalkeeping_handling": j.goalkeeping_handling,
-                        "goalkeeping_kicking": j.goalkeeping_kicking,
-                        "goalkeeping_positioning": j.goalkeeping_positioning,
-                        "goalkeeping_reflexes": j.goalkeeping_reflexes,
-                        "age": j.age,
-                        "height_cm": j.height_cm,
-                        "club_name": j.club_name,
-                        "club_jersey_number": j.club_jersey_number,
-                        "position_category": j.position_category
-                    })
-    except Exception as e:
-        print(f"Error al obtener jugadores: {e}")
-        enriched_players = []
+    paginated_result = await session.execute(
+        select(Metricplayer).offset(offset).limit(limit)
+    )
+    jugadores_db = paginated_result.scalars().all()
 
-    total_pages = len(enriched_players) // limit + (1 if len(enriched_players) % limit != 0 else 0)
+    jugadores = []
+    for jugador in jugadores_db:
+        imagenes = await get_player_images(jugador.sofifa_id)
+        jugador_dict = jugador.model_dump()
+        jugador_dict["photo_url"] = imagenes.get("player_face_url")
+        jugador_dict["club_logo_url"] = imagenes.get("club_logo_url")
+        jugador_dict["nationality_flag_url"] = imagenes.get("nation_flag_url")
+        jugadores.append(jugador_dict)
+
+    total_pages = (total_jugadores + limit - 1) // limit
 
     return templates.TemplateResponse("player/list.html", {
         "request": request,
-        "jugadores": enriched_players,
+        "jugadores": jugadores,
         "page": page,
         "total_pages": total_pages
     })
+
+
+
+
