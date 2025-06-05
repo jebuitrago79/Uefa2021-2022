@@ -23,8 +23,22 @@ engine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
 sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
 async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
-# Asegúrate de que este CSV tiene las columnas nuevas
 df = pd.read_csv("Jugadores_2021_22.csv")
+
+
+df.replace({pd.NA: None, "NaN": None}, inplace=True)
+
+def safe_float(val):
+    try:
+        return float(val)
+    except (ValueError, TypeError):
+        return None
+
+def safe_category(val):
+    try:
+        return PlayerCategory(val)
+    except (ValueError, TypeError):
+        return None
 
 async def get_session() -> AsyncSession:
     async with async_session() as session:
@@ -39,36 +53,39 @@ def cargar_datos():
             jugador = Jugador(
                 sofifa_id=row["sofifa_id"],
                 long_name=row["long_name"],
-                age=row["age"],
+                age=int(row["age"]),
                 nationality_name=row["nationality_name"],
-                height_cm=row["height_cm"],
-                club_name=row["club_name"],
-                position_category=PlayerCategory(row["position_category"]),
-                club_jersey_number=row.get("club_jersey_number"),
+                height_cm=int(row["height_cm"]),
+                club_name=row.get("club_name"),
+                position_category=safe_category(row.get("position_category")),
+                club_jersey_number=safe_float(row.get("club_jersey_number")),
             )
 
             metric = Metricplayer(
                 sofifa_id=row["sofifa_id"],
                 long_name=row["long_name"],
-                age=row["age"],
+                age=int(row["age"]),
                 nationality_name=row["nationality_name"],
-                height_cm=row["height_cm"],
-                club_name=row["club_name"],
-                player_positions=row.get("player_positions") or "Unknown",  # ✅ este es el nuevo campo
-                position_category=PlayerCategory(row["position_category"]),
-                club_jersey_number=row.get("club_jersey_number"),
-                overall=row.get("overall"),
-                pace=row.get("pace"),
-                shooting=row.get("shooting"),
-                defending=row.get("defending"),
-                physical=row.get("physic"),
-                power_shot=row.get("power_shot_power"),
-                goalkeeping_diving=row.get("goalkeeping_diving"),
-                goalkeeping_handling=row.get("goalkeeping_handling"),
-                goalkeeping_kicking=row.get("goalkeeping_kicking"),
-                goalkeeping_positioning=row.get("goalkeeping_positioning"),
-                goalkeeping_reflexes=row.get("goalkeeping_reflexes"),
-                goalkeeping_speed=row.get("goalkeeping_speed"),
+                height_cm=int(row["height_cm"]),
+                club_name=row.get("club_name"),
+                player_positions=row.get("player_positions") or "Unknown",
+                position_category=safe_category(row.get("position_category")),
+                club_jersey_number=safe_float(row.get("club_jersey_number")),
+                overall=safe_float(row.get("overall")),
+                pace=safe_float(row.get("pace")),
+                shooting=safe_float(row.get("shooting")),
+                defending=safe_float(row.get("defending")),
+                physical=safe_float(row.get("physic")),
+                power_shot=safe_float(row.get("power_shot_power")),
+                goalkeeping_diving=safe_float(row.get("goalkeeping_diving")),
+                goalkeeping_handling=safe_float(row.get("goalkeeping_handling")),
+                goalkeeping_kicking=safe_float(row.get("goalkeeping_kicking")),
+                goalkeeping_positioning=safe_float(row.get("goalkeeping_positioning")),
+                goalkeeping_reflexes=safe_float(row.get("goalkeeping_reflexes")),
+                goalkeeping_speed=safe_float(row.get("goalkeeping_speed")),
+                photo_url=row.get("photo_url"),
+                nationality_flag_url=row.get("nation_logo_url"),
+                club_logo_url=row.get("club_logo_url"),
                 is_active=True
             )
 
@@ -91,3 +108,4 @@ if __name__ == "__main__":
         verificar_conexion()
     except Exception as e:
         print("❌ Error durante la ejecución:", e)
+
