@@ -2,8 +2,6 @@ import pandas as pd
 from sqlmodel import SQLModel, create_engine, Session
 from models_sqlmodel import Jugador, Metricplayer
 
-# Si tu CSV original NO contiene las columnas “goals”, “assists”, etc.,
-# en cargar_datos() simplemente NO intentes leerlas. Así quedarán en None.
 
 DATABASE_URL = "sqlite:///uefa.db"
 engine = create_engine(DATABASE_URL, echo=False)
@@ -16,7 +14,7 @@ def cargar_datos():
 
     with Session(engine) as session:
         for _, row in df.iterrows():
-            # Crea el Jugador sólo con los campos que SÍ vienen en el CSV:
+
             jugador = Jugador(
                 sofifa_id = row["sofifa_id"],
                 long_name = row["long_name"],
@@ -27,11 +25,9 @@ def cargar_datos():
                 player_positions = row.get("player_positions"),
                 position_category = row.get("position_category"),
                 club_jersey_number = row.get("club_jersey_number"),
-                # NOTA: No incluyas aquí `goals=…` ni ninguno de los deseos; así quedan en None
-                # goals=None, assists=None, etc.  (no hace falta ni ponerlos)
+
             )
 
-            # Crea el Metricplayer de la misma forma:
             metric = Metricplayer(
                 sofifa_id = row["sofifa_id"],
                 long_name = row["long_name"],
@@ -54,6 +50,9 @@ def cargar_datos():
                 goalkeeping_positioning = row.get("goalkeeping_positioning"),
                 goalkeeping_reflexes = row.get("goalkeeping_reflexes"),
                 goalkeeping_speed = row.get("goalkeeping_speed"),
+                photo_url=row.get("photo_url"),
+                nationality_flag_url=row.get("nation_logo_url"),
+                club_logo_url=row.get("club_logo_url"),
                 is_active = True
             )
 
@@ -63,8 +62,8 @@ def cargar_datos():
         session.commit()
 
 if __name__ == "__main__":
-    # 1) Crea la BD / tablas (incluyendo columnas nuevas en Jugador)
+
     crear_tablas()
-    # 2) Carga los datos del CSV (sólo con las columnas que realmente existen allí)
+
     cargar_datos()
 
