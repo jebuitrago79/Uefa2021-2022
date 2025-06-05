@@ -1,5 +1,4 @@
 from Enum import PlayerCategory
-from sqlmodel import SQLModel, Field
 from sqlalchemy import Column, String
 from pydantic import BaseModel
 from sqlmodel import SQLModel, Field
@@ -61,6 +60,9 @@ class Metricplayer(SQLModel, table=True):
     goalkeeping_positioning: Optional[float]
     goalkeeping_reflexes: Optional[float]
     goalkeeping_speed: Optional[float]
+    photo_url: Optional[str] = None
+    nationality_flag_url: Optional[str] = None
+    club_logo_url: Optional[str] = None
     is_active: bool = True
 
 class MetricplayerPatchBody(BaseModel):
