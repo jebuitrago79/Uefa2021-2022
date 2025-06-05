@@ -19,18 +19,27 @@
         color: white;
     }
 
+    .card-col {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+    }
+
     .flip-card {
-        width: 300px;
-        height: 485px;
+        position: relative;
+        margin: 0 auto 30px auto;
+        width: 358px;
+        height: 491px;
         perspective: 1000px;
     }
+
 
     .flip-card-inner {
         width: 100%;
         height: 100%;
         position: relative;
-        transition: transform 0.8s ease;
         transform-style: preserve-3d;
+        transition: transform 0.8s ease;
     }
 
     .flip-card:hover .flip-card-inner {
@@ -39,9 +48,9 @@
 
     .flip-card-front,
     .flip-card-back {
-        position: absolute;
         width: 100%;
         height: 100%;
+        position: absolute;
         top: 0;
         left: 0;
         backface-visibility: hidden;
@@ -59,7 +68,7 @@
         align-items: center;
         font-size: 0.95rem;
         line-height: 1.4;
-        border-radius: 20px;
+        z-index: 2;
     }
 
     .flip-card-back .back-content {
@@ -71,9 +80,9 @@
     }
 
     .fut-player-card {
-        width: 300px;
-        height: 485px;
-        background-image: url("https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png");
+        width: 358px;
+        height: 491px;
+        background-image: url("/static/img/uefa2021.png");
         background-size: cover;
         background-position: center;
         padding: 3.8rem 0;
@@ -84,24 +93,34 @@
     .player-card-top {
         position: relative;
         display: flex;
-        color: #e9cc74;
+        justify-content: flex-start;
         padding: 0 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .player-master-info {
         position: absolute;
-        line-height: 2.2rem;
-        font-weight: 300;
-        padding: 1.5rem 0;
+        top: 2rem;
+        left: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
         text-transform: uppercase;
+        line-height: 1.4rem;
+        font-weight: 400;
+        z-index: 2;
     }
 
     .player-rating {
         font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
     }
 
     .player-position {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1;
     }
 
     .player-nation,
@@ -112,13 +131,15 @@
 
     .player-nation img,
     .player-club img {
-        width: 2rem;
+        width: 2.4rem;
         height: auto;
         object-fit: contain;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6)); /* opcional para mejor visibilidad */
     }
 
     .player-club img {
-        height: 40px;
+        height: 35px;
+        margin-top: 4px;
     }
 
     .player-picture {
@@ -155,7 +176,7 @@
     .player-info {
         display: block;
         padding: 0.3rem 0;
-        color: #e9cc74;
+        color: #ffffff;
         width: 90%;
         margin: 0 auto;
     }
@@ -214,7 +235,7 @@
     }
 
     .pagination-button {
-        background-color: #16444a;
+        background-color: #2d6aac;
         color: #ffffff;
         padding: 10px 20px;
         font-weight: 700;
@@ -223,18 +244,22 @@
         text-decoration: none;
         transition: all 0.3s ease;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        display: inline-block;
     }
 
     .pagination-button:hover {
-        background-color: #16444a;
-        color: #bc5aff;
-        transform: scale(1.05);
+        background-color: #0c363a;
+        color: #ffffff;
+        transform: scale(1.08);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
     }
 
     .pagination-info {
         font-size: 1.1rem;
         color: white;
     }
+
 
     .btn-pag {
         background-color: #16444a;
@@ -258,7 +283,7 @@
         right: 40px;
         width: 60px;
         height: 60px;
-        background-color: #007bff;
+        background-color: #2d6aac;
         color: white;
         font-size: 36px;
         border: none;
@@ -272,19 +297,70 @@
     }
 
     .fab-button:hover {
-        background-color: #0056b3;
+        background-color: #16444a;
     }
+
+    .deactivate-btn,
+    .activate-btn {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .deactivate-btn {
+        background-color: #ff4e4e;
+        color: white;
+    }
+
+    .deactivate-btn:hover {
+        background-color: #cc0000;
+        transform: scale(1.05);
+    }
+
+    .activate-btn {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    .activate-btn:hover {
+        background-color: #2e7d32;
+        transform: scale(1.05);
+    }
+
+    .edit-btn {
+        background-color: #e6d64a;
+        color: #ffffff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .edit-btn:hover {
+        background-color: #ffe600;
+    /
+    }
+
 
 </style>
 
 <div class="container mt-5">
-    <div class="row gx-0 gy-4 justify-content-start">
+    <div class="row gx-0 gy-4 justify-content-center">
         {% for jugador in jugadores %}
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col">
             <div class="flip-card">
                 <div class="flip-card-inner">
 
-                    <!-- Frente -->
+
                     <div class="flip-card-front">
                         <div class="fut-player-card">
                             <div class="player-card-top">
@@ -303,7 +379,6 @@
                                 </div>
                                 <div class="player-picture">
                                     <img src="{{ jugador.photo_url }}" alt="{{ jugador.long_name }}" draggable="false">
-                                    <div class="player-extra"><span>4*SM</span><span>4*WF</span></div>
                                 </div>
                             </div>
 
@@ -352,7 +427,7 @@
                         </div>
                     </div>
 
-                    <!-- Reverso -->
+
                     <div class="flip-card-back">
                         <div class="back-content">
                             <p><strong>Club:</strong> {{ jugador.club_name }}</p>
@@ -382,41 +457,45 @@
 
                             <p><strong>ID Sofifa:</strong> {{ jugador.sofifa_id }}</p>
                             <p><strong>Estado:</strong> {{ "Activo" if jugador.is_active else "Inactivo" }}</p>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                                <form action="/players/edit/{{ jugador.id }}" method="get">
+                                    <button type="submit" class="edit-btn">Editar</button>
+                                </form>
+                                <form action="/players/delete/{{ jugador.id }}" method="post">
+                                    <button type="submit" class="deactivate-btn" style="margin-top: 2px;">
+                                        {{ 'Desactivar' if jugador.is_active else 'Activar' }}
+                                    </button>
+                                </form>
+                            </div>
 
-                            <form action="/players/delete/{{ jugador.id }}" method="post">
-                                <button type="submit"
-                                        class="{{ 'deactivate-btn' if jugador.is_active else 'activate-btn' }}">
-                                    {{ 'Desactivar' if jugador.is_active else 'Activar' }}
-                                </button>
-                            </form>
                         </div>
                     </div>
 
-                </div> <!-- cierre de flip-card-inner -->
-            </div> <!-- cierre de flip-card -->
-        </div> <!-- cierre de col -->
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </div> <!-- cierre de row -->
+    </div>
 
     <div class="pagination-bar" style="margin-top: 30px; text-align: center;">
         {% if page > 1 %}
-        <a href="/players?page=1" class="btn-pag">« Primera</a>
-        <a href="/players?page={{ page - 1 }}" class="btn-pag">← Anterior</a>
+        <a href="/players?page=1" class="pagination-button">« Primera</a>
+        <a href="/players?page={{ page - 1 }}" class="pagination-button">← Anterior</a>
         {% endif %}
 
-        <span class="page-info" style="margin: 0 12px; color: #fff;">
+        <span class="pagination-info">
         Página {{ page }} de {{ total_pages }}
     </span>
 
         {% if page < total_pages %}
-        <a href="/players?page={{ page + 1 }}" class="btn-pag">Siguiente →</a>
-        <a href="/players?page={{ total_pages }}" class="btn-pag">Última »</a>
+        <a href="/players?page={{ page + 1 }}" class="pagination-button">Siguiente →</a>
+        <a href="/players?page={{ total_pages }}" class="pagination-button">Última »</a>
         {% endif %}
 
         <form method="get" action="/players" style="display: inline-block; margin-left: 12px;">
             <input type="number" name="page" min="1" max="{{ total_pages }}" placeholder="Ir a página"
                    style="width: 80px; padding: 4px;">
-            <button type="submit" class="btn-pag">Ir</button>
+            <button type="submit" class="pagination-button">Ir</button>
         </form>
     </div>
 </div>
