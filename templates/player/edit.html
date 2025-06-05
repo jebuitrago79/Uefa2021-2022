@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Editar Jugador{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background: linear-gradient(to bottom right, #001f4d, #0040ff);
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    .form-container {
+        margin: 40px auto;
+        width: 90%;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .form-group {
+        margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"],
+    select {
+        padding: 8px;
+        width: 95%;
+        max-width: 300px;
+        border-radius: 5px;
+        border: none;
+        margin: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #ffff66;
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #ffee00;
+    }
+
+    .footer {
+        margin-top: 50px;
+        color: #ccc;
+    }
+</style>
+
+<h1>Editar Jugador</h1>
+
+<div class="form-container">
+    <form action="/players/edit/{{ jugador.id }}" method="post">
+        <!-- Columna 1: Datos del jugador -->
+        <div class="form-column">
+            <h3>Datos del Jugador</h3>
+
+            <input type="text" name="long_name" value="{{ jugador.long_name }}" placeholder="Nombre completo" required>
+            <input type="number" name="age" value="{{ jugador.age }}" placeholder="Edad" required>
+            <input type="text" name="nationality_name" value="{{ jugador.nationality_name }}" placeholder="Nacionalidad"
+                   required>
+            <input type="url" name="nationality_flag_url" value="{{ jugador.nationality_flag_url or '' }}"
+                   placeholder="URL de la Bandera del País">
+            <input type="number" step="0.01" name="height_cm" value="{{ jugador.height_cm }}" placeholder="Altura (cm)"
+                   required>
+            <input type="text" name="club_name" value="{{ jugador.club_name }}" placeholder="Club">
+            <input type="url" name="club_logo_url" value="{{ jugador.club_logo_url or '' }}"
+                   placeholder="URL del Escudo del Club">
+
+            <select name="player_positions" required>
+                <option value="">Seleccione posición</option>
+                <option value="ST">Delantero centro (ST)</option>
+                <option value="CF">Segundo delantero (CF)</option>
+                <option value="LW">Extremo izquierdo (LW)</option>
+                <option value="RW">Extremo derecho (RW)</option>
+                <option value="CAM">Mediapunta (CAM)</option>
+                <option value="CM">Centrocampista (CM)</option>
+                <option value="CDM">Mediocentro defensivo (CDM)</option>
+                <option value="LM">Lateral medio izquierdo (LM)</option>
+                <option value="RM">Lateral medio derecho (RM)</option>
+                <option value="CB">Defensa central (CB)</option>
+                <option value="LB">Lateral izquierdo (LB)</option>
+                <option value="RB">Lateral derecho (RB)</option>
+                <option value="LWB">Carrilero izquierdo (LWB)</option>
+                <option value="RWB">Carrilero derecho (RWB)</option>
+                <option value="GK">Portero (GK)</option>
+            </select>
+
+            <input type="number" name="club_jersey_number" value="{{ jugador.club_jersey_number or '' }}"
+                   placeholder="Número camiseta" step="1" min="1">
+
+            <select name="position_category" required>
+                <option value="">Categoría de posición</option>
+                <option value="Goalkeeper">Portero</option>
+                <option value="Defender">Defensor</option>
+                <option value="Midfielder">Mediocampista</option>
+                <option value="Forward">Delantero</option>
+            </select>
+        </div>
+
+        <button type="submit">Actualizar Jugador</button>
+    </form>
+</div>
+{% endblock %}
