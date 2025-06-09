@@ -350,12 +350,36 @@
     /
     }
 
+    .deactivate-btn {
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+    }
 
+    .deactivate-btn:hover {
+        background-color: #cc5200;
+    }
+
+    .inactive-card {
+        opacity: 0.5;
+        filter: grayscale(50%);
+        transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    .inactive-card:hover {
+        opacity: 0.8;
+        filter: grayscale(20%);
+    }
 </style>
 <div class="container mt-5">
     <div class="row gx-0 gy-4 justify-content-center">
         {% for jugador in jugadores %}
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col {% if not jugador.is_active %}inactive-card{% endif %}">
             <div class="flip-card">
                 <div class="flip-card-inner">
 
@@ -384,8 +408,8 @@
                                     <!-- Escudo del club -->
                                     <div class="player-club">
                                         {% if jugador.club_logo_url %}
-                                        <img src="{{ jugador.club_logo_url }}"
-                                             alt="{{ jugador.club_name }}" draggable="false">
+                                        <img src="{{ jugador.club_logo_url }}" alt="{{ jugador.club_name }}"
+                                             draggable="false">
                                         {% else %}
                                         <span>Sin escudo</span>
                                         {% endif %}
@@ -395,8 +419,7 @@
                                 <!-- Foto del jugador -->
                                 <div class="player-picture">
                                     {% if jugador.photo_url %}
-                                    <img src="{{ jugador.photo_url }}"
-                                         alt="{{ jugador.long_name }}" draggable="false">
+                                    <img src="{{ jugador.photo_url }}" alt="{{ jugador.long_name }}" draggable="false">
                                     {% else %}
                                     <span>Sin foto</span>
                                     {% endif %}
@@ -425,11 +448,16 @@
                             </p>
                             <p><strong>ID Sofifa:</strong> {{ jugador.sofifa_id }}</p>
                             <p><strong>Estado:</strong> {{ "Activo" if jugador.is_active else "Inactivo" }}</p>
-                            <a href="/jugadores/{{ jugador.sofifa_id }}/stats-form" class="edit-btn"
-                               style="margin-top: 10px;">
-                                Llenar Stats Reales
-                            </a>
 
+                            <form action="/jugadores/{{ jugador.sofifa_id }}/stats-form" method="get">
+                                <button type="submit" class="edit-btn">Llenar Stats Reales</button>
+                            </form>
+                            <form action="/players/delete/{{ jugador.sofifa_id }}" method="post"
+                                  style="margin-top: 8px;">
+                                <button type="submit" class="deactivate-btn">
+                                    {{ 'Desactivar' if jugador.is_active else 'Activar' }}
+                                </button>
+                            </form>
                         </div>
                     </div>
 
@@ -438,27 +466,29 @@
         </div>
         {% endfor %}
     </div>
-    <div class="pagination-bar" style="margin-top: 30px; text-align: center;">
-        {% if page > 1 %}
-        <a href="/jugadores?page=1" class="pagination-button">« Primera</a>
-        <a href="/jugadores?page={{ page - 1 }}" class="pagination-button">← Anterior</a>
-        {% endif %}
+</div>
 
-        <span class="pagination-info">
+<div class="pagination-bar" style="margin-top: 30px; text-align: center;">
+    {% if page > 1 %}
+    <a href="/jugadores?page=1" class="pagination-button">« Primera</a>
+    <a href="/jugadores?page={{ page - 1 }}" class="pagination-button">← Anterior</a>
+    {% endif %}
+
+    <span class="pagination-info">
         Página {{ page }} de {{ total_pages }}
     </span>
 
-        {% if page < total_pages %}
-        <a href="/jugadores?page={{ page + 1 }}" class="pagination-button">Siguiente →</a>
-        <a href="/jugadores?page={{ total_pages }}" class="pagination-button">Última »</a>
-        {% endif %}
+    {% if page < total_pages %}
+    <a href="/jugadores?page={{ page + 1 }}" class="pagination-button">Siguiente →</a>
+    <a href="/jugadores?page={{ total_pages }}" class="pagination-button">Última »</a>
+    {% endif %}
 
-        <form method="get" action="/jugadores" style="display: inline-block; margin-left: 12px;">
-            <input type="number" name="page" min="1" max="{{ total_pages }}" placeholder="Ir a página"
-                   style="width: 80px; padding: 4px;">
-            <button type="submit" class="pagination-button">Ir</button>
-        </form>
-    </div>
+    <form method="get" action="/jugadores" style="display: inline-block; margin-left: 12px;">
+        <input type="number" name="page" min="1" max="{{ total_pages }}" placeholder="Ir a página"
+               style="width: 80px; padding: 4px;">
+        <button type="submit" class="pagination-button">Ir</button>
+    </form>
+</div>
 
 </div>
 
