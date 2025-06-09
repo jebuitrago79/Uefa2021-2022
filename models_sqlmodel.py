@@ -34,11 +34,6 @@ class Jugador(SQLModel, table=True):
     club_logo_url: Optional[str] = None
 
 
-class JugadorPatchBody(BaseModel):
-    club_name: Optional[str] = None
-    club_jersey_number: Optional[float] = None
-    position_category: Optional[PlayerCategory] = None
-
 
 class Metricplayer(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
