@@ -219,3 +219,11 @@ async def crear_jugador_post( request: Request,
 
     return RedirectResponse(url="/jugadores", status_code=303)
 
+@router.post("/jugadores/delete/{sofifa_id}")
+async def activar_o_desactivar_jugador(sofifa_id: int, session: AsyncSession = Depends(get_session)):
+    result = await session.execute(select(Jugador).where(Jugador.sofifa_id == sofifa_id))
+    jugador = result.scalar_one_or_none()
+    if jugador:
+        jugador.is_active = not jugador.is_active
+        await session.commit()
+    return RedirectResponse(url="/jugadores", status_code=303)
