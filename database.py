@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from dotenv import load_dotenv
-from sqlmodel import SQLModel, create_engine, Session, select
+from sqlmodel import SQLModel, create_engine, Session, select, delete
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlalchemy.orm import sessionmaker
@@ -9,7 +9,7 @@ from models_sqlmodel import Jugador, Metricplayer, PlayerCategory
 
 load_dotenv()
 
-# Datos de conexión a Clever Cloud
+# Conexión a Clever Cloud
 DB_USER = os.getenv("POSTGRESQL_ADDON_USER")
 DB_PASS = os.getenv("POSTGRESQL_ADDON_PASSWORD")
 DB_HOST = os.getenv("POSTGRESQL_ADDON_HOST")
@@ -23,8 +23,8 @@ engine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
 sync_engine = create_engine(SYNC_DATABASE_URL, echo=False)
 async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
+# Leer CSV
 df = pd.read_csv("Jugadores_2021_22.csv")
-
 df.replace({pd.NA: None, "NaN": None}, inplace=True)
 
 
@@ -42,17 +42,20 @@ def safe_category(val):
         return None
 
 
-async def get_session() -> AsyncSession:
-    async with async_session() as session:
-        yield session
-
-
 def crear_tablas():
     SQLModel.metadata.create_all(sync_engine)
 
 
 def cargar_datos():
     with Session(sync_engine) as session:
+        session.exec(delete(Jugador))
+        session.exec(delete(Metricplayer))
+        session.commit()
+        print("🧹 Tablas limpiadas correctamente")
+
+        jugadores = []
+        metricplayers = []
+
         for _, row in df.iterrows():
             jugador = Jugador(
                 sofifa_id=row["sofifa_id"],
@@ -77,9 +80,9 @@ def cargar_datos():
                 tackles=int(row.get("tackles", 0)),
                 interceptions=int(row.get("interceptions", 0)),
                 fouls=int(row.get("fouls", 0)),
-                photo_url = row.get("photo_url"),
-                nationality_flag_url = row.get("nation_logo_url"),
-                club_logo_url = row.get("club_logo_url")
+                photo_url=row.get("photo_url"),
+                nationality_flag_url=row.get("nation_logo_url"),
+                club_logo_url=row.get("club_logo_url")
             )
 
             metric = Metricplayer(
@@ -110,16 +113,32 @@ def cargar_datos():
                 is_active=True
             )
 
-            session.add(jugador)
-            session.add(metric)
+            jugadores.append(jugador)
+            metricplayers.append(metric)
 
-        session.commit()
+        def insertar_en_bloques(lista, modelo, nombre):
+            chunk_size = 100
+            total = len(lista)
+            for i in range(0, total, chunk_size):
+                chunk = lista[i:i + chunk_size]
+                session.bulk_save_objects(chunk)
+                session.commit()
+                print(f"✅ Insertados {i + len(chunk)} / {total} en tabla '{nombre}'")
+
+        insertar_en_bloques(jugadores, Jugador, "Jugador")
+        insertar_en_bloques(metricplayers, Metricplayer, "Metricplayer")
 
 
 def verificar_conexion():
     with Session(sync_engine) as session:
-        result = session.exec(select(Jugador)).all()
-        print(f"✅ Total de jugadores en la base: {len(result)}")
+        total_jugadores = session.exec(select(Jugador)).all()
+        total_metric = session.exec(select(Metricplayer)).all()
+        print(f"📊 Total Jugadores en BD: {len(total_jugadores)}")
+        print(f"📊 Total Metricplayers en BD: {len(total_metric)}")
+
+async def get_session() -> AsyncSession:
+    async with async_session() as session:
+        yield session
 
 
 if __name__ == "__main__":
@@ -127,7 +146,7 @@ if __name__ == "__main__":
         crear_tablas()
         print("✅ Tablas creadas correctamente")
         cargar_datos()
-        print("✅ Datos cargados correctamente")
         verificar_conexion()
     except Exception as e:
         print("❌ Error durante la ejecución:", e)
+
