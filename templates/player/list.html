@@ -350,13 +350,24 @@
     /
     }
 
+    .inactive-card {
+        opacity: 0.5;
+        filter: grayscale(50%);
+        transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    .inactive-card:hover {
+        opacity: 0.8;
+        filter: grayscale(20%);
+    }
+
 
 </style>
 
 <div class="container mt-5">
     <div class="row gx-0 gy-4 justify-content-center">
         {% for jugador in jugadores %}
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col {% if not jugador.is_active %}inactive-card{% endif %}">
             <div class="flip-card">
                 <div class="flip-card-inner">
 
@@ -458,10 +469,10 @@
                             <p><strong>ID Sofifa:</strong> {{ jugador.sofifa_id }}</p>
                             <p><strong>Estado:</strong> {{ "Activo" if jugador.is_active else "Inactivo" }}</p>
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
-                                <form action="/players/edit/{{ jugador.id }}" method="get">
+                                <form action="/players/edit/{{ jugador.sofifa_id}}" method="get">
                                     <button type="submit" class="edit-btn">Editar</button>
                                 </form>
-                                <form action="/players/delete/{{ jugador.id }}" method="post">
+                                <form action="/players/delete/{{ jugador.sofifa_id }}" method="post">
                                     <button type="submit" class="deactivate-btn" style="margin-top: 2px;">
                                         {{ 'Desactivar' if jugador.is_active else 'Activar' }}
                                     </button>
