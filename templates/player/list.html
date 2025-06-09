@@ -361,10 +361,48 @@
         filter: grayscale(20%);
     }
 
+    .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 30px 0;
+    }
+
+    .search-form input[type="number"] {
+        padding: 8px 14px;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        width: 200px;
+    }
+
+    .search-form button {
+        background-color: #2d6aac;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-form button:hover {
+        background-color: #16444a;
+    }
 
 </style>
 
 <div class="container mt-5">
+    <form method="get" action="/players/search" class="search-form">
+        <input type="number" name="id" placeholder="Buscar por ID" required>
+        <button type="submit">Buscar</button>
+    </form>
+
     <div class="row gx-0 gy-4 justify-content-center">
         {% for jugador in jugadores %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-col {% if not jugador.is_active %}inactive-card{% endif %}">
