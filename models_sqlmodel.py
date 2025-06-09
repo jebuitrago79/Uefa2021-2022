@@ -21,7 +21,6 @@ class Jugador(SQLModel, table=True):
     yellow_cards: Optional[int] = Field(default=None, ge=0)
     red_cards: Optional[int] = Field(default=None, ge=0)
     saved: Optional[int] = Field(default=None, ge=0)
-    conceded: Optional[int] = Field(default=None, ge=0)
     games: Optional[int] = Field(default=None, ge=0)
     saves: Optional[int] = Field(default=None, ge=0)
     goals_conceded: Optional[int] = Field(default=None, ge=0)
@@ -36,8 +35,7 @@ class Jugador(SQLModel, table=True):
 
 
 class Metricplayer(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    sofifa_id: int
+    sofifa_id: int = Field(default=None, primary_key=True)
     long_name: str
     age: int
     nationality_name: str
