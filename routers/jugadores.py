@@ -8,6 +8,8 @@ from supabase import  get_player_images
 from fastapi import Form
 from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
+from crud_jugador import create_jugador
+from supabase import insertar_imagen_supabase
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
@@ -101,7 +103,6 @@ async def guardar_stats_jugador(
     session.add(jugador)
     await session.commit()
 
-    # Redirige a la vista de comparación
     return RedirectResponse(f"/jugadores/{sofifa_id}/comparar", status_code=303)
 
 
@@ -117,7 +118,7 @@ async def comparar_stats(
     if not jugador or not fifa:
         raise HTTPException(status_code=404, detail="Jugador o carta FIFA no encontrado")
 
-    # 🧠 Cálculo del overall basado en estadísticas reales
+
     if jugador.games and jugador.games > 0:
         goles_por_partido = jugador.goals / jugador.games if jugador.goals is not None else 0
         asistencias_por_partido = jugador.assists / jugador.games if jugador.assists is not None else 0
@@ -130,8 +131,8 @@ async def comparar_stats(
             (asistencias_por_partido * 20) +
             (tackles_por_partido * 5) +
             (intercepciones_por_partido * 5) +
-            ((1 - fouls_por_partido) * 5) +  # menos faltas = mejor
-            39  # base para ajustarse al estilo FIFA
+            ((1 - fouls_por_partido) * 5) +  #
+            39
         )
         overall_estimado = min(max(round(overall), 0), 99)
     else:
@@ -146,3 +147,75 @@ async def comparar_stats(
         "imagen": imagen,
         "overall_estimado": overall_estimado
     })
+
+
+@router.get("/jugadores/crear", response_class=HTMLResponse)
+async def crear_jugador_formulario(request: Request):
+    return templates.TemplateResponse("Jugadores/crear_jugador.html", {"request": request})
+
+
+
+@router.post("/jugadores/crear")
+async def crear_jugador_post( request: Request,
+    sofifa_id: int = Form(...),
+    long_name: str = Form(...),
+    age: int = Form(...),
+    nationality_name: str = Form(...),
+    height_cm: float = Form(...),
+    club_name: str = Form(None),
+    player_positions: str = Form(None),
+    position_category: str = Form(None),
+    club_jersey_number: float = Form(None),
+    is_active: bool = Form(...),
+    goals: int = Form(None),
+    assists: int = Form(None),
+    yellow_cards: int = Form(None),
+    red_cards: int = Form(None),
+    saved: int = Form(None),
+    games: int = Form(None),
+    saves: int = Form(None),
+    goals_conceded: int = Form(None),
+    clean_Sheets: int = Form(None),
+    tackles: int = Form(None),
+    interceptions: int = Form(None),
+    fouls: int = Form(None),
+    photo_url: str = Form(None),
+    club_logo_url: str = Form(None),
+    nationality_flag_url: str = Form(None),
+    session: AsyncSession = Depends(get_session)
+):
+    nuevo_jugador = Jugador(
+        sofifa_id=sofifa_id,
+        long_name=long_name,
+        age=age,
+        nationality_name=nationality_name,
+        height_cm=height_cm,
+        club_name=club_name,
+        player_positions=player_positions,
+        position_category=position_category,
+        club_jersey_number=club_jersey_number,
+        is_active=is_active,
+        goals=goals,
+        assists=assists,
+        yellow_cards=yellow_cards,
+        red_cards=red_cards,
+        saved=saved,
+        games=games,
+        saves=saves,
+        goals_conceded=goals_conceded,
+        clean_Sheets=clean_Sheets,
+        tackles=tackles,
+        interceptions=interceptions,
+        fouls=fouls,
+        photo_url=photo_url,
+        club_logo_url=club_logo_url,
+        nationality_flag_url=nationality_flag_url
+    )
+
+    await create_jugador(session, nuevo_jugador)
+
+    if photo_url and club_logo_url and nationality_flag_url:
+        await insertar_imagen_supabase(sofifa_id, photo_url, club_logo_url, nationality_flag_url)
+
+    return RedirectResponse(url="/jugadores", status_code=303)
+
