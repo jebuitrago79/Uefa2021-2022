@@ -8,7 +8,7 @@ from supabase import  get_player_images
 from fastapi import Form
 from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
-from crud_jugador import create_jugador
+from crud_jugador import create_jugador, get_jugador
 from supabase import insertar_imagen_supabase
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
@@ -227,3 +227,31 @@ async def activar_o_desactivar_jugador(sofifa_id: int, session: AsyncSession = D
         jugador.is_active = not jugador.is_active
         await session.commit()
     return RedirectResponse(url="/jugadores", status_code=303)
+
+@router.get("/jugadores/search", response_class=HTMLResponse)
+async def buscar_jugador_por_id(
+    request: Request,
+    id: int = Query(...),
+    session: AsyncSession = Depends(get_session)
+):
+    jugador = await get_jugador(session, id)
+    if not jugador:
+        return templates.TemplateResponse("Jugadores/list.html", {
+            "request": request,
+            "jugadores": [],
+            "page": 1,
+            "total_pages": 1
+        })
+
+    imagenes = await get_player_images(jugador.sofifa_id)
+    jugador_dict = jugador.model_dump()
+    jugador_dict["photo_url"] = imagenes.get("player_face_url")
+    jugador_dict["club_logo_url"] = imagenes.get("club_logo_url")
+    jugador_dict["nationality_flag_url"] = imagenes.get("nation_flag_url")
+
+    return templates.TemplateResponse("Jugadores/list.html", {
+        "request": request,
+        "jugadores": [jugador_dict],
+        "page": 1,
+        "total_pages": 1
+    })
