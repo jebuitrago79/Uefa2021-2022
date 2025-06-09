@@ -215,3 +215,34 @@ async def update_player(
 
     return RedirectResponse(url="/players", status_code=303)
 
+
+@router.get("/players/search", response_class=HTMLResponse)
+async def buscar_por_id(
+    request: Request,
+    id: int = Query(...),
+    session: AsyncSession = Depends(get_session)
+):
+    jugador = await get_player(session, id)
+
+    if not jugador:
+        return templates.TemplateResponse("player/list.html", {
+            "request": request,
+            "jugadores": [],
+            "page": 1,
+            "total_pages": 1,
+            "mensaje": f"No se encontró ningún jugador con el ID {id}."
+        })
+
+    imagenes = await get_player_images(jugador.sofifa_id)
+    jugador_dict = jugador.model_dump()
+    jugador_dict["photo_url"] = imagenes.get("player_face_url")
+    jugador_dict["club_logo_url"] = imagenes.get("club_logo_url")
+    jugador_dict["nationality_flag_url"] = imagenes.get("nation_flag_url")
+
+    return templates.TemplateResponse("player/list.html", {
+        "request": request,
+        "jugadores": [jugador_dict],
+        "page": 1,
+        "total_pages": 1
+    })
+
