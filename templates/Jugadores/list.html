@@ -352,7 +352,6 @@
 
 
 </style>
-
 <div class="container mt-5">
     <div class="row gx-0 gy-4 justify-content-center">
         {% for jugador in jugadores %}
@@ -434,5 +433,28 @@
         </div>
         {% endfor %}
     </div>
+    <div class="pagination-bar" style="margin-top: 30px; text-align: center;">
+        {% if page > 1 %}
+        <a href="/jugadores?page=1" class="pagination-button">« Primera</a>
+        <a href="/jugadores?page={{ page - 1 }}" class="pagination-button">← Anterior</a>
+        {% endif %}
+
+        <span class="pagination-info">
+        Página {{ page }} de {{ total_pages }}
+    </span>
+
+        {% if page < total_pages %}
+        <a href="/jugadores?page={{ page + 1 }}" class="pagination-button">Siguiente →</a>
+        <a href="/jugadores?page={{ total_pages }}" class="pagination-button">Última »</a>
+        {% endif %}
+
+        <form method="get" action="/jugadores" style="display: inline-block; margin-left: 12px;">
+            <input type="number" name="page" min="1" max="{{ total_pages }}" placeholder="Ir a página"
+                   style="width: 80px; padding: 4px;">
+            <button type="submit" class="pagination-button">Ir</button>
+        </form>
+    </div>
+
 </div>
+
 {% endblock %}
