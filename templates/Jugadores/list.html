@@ -425,6 +425,11 @@
                             </p>
                             <p><strong>ID Sofifa:</strong> {{ jugador.sofifa_id }}</p>
                             <p><strong>Estado:</strong> {{ "Activo" if jugador.is_active else "Inactivo" }}</p>
+                            <a href="/jugadores/{{ jugador.sofifa_id }}/stats-form" class="edit-btn"
+                               style="margin-top: 10px;">
+                                Llenar Stats Reales
+                            </a>
+
                         </div>
                     </div>
 
