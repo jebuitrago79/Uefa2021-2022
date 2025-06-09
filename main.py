@@ -7,7 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from routers import jugadores, player_web
 
 app = FastAPI()
-#app.include_router(jugadores.router)
+app.include_router(jugadores.router)
 app.include_router(player_web.router)
 
 templates = Jinja2Templates(directory="templates")
