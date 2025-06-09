@@ -17,9 +17,6 @@ from supabase import get_player_images
 from Enum import PlayerCategory
 from typing import Optional
 from supabase import insertar_imagen_supabase
-
-templates = Jinja2Templates(directory="templates")
-
 from fastapi import APIRouter
 from supabase import actualizar_imagen_supabase
 from fastapi import APIRouter, Request, Depends, Query, status
@@ -154,7 +151,7 @@ async def post_create_form(
 
 @router.post("/players/delete/{player_id}")
 async def delete_player(player_id: int, session: AsyncSession = Depends(get_session)):
-    statement = select(Metricplayer).where(Metricplayer.id == player_id)
+    statement = select(Metricplayer).where(Metricplayer.sofifa_id == player_id)
     result = await session.execute(statement)
     player = result.scalar_one_or_none()
 
