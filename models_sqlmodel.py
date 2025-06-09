@@ -15,7 +15,7 @@ class Jugador(SQLModel, table=True):
     player_positions: Optional[str] = Field(default=None, min_length=1, max_length=20)
     position_category: Optional[PlayerCategory] = Field(default=None)
     club_jersey_number: Optional[float] = Field(default=None, gt=0)
-
+    is_active: Optional[bool] = Field(default=True)
     goals: Optional[int] = Field(default=None, ge=0)
     assists: Optional[int] = Field(default=None, ge=0)
     yellow_cards: Optional[int] = Field(default=None, ge=0)
@@ -29,6 +29,9 @@ class Jugador(SQLModel, table=True):
     tackles: Optional[int] = Field(default=None, ge=0)
     interceptions: Optional[int] = Field(default=None, ge=0)
     fouls: Optional[int] = Field(default=None, ge=0)
+    photo_url: Optional[str] = None
+    nationality_flag_url: Optional[str] = None
+    club_logo_url: Optional[str] = None
 
 
 class JugadorPatchBody(BaseModel):
