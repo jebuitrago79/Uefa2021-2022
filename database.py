@@ -25,8 +25,8 @@ async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False
 
 df = pd.read_csv("Jugadores_2021_22.csv")
 
-
 df.replace({pd.NA: None, "NaN": None}, inplace=True)
+
 
 def safe_float(val):
     try:
@@ -34,18 +34,22 @@ def safe_float(val):
     except (ValueError, TypeError):
         return None
 
+
 def safe_category(val):
     try:
         return PlayerCategory(val)
     except (ValueError, TypeError):
         return None
 
+
 async def get_session() -> AsyncSession:
     async with async_session() as session:
         yield session
 
+
 def crear_tablas():
     SQLModel.metadata.create_all(sync_engine)
+
 
 def cargar_datos():
     with Session(sync_engine) as session:
@@ -59,6 +63,23 @@ def cargar_datos():
                 club_name=row.get("club_name"),
                 position_category=safe_category(row.get("position_category")),
                 club_jersey_number=safe_float(row.get("club_jersey_number")),
+                is_active=True,
+                goals=int(row.get("goals", 0)),
+                assists=int(row.get("assists", 0)),
+                yellow_cards=int(row.get("yellow_cards", 0)),
+                red_cards=int(row.get("red_cards", 0)),
+                saved=int(row.get("saved", 0)),
+                conceded=int(row.get("conceded", 0)),
+                games=int(row.get("games", 0)),
+                saves=int(row.get("saves", 0)),
+                goals_conceded=int(row.get("goals_conceded", 0)),
+                clean_Sheets=int(row.get("clean_Sheets", 0)),
+                tackles=int(row.get("tackles", 0)),
+                interceptions=int(row.get("interceptions", 0)),
+                fouls=int(row.get("fouls", 0)),
+                photo_url = row.get("photo_url"),
+                nationality_flag_url = row.get("nation_logo_url"),
+                club_logo_url = row.get("club_logo_url")
             )
 
             metric = Metricplayer(
@@ -94,10 +115,12 @@ def cargar_datos():
 
         session.commit()
 
+
 def verificar_conexion():
     with Session(sync_engine) as session:
         result = session.exec(select(Jugador)).all()
         print(f"✅ Total de jugadores en la base: {len(result)}")
+
 
 if __name__ == "__main__":
     try:
@@ -108,4 +131,3 @@ if __name__ == "__main__":
         verificar_conexion()
     except Exception as e:
         print("❌ Error durante la ejecución:", e)
-
