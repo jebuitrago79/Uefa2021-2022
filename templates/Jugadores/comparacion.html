@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #001a33;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .comparison-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin: auto;
+        max-width: 1200px;
+        padding: 20px;
+        background-color: #00264d;
+        border-radius: 10px;
+    }
+
+    .card-box {
+        flex: 1;
+        background-color: #003366;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .card-box h3 {
+        text-align: center;
+        border-bottom: 1px solid #004c99;
+        padding-bottom: 8px;
+        color: #00aaff;
+        margin-bottom: 20px;
+    }
+
+    .stat {
+        margin: 8px 0;
+    }
+
+    .stat label {
+        font-weight: bold;
+        color: #99ccff;
+    }
+
+    .overall-box {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 22px;
+        color: #00ffcc;
+    }
+
+    .card-box img {
+        display: block;
+        margin: 10px auto;
+        max-width: 80px;
+    }
+
+    .card-fifa {
+        background-color: #0b1e3a;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .fifa-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .fifa-header .overall {
+        font-size: 2.5rem;
+        color: #00e6e6;
+        font-weight: bold;
+    }
+
+    .fifa-image img {
+        width: 120px;
+        margin: 10px 0;
+    }
+
+    .fifa-stats p {
+        margin: 3px 0;
+        font-weight: 500;
+    }
+
+</style>
+
+<h2>Comparación de Estadísticas</h2>
+
+<div class="comparison-container">
+    <!-- Carta FIFA -->
+    <div class="card-fifa">
+        <div class="fifa-header">
+            <h3>{{ fifa.long_name }}</h3>
+            <p><strong>Posición:</strong> {{ fifa.player_positions }}</p>
+            <div class="overall">{{ fifa.overall | round }}</div>
+        </div>
+        <div class="fifa-image">
+            {% if imagen.player_face_url %}
+            <img src="{{ imagen.player_face_url }}" alt="{{ fifa.long_name }}">
+            {% else %}
+            <p>Sin foto</p>
+            {% endif %}
+        </div>
+        <div class="fifa-stats">
+            <p>PAC: {{ fifa.pace }}</p>
+            <p>SHO: {{ fifa.shooting }}</p>
+            <p>PAS: {{ fifa.power_shot }}</p>
+            <p>DEF: {{ fifa.defending }}</p>
+            <p>PHY: {{ fifa.physical }}</p>
+        </div>
+    </div>
+
+    <!-- Jugador Real -->
+    <div class="card-box">
+        <h3>Jugador Real (Champions)</h3>
+        <p class="stat"><label>Goles:</label> {{ jugador.goals }}</p>
+        <p class="stat"><label>Asistencias:</label> {{ jugador.assists }}</p>
+        <p class="stat"><label>Partidos:</label> {{ jugador.games }}</p>
+        <p class="stat"><label>Tarjetas amarillas:</label> {{ jugador.yellow_cards }}</p>
+        <p class="stat"><label>Tarjetas rojas:</label> {{ jugador.red_cards }}</p>
+        <p class="stat"><label>Faltas:</label> {{ jugador.fouls }}</p>
+        <p class="stat"><label>Intercepciones:</label> {{ jugador.interceptions }}</p>
+        <p class="stat"><label>Entradas:</label> {{ jugador.tackles }}</p>
+        <p class="stat"><label>Paradas:</label> {{ jugador.saves }}</p>
+        <p class="stat"><label>Goles concedidos:</label> {{ jugador.goals_conceded }}</p>
+        <p class="stat"><label>Porterías en cero:</label> {{ jugador.clean_Sheets }}</p>
+        <img src="{{ imagen.player_face_url }}" alt="Foto real">
+    </div>
+</div>
+
+<div class="overall-box">
+    <strong>Overall aproximado basado en estadísticas reales:</strong>
+    {{ overall_estimado }}
+</div>
+
+{% endblock %}
