@@ -30,3 +30,7 @@ async def mostrar_diseno(request: Request):
 @app.get("/desarrollo", response_class=HTMLResponse)
 async def mostrar_fase_desarrollo(request: Request):
     return templates.TemplateResponse("desarrollo.html", {"request": request})
+
+@app.get("/desarrollador", response_class=HTMLResponse)
+async def mostrar_desarrollador(request: Request):
+    return templates.TemplateResponse("desarrollador.html", {"request": request})
