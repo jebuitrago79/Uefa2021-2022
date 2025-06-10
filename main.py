@@ -27,3 +27,6 @@ async def mostrar_planeacion(request: Request):
 async def mostrar_diseno(request: Request):
     return templates.TemplateResponse("diseño.html", {"request": request})
 
+@app.get("/desarrollo", response_class=HTMLResponse)
+async def mostrar_fase_desarrollo(request: Request):
+    return templates.TemplateResponse("desarrollo.html", {"request": request})
