@@ -29,10 +29,18 @@
 
 <section class="bloque-contenedor">
     <p style="text-align: justify;">
-        En esta etapa del proyecto integrador se debe evidenciar la capacidad para implementar un sistema funcional
-        que refleje el entendimiento del ciclo completo de desarrollo de software. Esto incluye desde el backend y
-        su conexión con una base de datos online, hasta una interfaz navegable y amigable que sea accesible desde
-        cualquier dispositivo.
+        En esta etapa del proyecto integrador se implementó un sistema web completo que permite gestionar datos de jugadores
+        de la UEFA Champions League 2021-2022, integrando un backend funcional con <strong>FastAPI</strong> y <strong>SQLModel</strong>,
+        conectado a una base de datos <strong>PostgreSQL</strong> alojada en la nube (Supabase). A nivel frontend, se diseñó una interfaz HTML responsiva
+        y visualmente amigable con estilos consistentes, navegación fluida y formularios interactivos para la creación, edición, consulta
+        y eliminación lógica de jugadores y sus métricas.
+    </p>
+
+    <p style="text-align: justify;">
+        Se construyó un sistema modular con rutas separadas para jugadores y cartas FIFA, validaciones asincrónicas, endpoints estructurados,
+        y funcionalidades CRUD completas. El sistema fue desplegado de manera local y se documentó de forma clara para facilitar su evaluación
+        y mantenimiento. Esta fase refleja la consolidación práctica de habilidades en bases de datos, backend en Python, integración con servicios externos
+        (como Supabase), pruebas, control de versiones en GitHub y diseño de interfaces limpias y funcionales.
     </p>
 </section>
 
@@ -68,14 +76,5 @@
         <li>Endpoint explicativo del objetivo del proyecto.</li>
     </ul>
 </section>
-
-<section class="bloque-contenedor">
-    <p style="text-align: justify;">
-        Además, es recomendable incluir visualizaciones de datos relevantes al tema desarrollado.
-        Puede integrar gráficos, estadísticas o análisis generados con librerías como
-        <strong>Pandas</strong>, <strong>Matplotlib</strong>, <strong>Bokeh</strong>, entre otras.
-    </p>
-</section>
-
 
 {% endblock %}
