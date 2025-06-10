@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Fase de Desarrollo{% endblock %}
+
+{% block content %}
+<style>
+    .seccion-titulo {
+        background: linear-gradient(90deg, #001c58, #0038a8);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        color: white;
+    }
+
+    .bloque-contenedor {
+        background-color: rgba(0, 0, 50, 0.4);
+        padding: 1.5rem;
+        margin: 1rem auto;
+        max-width: 900px;
+        border-radius: 12px;
+        color: white;
+    }
+</style>
+
+
+<section class="seccion-titulo">
+    <h2>🧪 Fase de Desarrollo</h2>
+</section>
+
+<section class="bloque-contenedor">
+    <p style="text-align: justify;">
+        En esta etapa del proyecto integrador se debe evidenciar la capacidad para implementar un sistema funcional
+        que refleje el entendimiento del ciclo completo de desarrollo de software. Esto incluye desde el backend y
+        su conexión con una base de datos online, hasta una interfaz navegable y amigable que sea accesible desde
+        cualquier dispositivo.
+    </p>
+</section>
+
+<section class="bloque-contenedor">
+    <h3>⚙️ Componentes exigidos en esta fase</h3>
+    <ul>
+        <li>Despliegue del sistema en un servidor online.</li>
+        <li>Conexión con una base de datos remota.</li>
+        <li>Repositorio en GitHub con commits organizados y descriptivos.</li>
+        <li>Pruebas de funcionamiento (testing).</li>
+    </ul>
+</section>
+
+<section class="bloque-contenedor">
+    <h3>💡 Requisitos técnicos específicos</h3>
+    <ul>
+        <li>Interfaz en HTML con navegación coherente entre páginas.</li>
+        <li>Estilo uniforme en tipografía, colores, botones y estructura.</li>
+        <li>Formulario para registrar objetos en la base de datos, incluyendo imágenes.</li>
+        <li>Funcionalidad para consultar por ID, nombre o característica.</li>
+        <li>Consulta general de todos los elementos registrados.</li>
+        <li>Edición total o parcial de registros existentes.</li>
+        <li>Eliminación lógica de registros (manteniendo historial).</li>
+    </ul>
+</section>
+
+<section class="bloque-contenedor">
+    <h3>🌐 Endpoints requeridos</h3>
+    <ul>
+        <li>Endpoint con información del desarrollador.</li>
+        <li>Endpoint para mostrar la fase de planeación.</li>
+        <li>Endpoint para mostrar la fase de diseño.</li>
+        <li>Endpoint explicativo del objetivo del proyecto.</li>
+    </ul>
+</section>
+
+<section class="bloque-contenedor">
+    <p style="text-align: justify;">
+        Además, es recomendable incluir visualizaciones de datos relevantes al tema desarrollado.
+        Puede integrar gráficos, estadísticas o análisis generados con librerías como
+        <strong>Pandas</strong>, <strong>Matplotlib</strong>, <strong>Bokeh</strong>, entre otras.
+    </p>
+</section>
+
+
+{% endblock %}

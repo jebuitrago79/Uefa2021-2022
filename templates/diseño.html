@@ -111,37 +111,68 @@
     <div class="bloque">
         <h2><i class="fas fa-network-wired"></i> Mapa de Endpoints</h2>
         <p style="text-align: justify;">
-            A continuación se muestra la estructura de los endpoints diseñados en FastAPI para interactuar con las
-            diferentes
-            funciones del sistema:
+            El enrutamiento en este sistema comienza desde <code>main.py</code>, que delega el manejo de solicitudes a
+            través de dos routers principales: <strong>player_web</strong> (para la carta FIFA) y
+            <strong>jugador_web</strong> (para estadísticas reales). Cada router contiene endpoints que permiten
+            realizar operaciones CRUD sobre sus respectivos modelos.
         </p>
         <ul style="list-style: none; padding-left: 0;">
-            <li>🔹 <code>GET /players</code> → Lista de todos los jugadores FIFA</li>
-            <li>🔹 <code>GET /jugadores</code> → Lista de jugadores reales</li>
-            <li>🔹 <code>POST /players</code> → Crear nuevo jugador FIFA</li>
-            <li>🔹 <code>PUT /players/{id}</code> → Modificar un jugador FIFA</li>
-            <li>🔹 <code>DELETE /players/{id}</code> → Eliminar jugador FIFA (soft delete)</li>
-            <li>🔹 <code>GET /planeacion</code>, <code>/diseno</code>, <code>/objetivo</code> → Documentación del sistema
+            <li>📌 <code>main.py</code> → Entrada principal del sistema y enrutamiento general</li>
+            <li>┣ 📁 <code>router/player_web.py</code></li>
+            <ul>
+                <li>🔹 <code>GET /players</code> → Lista de jugadores FIFA</li>
+                <li>🔹 <code>POST /players</code> → Crear nuevo jugador FIFA</li>
+                <li>🔹 <code>PUT /players/{id}</code> → Modificar jugador FIFA</li>
+                <li>🔹 <code>DELETE /players/{id}</code> → Eliminar jugador FIFA (soft delete)</li>
+            </ul>
+            <li>┣ 📁 <code>router/jugador_web.py</code></li>
+            <ul>
+                <li>🔹 <code>GET /jugadores</code> → Lista de jugadores reales</li>
+                <li>🔹 <code>POST /jugadores</code> → Crear nuevo jugador real</li>
+                <li>🔹 <code>PUT /jugadores/{id}</code> → Modificar jugador real</li>
+                <li>🔹 <code>DELETE /jugadores/{id}</code> → Eliminar jugador real (soft delete)</li>
+            </ul>
+            <li>📄 <code>GET /planeacion</code>, <code>/diseno</code>, <code>/objetivo</code> → Secciones documentales
+                del sistema
             </li>
-            <li>🔹 <code>GET /developer</code> → Información del desarrollador</li>
+            <li>👤 <code>GET /developer</code> → Información del desarrollador</li>
         </ul>
     </div>
+
 
     <div class="bloque">
         <h2><i class="fas fa-desktop"></i> Wireframes / Mockups</h2>
         <p style="text-align: justify;">
             Se diseñaron prototipos de interfaz que permiten anticipar la distribución visual, organización de botones,
-            formularios y tarjetas de jugador. Estos diseños fueron creados con herramientas como <strong>Figma</strong>
+            formularios y tarjetas de jugador. Estos diseños fueron creados con herramientas como <strong>Canva</strong>
             y se
             utilizaron como guía para implementar la interfaz final.
         </p>
         <div style="text-align: center; margin-top: 1rem;">
-            <img src="/static/img/mockup_inicio.png" alt="Mockup Inicio"
+            <img src="/static/img/HOME.png" alt="Mockup Inicio"
                  style="max-width: 45%; margin: 10px; border-radius: 10px;">
-            <img src="/static/img/mockup_jugador.png" alt="Mockup Jugador"
+            <img src="/static/img/Carta.png"
+                 alt="Banner Curso IA" style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/edit_jugador.png" alt="Editar Jugador"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/player_edit.png" alt="Editar Player"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/formulario_player.png" alt="Formulario Player"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/formulario_jugador.png" alt="Formulario Jugador"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/jugador_back.png" alt="Vista posterior Jugador"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/jugador.png" alt="Tarjeta Jugador"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/player_back.png" alt="Vista posterior Player"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/player.png" alt="Tarjeta Player"
                  style="max-width: 45%; margin: 10px; border-radius: 10px;">
         </div>
     </div>
+
+
 </section>
 
 {% endblock %}
