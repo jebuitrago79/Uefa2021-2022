@@ -128,12 +128,12 @@ async def comparar_stats(
         fouls_por_partido = jugador.fouls / jugador.games if jugador.fouls is not None else 0
 
         overall = (
-                (goles_por_partido * 30) +
-                (asistencias_por_partido * 25) +
+                (goles_por_partido * 20) +
+                (asistencias_por_partido * 15) +
                 (tackles_por_partido * 10) +
                 (intercepciones_por_partido * 10) +
                 ((1 - fouls_por_partido) * 10) +
-                15
+                5
         )
         overall_estimado = min(max(round(overall), 0), 99)
     else:
