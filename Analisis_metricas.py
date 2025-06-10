@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
 
-df = pd.read_csv("Player_Equipos_Europeos2021_22.csv")
+df = pd.read_csv("Jugadores_2021_22.csv")
 
 metricas = ["overall", "pace", "shooting", "defending", "physic", "power_shot_power"]
 df_metricas = df[metricas].dropna()

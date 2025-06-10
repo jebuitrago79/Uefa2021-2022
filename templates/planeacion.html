@@ -207,10 +207,38 @@
 
                 Finalmente, el sistema se despliega en <strong>Render</strong> y se documenta todo el proceso:
                 endpoints, flujo, estructura.
+                   <p>El seguimiento del proyecto se gestiona con <strong>GitHub Projects</strong>.</p>
             </li>
         </ul>
 
-        <p>El seguimiento del proyecto se gestiona con <strong>GitHub Projects</strong>.</p>
+
+        <div class="bloque">
+            <h2><i class="fas fa-chart-bar"></i> Análisis de Métricas FIFA 2021-2022</h2>
+            <p>
+                Se realizó un análisis exploratorio sobre las métricas FIFA de los jugadores utilizando una
+                <strong>matriz de correlación</strong>, la cual permite identificar relaciones lineales entre
+                distintas variables numéricas. Esta herramienta permite observar qué tan relacionadas están
+                estadísticas como el ritmo (<em>pace</em>), disparo (<em>shooting</em>), defensa, físico y
+                potencia de tiro con el rendimiento general del jugador (<em>overall</em>).
+            </p>
+
+            <p>
+                Entre los hallazgos más relevantes, se destaca una
+                <strong>alta correlación entre "shooting" y "power_shot_power"</strong> (0.86), lo cual indica que
+                los jugadores con mejor capacidad de disparo también tienden a tener mayor potencia. Además,
+                "physic" presenta una correlación moderada con "defending" (0.58), lo que sugiere que los jugadores
+                físicamente fuertes también tienden a desempeñarse bien defensivamente. Finalmente, el atributo
+                "overall" muestra correlaciones consistentes con la mayoría de métricas, siendo "physic" (0.55) y
+                "power_shot_power" (0.59) las más influyentes.
+            </p>
+
+            <div style="text-align: center; margin-top: 1rem;">
+                <img src="/static/img/matriz.png" alt="Matriz de Correlación FIFA"
+                     style="max-width: 600px; border-radius: 10px;">
+                <p style="margin-top: 10px;">Matriz de correlación de métricas FIFA 2021-2022</p>
+            </div>
+        </div>
+
     </div>
 </section>
 {% endblock %}
