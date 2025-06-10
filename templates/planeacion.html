@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+{% block title %}Fase de Planeación{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        background: linear-gradient(135deg, #112266, #2a3f8e);
+        color: #ffffff;
+        font-family: 'Saira Semi Condensed', sans-serif;
+    }
+
+    .fase-planeacion {
+        padding: 40px 20px;
+    }
+
+    .fase-planeacion h1,
+    .fase-planeacion h2,
+    .fase-planeacion h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .fase-planeacion p,
+    .fase-planeacion ul {
+        max-width: 900px;
+        margin: 0 auto 1rem auto;
+        font-size: 15px;
+    }
+
+    .fase-planeacion ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+
+    .fase-planeacion .bloque {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 25px 30px;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .fase-planeacion .bloque p,
+    .fase-planeacion .bloque ul {
+        text-align: justify;
+    }
+
+    .caso-uso {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem 1.5rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .caso-uso h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .caso-uso p {
+        text-align: justify;
+        margin-bottom: 0.5rem;
+        font-size: 15px;
+    }
+</style>
+
+<section class="fase-planeacion container">
+    <div class="bloque">
+        <h1><i class="fas fa-clipboard-list"></i> Fase de Planeación</h1>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-lightbulb"></i> Nombre del Proyecto:</h2>
+        <p><strong>UEFA 2021-2022</strong></p>
+
+        <h2><i class="fas fa-id-card"></i> Código del Estudiante:</h2>
+        <p><strong>67001179</strong></p>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-book-open"></i> Introducción</h2>
+        <p>
+            El proyecto integrador del curso de Desarrollo de Software busca consolidar conocimientos adquiridos en
+            diferentes materias como programación orientada a objetos, estructuras de datos, bases de datos.
+            En este caso, el objetivo es desarrollar una aplicación web que permita visualizar, comparar y
+            consultar estadísticas reales de la UEFA Champions League 2021-2022, integrando datos reales y simulados,
+            con
+            fines educativos.
+        </p>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-bullseye"></i> Objetivos</h2>
+
+        <h3>🎯 Objetivo General</h3>
+        <p>
+            Desarrollar una pagina web interactiva que permita consultar y comparar estadísticas reales de jugadores de
+            la
+            UEFA Champions League 2021-2022 con sus valores representados en el videojuego FIFA 22.
+        </p>
+
+        <h3>🔹 Objetivos Específicos</h3>
+        <ul>
+            <li>📊 Diseñar una base de datos que contenga la información necesaria sobre jugadores, métricas reales y
+                métricas del videojuego.
+            </li>
+            <li>🛠️ Implementar funcionalidades CRUD que permitan registrar, consultar, modificar y eliminar datos de
+                jugadores.
+            </li>
+            <li>📈 Visualizar cómo se relacionan las métricas del FIFA entre sí y su correlación.</li>
+            <li>🚀 Desplegar el sistema en línea con una interfaz responsiva y documentación del proceso.</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-database"></i> Modelo de Datos</h2>
+        <p style="text-align: justify;">
+            El modelo de datos está compuesto por entidades como <strong>Jugador</strong>, <strong>Carta FIFA</strong> y
+            <strong>Comparación</strong>. Se define una relación 1 a 1 entre jugador y carta FIFA. La estructura permite
+            también realizar comparaciones múltiples.
+        </p>
+        <p style="text-align: center;"><strong>📸 Diagrama:</strong></p>
+        <div style="text-align: center;">
+            <img src="/static/img/modelo_datos.png" alt="Modelo de datos"
+                 style="max-width: 100%; max-height: 600px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);"/>
+        </div>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-users-cog"></i> Casos de Uso</h2>
+
+        <div class="caso-uso">
+            <h3>🧾 Caso 1: Consultar estadísticas de un jugador de FIFA 22</h3>
+            <p><strong>Actor:</strong> Usuario visitante</p>
+            <p><strong>Flujo:</strong> El usuario introduce el sofifa_ID, el sistema busca en la base de datos y muestra
+                las stats del jugador en FIFA 22.</p>
+            <p><strong>Resultado esperado:</strong> Visualización completa de la carta del jugador en FIFA 22</p>
+        </div>
+
+        <div class="caso-uso">
+            <h3>📝 Caso 2: Crear nuevo registro de jugador</h3>
+            <p><strong>Actor:</strong> Administrador o desarrollador</p>
+            <p><strong>Flujo:</strong> Cada modelo cuenta con un botón para crear un nuevo jugador,
+                desde un formulario se ingresa información básica y estadísticas, esta información
+                se guarda en la base de datos.</p>
+            <p><strong>Resultado esperado:</strong> Jugador registrado exitosamente con imagen incluida
+                y creación de la carta dependiendo en qué modelo se crea.</p>
+        </div>
+
+        <div class="caso-uso">
+            <h3>📋 Caso 3: Comparación masiva de jugadores</h3>
+            <p><strong>Actor:</strong> Usuario</p>
+            <p><strong>Flujo:</strong> Desde el modelo jugadores el usuario da clic en modificar estadísticas y este lo
+                dirige a un formulario donde rellena los campos con los stats reales del jugador de la Champions, y el
+                sistema predice el overall aproximado generado por esas estadísticas.</p>
+            <p><strong>Resultado esperado:</strong> Tabla comparativa renderizada correctamente</p>
+        </div>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-globe"></i> Fuente de los Datos</h2>
+        <p>
+            Los datos utilizados provienen de sitios como <em>UEFA.com</em>, <em>FBREF</em>
+            (estadísticas reales), y <em>Kangle</em> o <em>sofifa</em> (datos de FIFA 22). También se emplean archivos
+            CSV de
+            Kangle que contienen stats reales y datos completos de los jugadores.
+        </p>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-project-diagram"></i> Metodología de Planeación</h2>
+        <p>
+            Para el desarrollo del proyecto se adopta una <strong>metodología ágil basada en Scrum</strong>, que permite
+            dividir el proceso en iteraciones llamadas <em>sprints</em>. Cada sprint tiene una duración estimada de 1 a
+            2 meses,
+            con objetivos específicos y entregables funcionales.
+        </p>
+
+        <ul>
+            <li>
+                <strong>📌 Sprint 1: Planeación y modelado de datos</strong><br>
+                Se definen los objetivos, los casos de uso principales, y se diseñan los modelos <code>jugador</code> y
+                <code>player</code>.
+                También se recopilan las fuentes de datos desde Kangle.
+            </li>
+
+            <li>
+                <strong>🧩 Sprint 2: Desarrollo y endpoints</strong><br>
+                Se implementan los modelos con sus características (búsqueda de jugadores, comparación de estadísticas,
+                CRUD),
+                se definen los endpoints usando FastAPI y se estructuran las rutas del sistema.
+            </li>
+
+            <li>
+                <strong>🧪 Sprint 3: Desarrollo, diseño de interfaz y despliegue</strong><br>
+                Se implementa la lógica funcional del sistema y las interfaces finales. Se cuida la experiencia de
+                usuario (UX) y
+                la coherencia visual (colores, tipografía, responsividad).<br><br>
+
+                Luego se conecta a una base de datos online, se agregan validaciones, pruebas unitarias y de
+                integración.<br><br>
+
+                Finalmente, el sistema se despliega en <strong>Render</strong> y se documenta todo el proceso:
+                endpoints, flujo, estructura.
+            </li>
+        </ul>
+
+        <p>El seguimiento del proyecto se gestiona con <strong>GitHub Projects</strong>.</p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Fase de Diseño{% endblock %}
+{% block content %}
+
+
+<style>
+    .fase-planeacion {
+        padding: 40px 20px;
+    }
+
+    .fase-planeacion h1,
+    .fase-planeacion h2,
+    .fase-planeacion h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .fase-planeacion p {
+        text-align: justify;
+        max-width: 900px;
+        margin: 0 auto 1.2rem auto;
+    }
+
+    .fase-planeacion ul {
+        max-width: 900px;
+        margin: 0 auto 1.5rem auto;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .fase-planeacion li {
+        margin-bottom: 8px;
+    }
+
+    .bloque {
+        max-width: 950px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .bloque img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .fase-planeacion code {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .bloque {
+            padding: 20px;
+        }
+
+        .fase-planeacion img {
+            max-width: 100%;
+        }
+    }
+
+    .zoom-container {
+        overflow: auto;
+        text-align: center;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .zoomable-img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        cursor: zoom-in;
+    }
+
+    .zoomable-img:active {
+        transform: scale(2);
+        cursor: zoom-out;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="fase-planeacion container">
+    <div class="bloque">
+        <h1><i class="fas fa-pencil-ruler"></i> Fase de Diseño</h1>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-code-branch"></i> Diagrama de Flujo del Sistema</h2>
+        <p style="text-align: justify;">
+            Este diagrama ilustra el flujo de ejecución del sistema desde que el usuario accede hasta que se comunican
+            los endpoints, rutas y modelos de datos definidos con FastAPI, SQLModel y PostgreSQL/Supabase.
+        </p>
+
+        <div class="zoom-container">
+            <img src="/static/img/diagrama.png" alt="Diagrama de flujo del sistema" class="zoomable-img"/>
+        </div>
+    </div>
+    <div class="bloque">
+        <h2><i class="fas fa-network-wired"></i> Mapa de Endpoints</h2>
+        <p style="text-align: justify;">
+            A continuación se muestra la estructura de los endpoints diseñados en FastAPI para interactuar con las
+            diferentes
+            funciones del sistema:
+        </p>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>🔹 <code>GET /players</code> → Lista de todos los jugadores FIFA</li>
+            <li>🔹 <code>GET /jugadores</code> → Lista de jugadores reales</li>
+            <li>🔹 <code>POST /players</code> → Crear nuevo jugador FIFA</li>
+            <li>🔹 <code>PUT /players/{id}</code> → Modificar un jugador FIFA</li>
+            <li>🔹 <code>DELETE /players/{id}</code> → Eliminar jugador FIFA (soft delete)</li>
+            <li>🔹 <code>GET /planeacion</code>, <code>/diseno</code>, <code>/objetivo</code> → Documentación del sistema
+            </li>
+            <li>🔹 <code>GET /developer</code> → Información del desarrollador</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2><i class="fas fa-desktop"></i> Wireframes / Mockups</h2>
+        <p style="text-align: justify;">
+            Se diseñaron prototipos de interfaz que permiten anticipar la distribución visual, organización de botones,
+            formularios y tarjetas de jugador. Estos diseños fueron creados con herramientas como <strong>Figma</strong>
+            y se
+            utilizaron como guía para implementar la interfaz final.
+        </p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <img src="/static/img/mockup_inicio.png" alt="Mockup Inicio"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+            <img src="/static/img/mockup_jugador.png" alt="Mockup Jugador"
+                 style="max-width: 45%; margin: 10px; border-radius: 10px;">
+        </div>
+    </div>
+</section>
+
+{% endblock %}
