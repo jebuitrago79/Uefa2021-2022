@@ -3,7 +3,10 @@ from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 from models_sqlmodel import Metricplayer, PlayerCategory
 import math
-
+from typing import List, Optional
+from sqlmodel import select
+from sqlmodel.ext.asyncio.session import AsyncSession
+from models_sqlmodel import Metricplayer
 
 async def get_all_players(session: AsyncSession) -> List[Metricplayer]:
     result = await session.execute(
@@ -54,10 +57,7 @@ async def get_players_by_overall(session: AsyncSession, min_overall: float) -> L
         select(Metricplayer).where(Metricplayer.overall >= min_overall, Metricplayer.is_active == True)
     )
     return result.scalars().all()
-from typing import List, Optional
-from sqlmodel import select
-from sqlmodel.ext.asyncio.session import AsyncSession
-from models_sqlmodel import Metricplayer
+
 
 
 async def get_all_players(session: AsyncSession) -> List[Metricplayer]:

@@ -120,24 +120,77 @@ async def comparar_stats(
     if not jugador or not fifa:
         raise HTTPException(status_code=404, detail="Jugador o carta FIFA no encontrado")
 
-    if jugador.games and jugador.games > 0:
-        goles_por_partido = jugador.goals / jugador.games if jugador.goals is not None else 0
-        asistencias_por_partido = jugador.assists / jugador.games if jugador.assists is not None else 0
-        tackles_por_partido = jugador.tackles / jugador.games if jugador.tackles is not None else 0
-        intercepciones_por_partido = jugador.interceptions / jugador.games if jugador.interceptions is not None else 0
-        fouls_por_partido = jugador.fouls / jugador.games if jugador.fouls is not None else 0
 
-        overall = (
+    POSICIONES_DELANTERO = {"ST", "CF", "LW", "RW", "LF", "RF"}
+    POSICIONES_MEDIOCAMPO = {"CM", "CAM", "CDM", "RM", "LM"}
+    POSICIONES_DEFENSA = {"CB", "RB", "LB", "RWB", "LWB"}
+    POSICIONES_PORTERO = {"GK"}
+
+    overall_estimado = 0
+
+    if jugador.games and jugador.games > 0:
+        goles_por_partido = jugador.goals / jugador.games if jugador.goals else 0
+        asistencias_por_partido = jugador.assists / jugador.games if jugador.assists else 0
+        tackles_por_partido = jugador.tackles / jugador.games if jugador.tackles else 0
+        intercepciones_por_partido = jugador.interceptions / jugador.games if jugador.interceptions else 0
+        fouls_por_partido = jugador.fouls / jugador.games if jugador.fouls else 0
+
+        atajadas_por_partido = jugador.saves / jugador.games if hasattr(jugador, 'saves') and jugador.saves else 0
+        goles_concedidos_por_partido = jugador.goals_conceded / jugador.games if hasattr(jugador, 'goals_conceded') and jugador.goals_conceded else 1
+        porterias_cero_ratio = jugador.clean_sheets / jugador.games if hasattr(jugador, 'clean_sheets') and jugador.clean_sheets else 0
+
+
+        posicion = fifa.player_positions.split(",")[0].strip().upper()
+
+        if posicion in POSICIONES_DELANTERO:
+            overall = (
+                (goles_por_partido * 40) +
+                (asistencias_por_partido * 25) +
+                ((1 - fouls_por_partido) * 10) +
+                (tackles_por_partido * 5) +
+                (intercepciones_por_partido * 5) +
+                25
+            )
+
+        elif posicion in POSICIONES_MEDIOCAMPO:
+            overall = (
                 (goles_por_partido * 20) +
-                (asistencias_por_partido * 15) +
-                (tackles_por_partido * 10) +
+                (asistencias_por_partido * 30) +
+                (tackles_por_partido * 20) +
                 (intercepciones_por_partido * 10) +
                 ((1 - fouls_por_partido) * 10) +
+                20
+            )
+
+        elif posicion in POSICIONES_DEFENSA:
+            overall = (
+                (tackles_por_partido * 25) +
+                (intercepciones_por_partido * 25) +
+                ((1 - fouls_por_partido) * 15) +
+                (goles_por_partido * 5) +
+                20
+            )
+
+        elif posicion in POSICIONES_PORTERO:
+            overall = (
+                (atajadas_por_partido * 20) +
+                ((1 - goles_concedidos_por_partido) * 20) +
+                (porterias_cero_ratio * 20) +
+                ((1 - fouls_por_partido) * 5) +
                 10
-        )
+            )
+        else:
+
+            overall = (
+                (goles_por_partido * 25) +
+                (asistencias_por_partido * 20) +
+                (tackles_por_partido * 10) +
+                (intercepciones_por_partido * 10) +
+                ((1 - fouls_por_partido) * 5) +
+                20
+            )
+
         overall_estimado = min(max(round(overall), 0), 99)
-    else:
-        overall_estimado = 0
 
     imagen = await get_player_images(jugador.sofifa_id)
 
