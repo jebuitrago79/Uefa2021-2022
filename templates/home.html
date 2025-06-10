@@ -1,17 +1,226 @@
 {% extends "base.html" %}
-
 {% block title %}Inicio - UEFA{% endblock %}
 
 {% block content %}
-<div class="fifa_hero">
-  <div class="fifa_title">
-    <h1>UEFA CHAMPIONS LEAGUE</h1>
-    <h1 class="text2">TEMPORADA 2021-2022</h1>
-    <p>Compara el rendimiento real de los jugadores de la champions 2021-2022 con sus estadísticas en FIFA 22.</p>
-    <div class="fifa_search">
-      <p>Explorar jugadores</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/49/49116.png" alt="Buscar" style="width: 25px;" />
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fifa_hero {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .fifa_hero h1 {
+        font-size: 36px;
+        color: white;
+        margin: 0;
+    }
+
+    .text2 {
+        font-weight: 300;
+        font-size: 28px;
+        color: #aabfff;
+    }
+
+    .fifa_search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .destacados {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .tarjeta {
+        width: 300px;
+        height: 400px;
+        perspective: 1000px;
+        flex: 0 0 auto;
+    }
+
+    .tarjeta-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .tarjeta:hover .tarjeta-inner {
+        transform: rotateY(180deg);
+    }
+
+    .tarjeta-front,
+    .tarjeta-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tarjeta-front {
+        background-color: #0a0f2c;
+    }
+
+    .tarjeta-back {
+        background-color: #001C58;
+        transform: rotateY(180deg);
+    }
+
+
+    .imagen-container {
+        width: 100%;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+    .imagen-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contenido {
+        flex: 1;
+        padding: 16px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .contenido h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .contenido p {
+        font-size: 14px;
+        color: #c2c2c2;
+    }
+
+    .contenido button {
+        margin-top: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contenido button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+
+<div class="container">
+    <div class="fifa_hero">
+        <h1>UEFA CHAMPIONS LEAGUE</h1>
+        <h1 class="text2">TEMPORADA 2021-2022</h1>
+        <p>Compara el rendimiento real de los jugadores de la champions 2021-2022 con sus estadísticas en FIFA 22.</p>
+        <div class="fifa_search">
+            <p>Explorar jugadores</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/49/49116.png" alt="Buscar" style="width: 25px;"/>
+        </div>
     </div>
-  </div>
+
+    <section class="destacados">
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <div class="imagen-container">
+                        <img src="/static/img/planeacion.png" alt="Planeación">
+                    </div>
+                    <div class="contenido">
+                        <h2>Fase de Planeación</h2>
+                        <p>Casos de uso, modelo de datos, objetivos y fuentes.</p>
+                    </div>
+                </div>
+                <div class="tarjeta-back">
+                    <div class="contenido">
+                        <h2>Ir a la Fase de Planeación</h2>
+                        <a href="/planeacion">
+                            <button>Ver más</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <div class="imagen-container">
+                        <img src="/static/img/desarrollo.png" alt="Diseño">
+                    </div>
+                    <div class="contenido">
+                        <h2>Fase de Diseño</h2>
+                        <p>Diagrama de clases, endpoints y wireframes.</p>
+                    </div>
+                </div>
+                <div class="tarjeta-back">
+                    <div class="contenido">
+                        <h2>Ir a la Fase de Diseño</h2>
+                        <a href="/diseno">
+                            <button>Ver más</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <div class="imagen-container">
+                        <img src="/static/img/objetivo.png" alt="Objetivo">
+                    </div>
+                    <div class="contenido">
+                        <h2>Objetivo</h2>
+                        <p>Conoce el propósito del sistema y su base de datos.</p>
+                    </div>
+                </div>
+                <div class="tarjeta-back">
+                    <div class="contenido">
+                        <h2>Conocer el Objetivo</h2>
+                        <a href="/objetivo">
+                            <button>Ver más</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
+
+
