@@ -137,4 +137,34 @@
     {{ overall_estimado }}
 </div>
 
+<div style="margin-top: 1rem; background-color: #072a5e; padding: 1rem; border-radius: 10px; color: #ffffff; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 0.9rem;">
+    <p style="margin-bottom: 0.5rem;">
+        <strong>Cálculo para la posición {{ fifa.player_positions.split(',')[0] }}:</strong>
+    </p>
+    {% set posicion = fifa.player_positions.split(',')[0].strip() %}
+    {% if posicion in ["ST", "CF", "LW", "RW", "LF", "RF"] %}
+    <p>Como delantero, se prioriza el rendimiento ofensivo. Los goles tienen el mayor peso (×40), seguidos por las
+        asistencias (×25), ya que reflejan su capacidad para definir y generar oportunidades. Se considera la disciplina
+        (faltas) con un peso medio (×10), y en menor medida su contribución defensiva como intercepciones o entradas (×5
+        cada una). Además, se suma una base de 25 puntos para estabilizar el valor.</p>
+    {% elif posicion in ["CM", "CDM", "CAM", "RM", "LM"] %}
+    <p>En el rol de mediocampista se evalúa un equilibrio entre creación y recuperación. Las asistencias reciben el
+        mayor peso (×30), seguidas por los goles (×20). También se tienen en cuenta las entradas (×10) e intercepciones
+        (×10), reflejando su participación defensiva. La disciplina y una base de 20 puntos completan la fórmula.</p>
+    {% elif posicion in ["CB", "RB", "LB", "RWB", "LWB"] %}
+    <p>Para defensores, la fórmula enfatiza la capacidad de recuperación: entradas (×25) e intercepciones (×25). Se
+        valora también su disciplina (×15) y, aunque en menor medida, su capacidad de aportar ofensivamente con goles
+        (×5). Se suma una base de 30 puntos para mantener consistencia con su impacto real.</p>
+    {% elif posicion == "GK" %}
+    <p>Como portero, las métricas clave son las atajadas realizadas (×30), los goles concedidos (invertido ×25), y las
+        porterías en cero (×25). Las faltas cometidas tienen un peso menor (×5), y se añade una base de 15 puntos para
+        representar su estabilidad bajo presión.</p>
+    {% else %}
+    <p>Al no poder identificar una posición específica, se aplica una fórmula promedio que combina estadísticas
+        ofensivas, defensivas y de disciplina con pesos balanceados. Esto garantiza una estimación justa para roles
+        mixtos o no reconocidos.</p>
+    {% endif %}
+</div>
+
+
 {% endblock %}
