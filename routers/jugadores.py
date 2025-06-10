@@ -4,21 +4,23 @@ from sqlmodel import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from database import get_session
 from models_sqlmodel import Jugador, Metricplayer
-from supabase import  get_player_images
+from supabase import get_player_images
 from fastapi import Form
 from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
 from crud_jugador import create_jugador, get_jugador
 from supabase import insertar_imagen_supabase
+
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
+
 @router.get("/jugadores", response_class=HTMLResponse)
 async def mostrar_jugadores(
-    request: Request,
-    session: AsyncSession = Depends(get_session),
-    page: int = Query(1, ge=1),
-    limit: int = 25
+        request: Request,
+        session: AsyncSession = Depends(get_session),
+        page: int = Query(1, ge=1),
+        limit: int = 25
 ):
     offset = (page - 1) * limit
 
@@ -51,9 +53,9 @@ async def mostrar_jugadores(
 
 @router.get("/jugadores/{sofifa_id}/stats-form", response_class=HTMLResponse)
 async def mostrar_formulario_stats(
-    sofifa_id: int,
-    request: Request,
-    session: AsyncSession = Depends(get_session)
+        sofifa_id: int,
+        request: Request,
+        session: AsyncSession = Depends(get_session)
 ):
     jugador = await session.get(Jugador, sofifa_id)
     if not jugador:
@@ -66,21 +68,21 @@ async def mostrar_formulario_stats(
 
 @router.post("/jugadores/{sofifa_id}/stats-form")
 async def guardar_stats_jugador(
-    sofifa_id: int,
-    request: Request,
-    goals: int = Form(...),
-    assists: int = Form(...),
-    yellow_cards: int = Form(...),
-    red_cards: int = Form(...),
-    saved: int = Form(...),
-    games: int = Form(...),
-    saves: int = Form(...),
-    goals_conceded: int = Form(...),
-    clean_Sheets: int = Form(...),
-    tackles: int = Form(...),
-    interceptions: int = Form(...),
-    fouls: int = Form(...),
-    session: AsyncSession = Depends(get_session)
+        sofifa_id: int,
+        request: Request,
+        goals: int = Form(...),
+        assists: int = Form(...),
+        yellow_cards: int = Form(...),
+        red_cards: int = Form(...),
+        saved: int = Form(...),
+        games: int = Form(...),
+        saves: int = Form(...),
+        goals_conceded: int = Form(...),
+        clean_Sheets: int = Form(...),
+        tackles: int = Form(...),
+        interceptions: int = Form(...),
+        fouls: int = Form(...),
+        session: AsyncSession = Depends(get_session)
 ):
     jugador = await session.get(Jugador, sofifa_id)
     if not jugador:
@@ -108,16 +110,15 @@ async def guardar_stats_jugador(
 
 @router.get("/jugadores/{sofifa_id}/comparar", response_class=HTMLResponse)
 async def comparar_stats(
-    request: Request,
-    sofifa_id: int,
-    session: AsyncSession = Depends(get_session)
+        request: Request,
+        sofifa_id: int,
+        session: AsyncSession = Depends(get_session)
 ):
     jugador = await session.get(Jugador, sofifa_id)
     fifa = await session.get(Metricplayer, sofifa_id)
 
     if not jugador or not fifa:
         raise HTTPException(status_code=404, detail="Jugador o carta FIFA no encontrado")
-
 
     if jugador.games and jugador.games > 0:
         goles_por_partido = jugador.goals / jugador.games if jugador.goals is not None else 0
@@ -127,12 +128,12 @@ async def comparar_stats(
         fouls_por_partido = jugador.fouls / jugador.games if jugador.fouls is not None else 0
 
         overall = (
-            (goles_por_partido * 25) +
-            (asistencias_por_partido * 20) +
-            (tackles_por_partido * 5) +
-            (intercepciones_por_partido * 5) +
-            ((1 - fouls_por_partido) * 5) +  #
-            39
+                (goles_por_partido * 30) +
+                (asistencias_por_partido * 25) +
+                (tackles_por_partido * 10) +
+                (intercepciones_por_partido * 10) +
+                ((1 - fouls_por_partido) * 10) +
+                15
         )
         overall_estimado = min(max(round(overall), 0), 99)
     else:
@@ -154,36 +155,35 @@ async def crear_jugador_formulario(request: Request):
     return templates.TemplateResponse("Jugadores/crear_jugador.html", {"request": request})
 
 
-
 @router.post("/jugadores/crear")
-async def crear_jugador_post( request: Request,
-    sofifa_id: int = Form(...),
-    long_name: str = Form(...),
-    age: int = Form(...),
-    nationality_name: str = Form(...),
-    height_cm: float = Form(...),
-    club_name: str = Form(None),
-    player_positions: str = Form(None),
-    position_category: str = Form(None),
-    club_jersey_number: float = Form(None),
-    is_active: bool = Form(...),
-    goals: int = Form(None),
-    assists: int = Form(None),
-    yellow_cards: int = Form(None),
-    red_cards: int = Form(None),
-    saved: int = Form(None),
-    games: int = Form(None),
-    saves: int = Form(None),
-    goals_conceded: int = Form(None),
-    clean_Sheets: int = Form(None),
-    tackles: int = Form(None),
-    interceptions: int = Form(None),
-    fouls: int = Form(None),
-    photo_url: str = Form(None),
-    club_logo_url: str = Form(None),
-    nationality_flag_url: str = Form(None),
-    session: AsyncSession = Depends(get_session)
-):
+async def crear_jugador_post(request: Request,
+                             sofifa_id: int = Form(...),
+                             long_name: str = Form(...),
+                             age: int = Form(...),
+                             nationality_name: str = Form(...),
+                             height_cm: float = Form(...),
+                             club_name: str = Form(None),
+                             player_positions: str = Form(None),
+                             position_category: str = Form(None),
+                             club_jersey_number: float = Form(None),
+                             is_active: bool = Form(...),
+                             goals: int = Form(None),
+                             assists: int = Form(None),
+                             yellow_cards: int = Form(None),
+                             red_cards: int = Form(None),
+                             saved: int = Form(None),
+                             games: int = Form(None),
+                             saves: int = Form(None),
+                             goals_conceded: int = Form(None),
+                             clean_Sheets: int = Form(None),
+                             tackles: int = Form(None),
+                             interceptions: int = Form(None),
+                             fouls: int = Form(None),
+                             photo_url: str = Form(None),
+                             club_logo_url: str = Form(None),
+                             nationality_flag_url: str = Form(None),
+                             session: AsyncSession = Depends(get_session)
+                             ):
     nuevo_jugador = Jugador(
         sofifa_id=sofifa_id,
         long_name=long_name,
@@ -219,6 +219,7 @@ async def crear_jugador_post( request: Request,
 
     return RedirectResponse(url="/jugadores", status_code=303)
 
+
 @router.post("/jugadores/delete/{sofifa_id}")
 async def activar_o_desactivar_jugador(sofifa_id: int, session: AsyncSession = Depends(get_session)):
     result = await session.execute(select(Jugador).where(Jugador.sofifa_id == sofifa_id))
@@ -228,11 +229,12 @@ async def activar_o_desactivar_jugador(sofifa_id: int, session: AsyncSession = D
         await session.commit()
     return RedirectResponse(url="/jugadores", status_code=303)
 
+
 @router.get("/jugadores/search", response_class=HTMLResponse)
 async def buscar_jugador_por_id(
-    request: Request,
-    id: int = Query(...),
-    session: AsyncSession = Depends(get_session)
+        request: Request,
+        id: int = Query(...),
+        session: AsyncSession = Depends(get_session)
 ):
     jugador = await get_jugador(session, id)
     if not jugador:
