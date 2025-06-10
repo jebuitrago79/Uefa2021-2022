@@ -133,7 +133,7 @@ async def comparar_stats(
                 (tackles_por_partido * 10) +
                 (intercepciones_por_partido * 10) +
                 ((1 - fouls_por_partido) * 10) +
-                5
+                10
         )
         overall_estimado = min(max(round(overall), 0), 99)
     else:
