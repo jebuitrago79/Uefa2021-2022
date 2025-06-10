@@ -486,7 +486,7 @@
                             <form action="/jugadores/{{ jugador.sofifa_id }}/stats-form" method="get">
                                 <button type="submit" class="edit-btn">Llenar Stats Reales</button>
                             </form>
-                            <form action="/players/delete/{{ jugador.sofifa_id }}" method="post"
+                            <form action="/jugadores/delete/{{ jugador.sofifa_id }}" method="post"
                                   style="margin-top: 8px;">
                                 <button type="submit" class="deactivate-btn">
                                     {{ 'Desactivar' if jugador.is_active else 'Activar' }}
